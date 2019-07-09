@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:aop="http://www.springframework.org/schema/aop" xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd">
+
+    <bean id="productDao" class="qinkai.spring.demo3.ProductDaoImpl"></bean>
+
+    <!-- 配置切面类 -->
+    <bean id="myAspectXml" class="qinkai.spring.demo3.MyAspectXML"></bean>
+
+    <!-- 进行aop的配置 -->
+    <aop:config>
+        <!-- 配置切入表达式(切入点) -->
+        <aop:pointcut expression="execution(* qinkai.spring.demo3.ProductDao.save(..))" id="pointcut"/>
+        <aop:aspect ref="myAspectXml">
+            <aop:before method="checkPri" pointcut-ref="pointcut"/>
+        </aop:aspect>
+    </aop:config>
+</beans>
