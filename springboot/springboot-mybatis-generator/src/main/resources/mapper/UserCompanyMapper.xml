@@ -1,0 +1,3800 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.mapper.UserCompanyMapper">
+  <resultMap id="BaseResultMap" type="com.example.model.UserCompany">
+    <constructor>
+      <idArg column="companyId" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="number" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="organizationCode" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="certificateType" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="companyName" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="industry" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="scale" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="concepts" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="legalPersonName" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="legalPersonIdentityNo" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="legalPersonPhoneNo" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="ifJointStockExchangeCenter" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="companyContractUserPhoneNo" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="companyContractUserName" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="businessPath" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="companyAuthorizationPath" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="province" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="city" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="county" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="town" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="companyLocation" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="companySummary" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="companyCharacteristics" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="createTime" javaType="java.util.Date" jdbcType="TIMESTAMP" />
+      <arg column="auditTime" javaType="java.util.Date" jdbcType="TIMESTAMP" />
+      <arg column="channel" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="email" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="note" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="legalPersonPathFront" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="legalPersonPathBack" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="companyLogoPath" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="creditCollectionPath" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="count" javaType="java.lang.Integer" jdbcType="INTEGER" />
+      <arg column="applyUserId" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="updateTime" javaType="java.util.Date" jdbcType="TIMESTAMP" />
+      <arg column="currentType" javaType="java.lang.Boolean" jdbcType="BIT" />
+      <arg column="applyType" javaType="java.lang.Boolean" jdbcType="BIT" />
+      <arg column="applyStatus" javaType="java.lang.Boolean" jdbcType="BIT" />
+      <arg column="paCompanyId" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="stickScale" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="stickCreateTime" javaType="java.util.Date" jdbcType="TIMESTAMP" />
+      <arg column="ifAuthorization" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="isShowInFront" javaType="java.lang.Boolean" jdbcType="BIT" />
+    </constructor>
+  </resultMap>
+  <sql id="Base_Column_List">
+    companyId, number, organizationCode, certificateType, companyName, industry, scale, 
+    concepts, legalPersonName, legalPersonIdentityNo, legalPersonPhoneNo, ifJointStockExchangeCenter, 
+    companyContractUserPhoneNo, companyContractUserName, businessPath, companyAuthorizationPath, 
+    province, city, county, town, companyLocation, companySummary, companyCharacteristics, 
+    createTime, auditTime, channel, email, note, legalPersonPathFront, legalPersonPathBack, 
+    companyLogoPath, creditCollectionPath, count, applyUserId, updateTime, currentType, 
+    applyType, applyStatus, paCompanyId, stickScale, stickCreateTime, ifAuthorization, 
+    isShowInFront
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from user_company
+    where companyId = #{companyId,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    delete from user_company
+    where companyId = #{companyId,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="com.example.model.UserCompany">
+    insert into user_company (companyId, number, organizationCode, 
+      certificateType, companyName, industry, 
+      scale, concepts, legalPersonName, 
+      legalPersonIdentityNo, legalPersonPhoneNo, 
+      ifJointStockExchangeCenter, companyContractUserPhoneNo, 
+      companyContractUserName, businessPath, 
+      companyAuthorizationPath, province, city, 
+      county, town, companyLocation, 
+      companySummary, companyCharacteristics, 
+      createTime, auditTime, channel, 
+      email, note, legalPersonPathFront, 
+      legalPersonPathBack, companyLogoPath, creditCollectionPath, 
+      count, applyUserId, updateTime, 
+      currentType, applyType, applyStatus, 
+      paCompanyId, stickScale, stickCreateTime, 
+      ifAuthorization, isShowInFront)
+    values (#{companyId,jdbcType=VARCHAR}, #{number,jdbcType=VARCHAR}, #{organizationCode,jdbcType=VARCHAR}, 
+      #{certificateType,jdbcType=VARCHAR}, #{companyName,jdbcType=VARCHAR}, #{industry,jdbcType=VARCHAR}, 
+      #{scale,jdbcType=VARCHAR}, #{concepts,jdbcType=VARCHAR}, #{legalPersonName,jdbcType=VARCHAR}, 
+      #{legalPersonIdentityNo,jdbcType=VARCHAR}, #{legalPersonPhoneNo,jdbcType=VARCHAR}, 
+      #{ifJointStockExchangeCenter,jdbcType=VARCHAR}, #{companyContractUserPhoneNo,jdbcType=VARCHAR}, 
+      #{companyContractUserName,jdbcType=VARCHAR}, #{businessPath,jdbcType=VARCHAR}, 
+      #{companyAuthorizationPath,jdbcType=VARCHAR}, #{province,jdbcType=VARCHAR}, #{city,jdbcType=VARCHAR}, 
+      #{county,jdbcType=VARCHAR}, #{town,jdbcType=VARCHAR}, #{companyLocation,jdbcType=VARCHAR}, 
+      #{companySummary,jdbcType=VARCHAR}, #{companyCharacteristics,jdbcType=VARCHAR}, 
+      #{createTime,jdbcType=TIMESTAMP}, #{auditTime,jdbcType=TIMESTAMP}, #{channel,jdbcType=VARCHAR}, 
+      #{email,jdbcType=VARCHAR}, #{note,jdbcType=VARCHAR}, #{legalPersonPathFront,jdbcType=VARCHAR}, 
+      #{legalPersonPathBack,jdbcType=VARCHAR}, #{companyLogoPath,jdbcType=VARCHAR}, #{creditCollectionPath,jdbcType=VARCHAR}, 
+      #{count,jdbcType=INTEGER}, #{applyUserId,jdbcType=VARCHAR}, #{updateTime,jdbcType=TIMESTAMP}, 
+      #{currentType,jdbcType=BIT}, #{applyType,jdbcType=BIT}, #{applyStatus,jdbcType=BIT}, 
+      #{paCompanyId,jdbcType=VARCHAR}, #{stickScale,jdbcType=VARCHAR}, #{stickCreateTime,jdbcType=TIMESTAMP}, 
+      #{ifAuthorization,jdbcType=VARCHAR}, #{isShowInFront,jdbcType=BIT})
+  </insert>
+  <insert id="insertSelective" parameterType="com.example.model.UserCompany">
+    insert into user_company
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="companyId != null">
+        companyId,
+      </if>
+      <if test="number != null">
+        number,
+      </if>
+      <if test="organizationCode != null">
+        organizationCode,
+      </if>
+      <if test="certificateType != null">
+        certificateType,
+      </if>
+      <if test="companyName != null">
+        companyName,
+      </if>
+      <if test="industry != null">
+        industry,
+      </if>
+      <if test="scale != null">
+        scale,
+      </if>
+      <if test="concepts != null">
+        concepts,
+      </if>
+      <if test="legalPersonName != null">
+        legalPersonName,
+      </if>
+      <if test="legalPersonIdentityNo != null">
+        legalPersonIdentityNo,
+      </if>
+      <if test="legalPersonPhoneNo != null">
+        legalPersonPhoneNo,
+      </if>
+      <if test="ifJointStockExchangeCenter != null">
+        ifJointStockExchangeCenter,
+      </if>
+      <if test="companyContractUserPhoneNo != null">
+        companyContractUserPhoneNo,
+      </if>
+      <if test="companyContractUserName != null">
+        companyContractUserName,
+      </if>
+      <if test="businessPath != null">
+        businessPath,
+      </if>
+      <if test="companyAuthorizationPath != null">
+        companyAuthorizationPath,
+      </if>
+      <if test="province != null">
+        province,
+      </if>
+      <if test="city != null">
+        city,
+      </if>
+      <if test="county != null">
+        county,
+      </if>
+      <if test="town != null">
+        town,
+      </if>
+      <if test="companyLocation != null">
+        companyLocation,
+      </if>
+      <if test="companySummary != null">
+        companySummary,
+      </if>
+      <if test="companyCharacteristics != null">
+        companyCharacteristics,
+      </if>
+      <if test="createTime != null">
+        createTime,
+      </if>
+      <if test="auditTime != null">
+        auditTime,
+      </if>
+      <if test="channel != null">
+        channel,
+      </if>
+      <if test="email != null">
+        email,
+      </if>
+      <if test="note != null">
+        note,
+      </if>
+      <if test="legalPersonPathFront != null">
+        legalPersonPathFront,
+      </if>
+      <if test="legalPersonPathBack != null">
+        legalPersonPathBack,
+      </if>
+      <if test="companyLogoPath != null">
+        companyLogoPath,
+      </if>
+      <if test="creditCollectionPath != null">
+        creditCollectionPath,
+      </if>
+      <if test="count != null">
+        count,
+      </if>
+      <if test="applyUserId != null">
+        applyUserId,
+      </if>
+      <if test="updateTime != null">
+        updateTime,
+      </if>
+      <if test="currentType != null">
+        currentType,
+      </if>
+      <if test="applyType != null">
+        applyType,
+      </if>
+      <if test="applyStatus != null">
+        applyStatus,
+      </if>
+      <if test="paCompanyId != null">
+        paCompanyId,
+      </if>
+      <if test="stickScale != null">
+        stickScale,
+      </if>
+      <if test="stickCreateTime != null">
+        stickCreateTime,
+      </if>
+      <if test="ifAuthorization != null">
+        ifAuthorization,
+      </if>
+      <if test="isShowInFront != null">
+        isShowInFront,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="companyId != null">
+        #{companyId,jdbcType=VARCHAR},
+      </if>
+      <if test="number != null">
+        #{number,jdbcType=VARCHAR},
+      </if>
+      <if test="organizationCode != null">
+        #{organizationCode,jdbcType=VARCHAR},
+      </if>
+      <if test="certificateType != null">
+        #{certificateType,jdbcType=VARCHAR},
+      </if>
+      <if test="companyName != null">
+        #{companyName,jdbcType=VARCHAR},
+      </if>
+      <if test="industry != null">
+        #{industry,jdbcType=VARCHAR},
+      </if>
+      <if test="scale != null">
+        #{scale,jdbcType=VARCHAR},
+      </if>
+      <if test="concepts != null">
+        #{concepts,jdbcType=VARCHAR},
+      </if>
+      <if test="legalPersonName != null">
+        #{legalPersonName,jdbcType=VARCHAR},
+      </if>
+      <if test="legalPersonIdentityNo != null">
+        #{legalPersonIdentityNo,jdbcType=VARCHAR},
+      </if>
+      <if test="legalPersonPhoneNo != null">
+        #{legalPersonPhoneNo,jdbcType=VARCHAR},
+      </if>
+      <if test="ifJointStockExchangeCenter != null">
+        #{ifJointStockExchangeCenter,jdbcType=VARCHAR},
+      </if>
+      <if test="companyContractUserPhoneNo != null">
+        #{companyContractUserPhoneNo,jdbcType=VARCHAR},
+      </if>
+      <if test="companyContractUserName != null">
+        #{companyContractUserName,jdbcType=VARCHAR},
+      </if>
+      <if test="businessPath != null">
+        #{businessPath,jdbcType=VARCHAR},
+      </if>
+      <if test="companyAuthorizationPath != null">
+        #{companyAuthorizationPath,jdbcType=VARCHAR},
+      </if>
+      <if test="province != null">
+        #{province,jdbcType=VARCHAR},
+      </if>
+      <if test="city != null">
+        #{city,jdbcType=VARCHAR},
+      </if>
+      <if test="county != null">
+        #{county,jdbcType=VARCHAR},
+      </if>
+      <if test="town != null">
+        #{town,jdbcType=VARCHAR},
+      </if>
+      <if test="companyLocation != null">
+        #{companyLocation,jdbcType=VARCHAR},
+      </if>
+      <if test="companySummary != null">
+        #{companySummary,jdbcType=VARCHAR},
+      </if>
+      <if test="companyCharacteristics != null">
+        #{companyCharacteristics,jdbcType=VARCHAR},
+      </if>
+      <if test="createTime != null">
+        #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="auditTime != null">
+        #{auditTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="channel != null">
+        #{channel,jdbcType=VARCHAR},
+      </if>
+      <if test="email != null">
+        #{email,jdbcType=VARCHAR},
+      </if>
+      <if test="note != null">
+        #{note,jdbcType=VARCHAR},
+      </if>
+      <if test="legalPersonPathFront != null">
+        #{legalPersonPathFront,jdbcType=VARCHAR},
+      </if>
+      <if test="legalPersonPathBack != null">
+        #{legalPersonPathBack,jdbcType=VARCHAR},
+      </if>
+      <if test="companyLogoPath != null">
+        #{companyLogoPath,jdbcType=VARCHAR},
+      </if>
+      <if test="creditCollectionPath != null">
+        #{creditCollectionPath,jdbcType=VARCHAR},
+      </if>
+      <if test="count != null">
+        #{count,jdbcType=INTEGER},
+      </if>
+      <if test="applyUserId != null">
+        #{applyUserId,jdbcType=VARCHAR},
+      </if>
+      <if test="updateTime != null">
+        #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="currentType != null">
+        #{currentType,jdbcType=BIT},
+      </if>
+      <if test="applyType != null">
+        #{applyType,jdbcType=BIT},
+      </if>
+      <if test="applyStatus != null">
+        #{applyStatus,jdbcType=BIT},
+      </if>
+      <if test="paCompanyId != null">
+        #{paCompanyId,jdbcType=VARCHAR},
+      </if>
+      <if test="stickScale != null">
+        #{stickScale,jdbcType=VARCHAR},
+      </if>
+      <if test="stickCreateTime != null">
+        #{stickCreateTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="ifAuthorization != null">
+        #{ifAuthorization,jdbcType=VARCHAR},
+      </if>
+      <if test="isShowInFront != null">
+        #{isShowInFront,jdbcType=BIT},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.example.model.UserCompany">
+    update user_company
+    <set>
+      <if test="number != null">
+        number = #{number,jdbcType=VARCHAR},
+      </if>
+      <if test="organizationCode != null">
+        organizationCode = #{organizationCode,jdbcType=VARCHAR},
+      </if>
+      <if test="certificateType != null">
+        certificateType = #{certificateType,jdbcType=VARCHAR},
+      </if>
+      <if test="companyName != null">
+        companyName = #{companyName,jdbcType=VARCHAR},
+      </if>
+      <if test="industry != null">
+        industry = #{industry,jdbcType=VARCHAR},
+      </if>
+      <if test="scale != null">
+        scale = #{scale,jdbcType=VARCHAR},
+      </if>
+      <if test="concepts != null">
+        concepts = #{concepts,jdbcType=VARCHAR},
+      </if>
+      <if test="legalPersonName != null">
+        legalPersonName = #{legalPersonName,jdbcType=VARCHAR},
+      </if>
+      <if test="legalPersonIdentityNo != null">
+        legalPersonIdentityNo = #{legalPersonIdentityNo,jdbcType=VARCHAR},
+      </if>
+      <if test="legalPersonPhoneNo != null">
+        legalPersonPhoneNo = #{legalPersonPhoneNo,jdbcType=VARCHAR},
+      </if>
+      <if test="ifJointStockExchangeCenter != null">
+        ifJointStockExchangeCenter = #{ifJointStockExchangeCenter,jdbcType=VARCHAR},
+      </if>
+      <if test="companyContractUserPhoneNo != null">
+        companyContractUserPhoneNo = #{companyContractUserPhoneNo,jdbcType=VARCHAR},
+      </if>
+      <if test="companyContractUserName != null">
+        companyContractUserName = #{companyContractUserName,jdbcType=VARCHAR},
+      </if>
+      <if test="businessPath != null">
+        businessPath = #{businessPath,jdbcType=VARCHAR},
+      </if>
+      <if test="companyAuthorizationPath != null">
+        companyAuthorizationPath = #{companyAuthorizationPath,jdbcType=VARCHAR},
+      </if>
+      <if test="province != null">
+        province = #{province,jdbcType=VARCHAR},
+      </if>
+      <if test="city != null">
+        city = #{city,jdbcType=VARCHAR},
+      </if>
+      <if test="county != null">
+        county = #{county,jdbcType=VARCHAR},
+      </if>
+      <if test="town != null">
+        town = #{town,jdbcType=VARCHAR},
+      </if>
+      <if test="companyLocation != null">
+        companyLocation = #{companyLocation,jdbcType=VARCHAR},
+      </if>
+      <if test="companySummary != null">
+        companySummary = #{companySummary,jdbcType=VARCHAR},
+      </if>
+      <if test="companyCharacteristics != null">
+        companyCharacteristics = #{companyCharacteristics,jdbcType=VARCHAR},
+      </if>
+      <if test="createTime != null">
+        createTime = #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="auditTime != null">
+        auditTime = #{auditTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="channel != null">
+        channel = #{channel,jdbcType=VARCHAR},
+      </if>
+      <if test="email != null">
+        email = #{email,jdbcType=VARCHAR},
+      </if>
+      <if test="note != null">
+        note = #{note,jdbcType=VARCHAR},
+      </if>
+      <if test="legalPersonPathFront != null">
+        legalPersonPathFront = #{legalPersonPathFront,jdbcType=VARCHAR},
+      </if>
+      <if test="legalPersonPathBack != null">
+        legalPersonPathBack = #{legalPersonPathBack,jdbcType=VARCHAR},
+      </if>
+      <if test="companyLogoPath != null">
+        companyLogoPath = #{companyLogoPath,jdbcType=VARCHAR},
+      </if>
+      <if test="creditCollectionPath != null">
+        creditCollectionPath = #{creditCollectionPath,jdbcType=VARCHAR},
+      </if>
+      <if test="count != null">
+        count = #{count,jdbcType=INTEGER},
+      </if>
+      <if test="applyUserId != null">
+        applyUserId = #{applyUserId,jdbcType=VARCHAR},
+      </if>
+      <if test="updateTime != null">
+        updateTime = #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="currentType != null">
+        currentType = #{currentType,jdbcType=BIT},
+      </if>
+      <if test="applyType != null">
+        applyType = #{applyType,jdbcType=BIT},
+      </if>
+      <if test="applyStatus != null">
+        applyStatus = #{applyStatus,jdbcType=BIT},
+      </if>
+      <if test="paCompanyId != null">
+        paCompanyId = #{paCompanyId,jdbcType=VARCHAR},
+      </if>
+      <if test="stickScale != null">
+        stickScale = #{stickScale,jdbcType=VARCHAR},
+      </if>
+      <if test="stickCreateTime != null">
+        stickCreateTime = #{stickCreateTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="ifAuthorization != null">
+        ifAuthorization = #{ifAuthorization,jdbcType=VARCHAR},
+      </if>
+      <if test="isShowInFront != null">
+        isShowInFront = #{isShowInFront,jdbcType=BIT},
+      </if>
+    </set>
+    where companyId = #{companyId,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.example.model.UserCompany">
+    update user_company
+    set number = #{number,jdbcType=VARCHAR},
+      organizationCode = #{organizationCode,jdbcType=VARCHAR},
+      certificateType = #{certificateType,jdbcType=VARCHAR},
+      companyName = #{companyName,jdbcType=VARCHAR},
+      industry = #{industry,jdbcType=VARCHAR},
+      scale = #{scale,jdbcType=VARCHAR},
+      concepts = #{concepts,jdbcType=VARCHAR},
+      legalPersonName = #{legalPersonName,jdbcType=VARCHAR},
+      legalPersonIdentityNo = #{legalPersonIdentityNo,jdbcType=VARCHAR},
+      legalPersonPhoneNo = #{legalPersonPhoneNo,jdbcType=VARCHAR},
+      ifJointStockExchangeCenter = #{ifJointStockExchangeCenter,jdbcType=VARCHAR},
+      companyContractUserPhoneNo = #{companyContractUserPhoneNo,jdbcType=VARCHAR},
+      companyContractUserName = #{companyContractUserName,jdbcType=VARCHAR},
+      businessPath = #{businessPath,jdbcType=VARCHAR},
+      companyAuthorizationPath = #{companyAuthorizationPath,jdbcType=VARCHAR},
+      province = #{province,jdbcType=VARCHAR},
+      city = #{city,jdbcType=VARCHAR},
+      county = #{county,jdbcType=VARCHAR},
+      town = #{town,jdbcType=VARCHAR},
+      companyLocation = #{companyLocation,jdbcType=VARCHAR},
+      companySummary = #{companySummary,jdbcType=VARCHAR},
+      companyCharacteristics = #{companyCharacteristics,jdbcType=VARCHAR},
+      createTime = #{createTime,jdbcType=TIMESTAMP},
+      auditTime = #{auditTime,jdbcType=TIMESTAMP},
+      channel = #{channel,jdbcType=VARCHAR},
+      email = #{email,jdbcType=VARCHAR},
+      note = #{note,jdbcType=VARCHAR},
+      legalPersonPathFront = #{legalPersonPathFront,jdbcType=VARCHAR},
+      legalPersonPathBack = #{legalPersonPathBack,jdbcType=VARCHAR},
+      companyLogoPath = #{companyLogoPath,jdbcType=VARCHAR},
+      creditCollectionPath = #{creditCollectionPath,jdbcType=VARCHAR},
+      count = #{count,jdbcType=INTEGER},
+      applyUserId = #{applyUserId,jdbcType=VARCHAR},
+      updateTime = #{updateTime,jdbcType=TIMESTAMP},
+      currentType = #{currentType,jdbcType=BIT},
+      applyType = #{applyType,jdbcType=BIT},
+      applyStatus = #{applyStatus,jdbcType=BIT},
+      paCompanyId = #{paCompanyId,jdbcType=VARCHAR},
+      stickScale = #{stickScale,jdbcType=VARCHAR},
+      stickCreateTime = #{stickCreateTime,jdbcType=TIMESTAMP},
+      ifAuthorization = #{ifAuthorization,jdbcType=VARCHAR},
+      isShowInFront = #{isShowInFront,jdbcType=BIT}
+    where companyId = #{companyId,jdbcType=VARCHAR}
+  </update>
+  <resultMap id="BaseResultMap" type="com.example.model.UserCompany">
+    <constructor>
+      <idArg column="companyId" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="number" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="organizationCode" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="certificateType" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="companyName" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="industry" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="scale" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="concepts" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="legalPersonName" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="legalPersonIdentityNo" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="legalPersonPhoneNo" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="ifJointStockExchangeCenter" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="companyContractUserPhoneNo" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="companyContractUserName" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="businessPath" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="companyAuthorizationPath" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="province" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="city" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="county" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="town" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="companyLocation" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="companySummary" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="companyCharacteristics" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="createTime" javaType="java.util.Date" jdbcType="TIMESTAMP" />
+      <arg column="auditTime" javaType="java.util.Date" jdbcType="TIMESTAMP" />
+      <arg column="channel" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="email" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="note" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="legalPersonPathFront" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="legalPersonPathBack" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="companyLogoPath" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="creditCollectionPath" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="count" javaType="java.lang.Integer" jdbcType="INTEGER" />
+      <arg column="applyUserId" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="updateTime" javaType="java.util.Date" jdbcType="TIMESTAMP" />
+      <arg column="currentType" javaType="java.lang.Boolean" jdbcType="BIT" />
+      <arg column="applyType" javaType="java.lang.Boolean" jdbcType="BIT" />
+      <arg column="applyStatus" javaType="java.lang.Boolean" jdbcType="BIT" />
+      <arg column="paCompanyId" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="stickScale" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="stickCreateTime" javaType="java.util.Date" jdbcType="TIMESTAMP" />
+      <arg column="ifAuthorization" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="isShowInFront" javaType="java.lang.Boolean" jdbcType="BIT" />
+    </constructor>
+  </resultMap>
+  <sql id="Base_Column_List">
+    companyId, number, organizationCode, certificateType, companyName, industry, scale, 
+    concepts, legalPersonName, legalPersonIdentityNo, legalPersonPhoneNo, ifJointStockExchangeCenter, 
+    companyContractUserPhoneNo, companyContractUserName, businessPath, companyAuthorizationPath, 
+    province, city, county, town, companyLocation, companySummary, companyCharacteristics, 
+    createTime, auditTime, channel, email, note, legalPersonPathFront, legalPersonPathBack, 
+    companyLogoPath, creditCollectionPath, count, applyUserId, updateTime, currentType, 
+    applyType, applyStatus, paCompanyId, stickScale, stickCreateTime, ifAuthorization, 
+    isShowInFront
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from user_company
+    where companyId = #{companyId,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    delete from user_company
+    where companyId = #{companyId,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="com.example.model.UserCompany">
+    insert into user_company (companyId, number, organizationCode, 
+      certificateType, companyName, industry, 
+      scale, concepts, legalPersonName, 
+      legalPersonIdentityNo, legalPersonPhoneNo, 
+      ifJointStockExchangeCenter, companyContractUserPhoneNo, 
+      companyContractUserName, businessPath, 
+      companyAuthorizationPath, province, city, 
+      county, town, companyLocation, 
+      companySummary, companyCharacteristics, 
+      createTime, auditTime, channel, 
+      email, note, legalPersonPathFront, 
+      legalPersonPathBack, companyLogoPath, creditCollectionPath, 
+      count, applyUserId, updateTime, 
+      currentType, applyType, applyStatus, 
+      paCompanyId, stickScale, stickCreateTime, 
+      ifAuthorization, isShowInFront)
+    values (#{companyId,jdbcType=VARCHAR}, #{number,jdbcType=VARCHAR}, #{organizationCode,jdbcType=VARCHAR}, 
+      #{certificateType,jdbcType=VARCHAR}, #{companyName,jdbcType=VARCHAR}, #{industry,jdbcType=VARCHAR}, 
+      #{scale,jdbcType=VARCHAR}, #{concepts,jdbcType=VARCHAR}, #{legalPersonName,jdbcType=VARCHAR}, 
+      #{legalPersonIdentityNo,jdbcType=VARCHAR}, #{legalPersonPhoneNo,jdbcType=VARCHAR}, 
+      #{ifJointStockExchangeCenter,jdbcType=VARCHAR}, #{companyContractUserPhoneNo,jdbcType=VARCHAR}, 
+      #{companyContractUserName,jdbcType=VARCHAR}, #{businessPath,jdbcType=VARCHAR}, 
+      #{companyAuthorizationPath,jdbcType=VARCHAR}, #{province,jdbcType=VARCHAR}, #{city,jdbcType=VARCHAR}, 
+      #{county,jdbcType=VARCHAR}, #{town,jdbcType=VARCHAR}, #{companyLocation,jdbcType=VARCHAR}, 
+      #{companySummary,jdbcType=VARCHAR}, #{companyCharacteristics,jdbcType=VARCHAR}, 
+      #{createTime,jdbcType=TIMESTAMP}, #{auditTime,jdbcType=TIMESTAMP}, #{channel,jdbcType=VARCHAR}, 
+      #{email,jdbcType=VARCHAR}, #{note,jdbcType=VARCHAR}, #{legalPersonPathFront,jdbcType=VARCHAR}, 
+      #{legalPersonPathBack,jdbcType=VARCHAR}, #{companyLogoPath,jdbcType=VARCHAR}, #{creditCollectionPath,jdbcType=VARCHAR}, 
+      #{count,jdbcType=INTEGER}, #{applyUserId,jdbcType=VARCHAR}, #{updateTime,jdbcType=TIMESTAMP}, 
+      #{currentType,jdbcType=BIT}, #{applyType,jdbcType=BIT}, #{applyStatus,jdbcType=BIT}, 
+      #{paCompanyId,jdbcType=VARCHAR}, #{stickScale,jdbcType=VARCHAR}, #{stickCreateTime,jdbcType=TIMESTAMP}, 
+      #{ifAuthorization,jdbcType=VARCHAR}, #{isShowInFront,jdbcType=BIT})
+  </insert>
+  <insert id="insertSelective" parameterType="com.example.model.UserCompany">
+    insert into user_company
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="companyId != null">
+        companyId,
+      </if>
+      <if test="number != null">
+        number,
+      </if>
+      <if test="organizationCode != null">
+        organizationCode,
+      </if>
+      <if test="certificateType != null">
+        certificateType,
+      </if>
+      <if test="companyName != null">
+        companyName,
+      </if>
+      <if test="industry != null">
+        industry,
+      </if>
+      <if test="scale != null">
+        scale,
+      </if>
+      <if test="concepts != null">
+        concepts,
+      </if>
+      <if test="legalPersonName != null">
+        legalPersonName,
+      </if>
+      <if test="legalPersonIdentityNo != null">
+        legalPersonIdentityNo,
+      </if>
+      <if test="legalPersonPhoneNo != null">
+        legalPersonPhoneNo,
+      </if>
+      <if test="ifJointStockExchangeCenter != null">
+        ifJointStockExchangeCenter,
+      </if>
+      <if test="companyContractUserPhoneNo != null">
+        companyContractUserPhoneNo,
+      </if>
+      <if test="companyContractUserName != null">
+        companyContractUserName,
+      </if>
+      <if test="businessPath != null">
+        businessPath,
+      </if>
+      <if test="companyAuthorizationPath != null">
+        companyAuthorizationPath,
+      </if>
+      <if test="province != null">
+        province,
+      </if>
+      <if test="city != null">
+        city,
+      </if>
+      <if test="county != null">
+        county,
+      </if>
+      <if test="town != null">
+        town,
+      </if>
+      <if test="companyLocation != null">
+        companyLocation,
+      </if>
+      <if test="companySummary != null">
+        companySummary,
+      </if>
+      <if test="companyCharacteristics != null">
+        companyCharacteristics,
+      </if>
+      <if test="createTime != null">
+        createTime,
+      </if>
+      <if test="auditTime != null">
+        auditTime,
+      </if>
+      <if test="channel != null">
+        channel,
+      </if>
+      <if test="email != null">
+        email,
+      </if>
+      <if test="note != null">
+        note,
+      </if>
+      <if test="legalPersonPathFront != null">
+        legalPersonPathFront,
+      </if>
+      <if test="legalPersonPathBack != null">
+        legalPersonPathBack,
+      </if>
+      <if test="companyLogoPath != null">
+        companyLogoPath,
+      </if>
+      <if test="creditCollectionPath != null">
+        creditCollectionPath,
+      </if>
+      <if test="count != null">
+        count,
+      </if>
+      <if test="applyUserId != null">
+        applyUserId,
+      </if>
+      <if test="updateTime != null">
+        updateTime,
+      </if>
+      <if test="currentType != null">
+        currentType,
+      </if>
+      <if test="applyType != null">
+        applyType,
+      </if>
+      <if test="applyStatus != null">
+        applyStatus,
+      </if>
+      <if test="paCompanyId != null">
+        paCompanyId,
+      </if>
+      <if test="stickScale != null">
+        stickScale,
+      </if>
+      <if test="stickCreateTime != null">
+        stickCreateTime,
+      </if>
+      <if test="ifAuthorization != null">
+        ifAuthorization,
+      </if>
+      <if test="isShowInFront != null">
+        isShowInFront,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="companyId != null">
+        #{companyId,jdbcType=VARCHAR},
+      </if>
+      <if test="number != null">
+        #{number,jdbcType=VARCHAR},
+      </if>
+      <if test="organizationCode != null">
+        #{organizationCode,jdbcType=VARCHAR},
+      </if>
+      <if test="certificateType != null">
+        #{certificateType,jdbcType=VARCHAR},
+      </if>
+      <if test="companyName != null">
+        #{companyName,jdbcType=VARCHAR},
+      </if>
+      <if test="industry != null">
+        #{industry,jdbcType=VARCHAR},
+      </if>
+      <if test="scale != null">
+        #{scale,jdbcType=VARCHAR},
+      </if>
+      <if test="concepts != null">
+        #{concepts,jdbcType=VARCHAR},
+      </if>
+      <if test="legalPersonName != null">
+        #{legalPersonName,jdbcType=VARCHAR},
+      </if>
+      <if test="legalPersonIdentityNo != null">
+        #{legalPersonIdentityNo,jdbcType=VARCHAR},
+      </if>
+      <if test="legalPersonPhoneNo != null">
+        #{legalPersonPhoneNo,jdbcType=VARCHAR},
+      </if>
+      <if test="ifJointStockExchangeCenter != null">
+        #{ifJointStockExchangeCenter,jdbcType=VARCHAR},
+      </if>
+      <if test="companyContractUserPhoneNo != null">
+        #{companyContractUserPhoneNo,jdbcType=VARCHAR},
+      </if>
+      <if test="companyContractUserName != null">
+        #{companyContractUserName,jdbcType=VARCHAR},
+      </if>
+      <if test="businessPath != null">
+        #{businessPath,jdbcType=VARCHAR},
+      </if>
+      <if test="companyAuthorizationPath != null">
+        #{companyAuthorizationPath,jdbcType=VARCHAR},
+      </if>
+      <if test="province != null">
+        #{province,jdbcType=VARCHAR},
+      </if>
+      <if test="city != null">
+        #{city,jdbcType=VARCHAR},
+      </if>
+      <if test="county != null">
+        #{county,jdbcType=VARCHAR},
+      </if>
+      <if test="town != null">
+        #{town,jdbcType=VARCHAR},
+      </if>
+      <if test="companyLocation != null">
+        #{companyLocation,jdbcType=VARCHAR},
+      </if>
+      <if test="companySummary != null">
+        #{companySummary,jdbcType=VARCHAR},
+      </if>
+      <if test="companyCharacteristics != null">
+        #{companyCharacteristics,jdbcType=VARCHAR},
+      </if>
+      <if test="createTime != null">
+        #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="auditTime != null">
+        #{auditTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="channel != null">
+        #{channel,jdbcType=VARCHAR},
+      </if>
+      <if test="email != null">
+        #{email,jdbcType=VARCHAR},
+      </if>
+      <if test="note != null">
+        #{note,jdbcType=VARCHAR},
+      </if>
+      <if test="legalPersonPathFront != null">
+        #{legalPersonPathFront,jdbcType=VARCHAR},
+      </if>
+      <if test="legalPersonPathBack != null">
+        #{legalPersonPathBack,jdbcType=VARCHAR},
+      </if>
+      <if test="companyLogoPath != null">
+        #{companyLogoPath,jdbcType=VARCHAR},
+      </if>
+      <if test="creditCollectionPath != null">
+        #{creditCollectionPath,jdbcType=VARCHAR},
+      </if>
+      <if test="count != null">
+        #{count,jdbcType=INTEGER},
+      </if>
+      <if test="applyUserId != null">
+        #{applyUserId,jdbcType=VARCHAR},
+      </if>
+      <if test="updateTime != null">
+        #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="currentType != null">
+        #{currentType,jdbcType=BIT},
+      </if>
+      <if test="applyType != null">
+        #{applyType,jdbcType=BIT},
+      </if>
+      <if test="applyStatus != null">
+        #{applyStatus,jdbcType=BIT},
+      </if>
+      <if test="paCompanyId != null">
+        #{paCompanyId,jdbcType=VARCHAR},
+      </if>
+      <if test="stickScale != null">
+        #{stickScale,jdbcType=VARCHAR},
+      </if>
+      <if test="stickCreateTime != null">
+        #{stickCreateTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="ifAuthorization != null">
+        #{ifAuthorization,jdbcType=VARCHAR},
+      </if>
+      <if test="isShowInFront != null">
+        #{isShowInFront,jdbcType=BIT},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.example.model.UserCompany">
+    update user_company
+    <set>
+      <if test="number != null">
+        number = #{number,jdbcType=VARCHAR},
+      </if>
+      <if test="organizationCode != null">
+        organizationCode = #{organizationCode,jdbcType=VARCHAR},
+      </if>
+      <if test="certificateType != null">
+        certificateType = #{certificateType,jdbcType=VARCHAR},
+      </if>
+      <if test="companyName != null">
+        companyName = #{companyName,jdbcType=VARCHAR},
+      </if>
+      <if test="industry != null">
+        industry = #{industry,jdbcType=VARCHAR},
+      </if>
+      <if test="scale != null">
+        scale = #{scale,jdbcType=VARCHAR},
+      </if>
+      <if test="concepts != null">
+        concepts = #{concepts,jdbcType=VARCHAR},
+      </if>
+      <if test="legalPersonName != null">
+        legalPersonName = #{legalPersonName,jdbcType=VARCHAR},
+      </if>
+      <if test="legalPersonIdentityNo != null">
+        legalPersonIdentityNo = #{legalPersonIdentityNo,jdbcType=VARCHAR},
+      </if>
+      <if test="legalPersonPhoneNo != null">
+        legalPersonPhoneNo = #{legalPersonPhoneNo,jdbcType=VARCHAR},
+      </if>
+      <if test="ifJointStockExchangeCenter != null">
+        ifJointStockExchangeCenter = #{ifJointStockExchangeCenter,jdbcType=VARCHAR},
+      </if>
+      <if test="companyContractUserPhoneNo != null">
+        companyContractUserPhoneNo = #{companyContractUserPhoneNo,jdbcType=VARCHAR},
+      </if>
+      <if test="companyContractUserName != null">
+        companyContractUserName = #{companyContractUserName,jdbcType=VARCHAR},
+      </if>
+      <if test="businessPath != null">
+        businessPath = #{businessPath,jdbcType=VARCHAR},
+      </if>
+      <if test="companyAuthorizationPath != null">
+        companyAuthorizationPath = #{companyAuthorizationPath,jdbcType=VARCHAR},
+      </if>
+      <if test="province != null">
+        province = #{province,jdbcType=VARCHAR},
+      </if>
+      <if test="city != null">
+        city = #{city,jdbcType=VARCHAR},
+      </if>
+      <if test="county != null">
+        county = #{county,jdbcType=VARCHAR},
+      </if>
+      <if test="town != null">
+        town = #{town,jdbcType=VARCHAR},
+      </if>
+      <if test="companyLocation != null">
+        companyLocation = #{companyLocation,jdbcType=VARCHAR},
+      </if>
+      <if test="companySummary != null">
+        companySummary = #{companySummary,jdbcType=VARCHAR},
+      </if>
+      <if test="companyCharacteristics != null">
+        companyCharacteristics = #{companyCharacteristics,jdbcType=VARCHAR},
+      </if>
+      <if test="createTime != null">
+        createTime = #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="auditTime != null">
+        auditTime = #{auditTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="channel != null">
+        channel = #{channel,jdbcType=VARCHAR},
+      </if>
+      <if test="email != null">
+        email = #{email,jdbcType=VARCHAR},
+      </if>
+      <if test="note != null">
+        note = #{note,jdbcType=VARCHAR},
+      </if>
+      <if test="legalPersonPathFront != null">
+        legalPersonPathFront = #{legalPersonPathFront,jdbcType=VARCHAR},
+      </if>
+      <if test="legalPersonPathBack != null">
+        legalPersonPathBack = #{legalPersonPathBack,jdbcType=VARCHAR},
+      </if>
+      <if test="companyLogoPath != null">
+        companyLogoPath = #{companyLogoPath,jdbcType=VARCHAR},
+      </if>
+      <if test="creditCollectionPath != null">
+        creditCollectionPath = #{creditCollectionPath,jdbcType=VARCHAR},
+      </if>
+      <if test="count != null">
+        count = #{count,jdbcType=INTEGER},
+      </if>
+      <if test="applyUserId != null">
+        applyUserId = #{applyUserId,jdbcType=VARCHAR},
+      </if>
+      <if test="updateTime != null">
+        updateTime = #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="currentType != null">
+        currentType = #{currentType,jdbcType=BIT},
+      </if>
+      <if test="applyType != null">
+        applyType = #{applyType,jdbcType=BIT},
+      </if>
+      <if test="applyStatus != null">
+        applyStatus = #{applyStatus,jdbcType=BIT},
+      </if>
+      <if test="paCompanyId != null">
+        paCompanyId = #{paCompanyId,jdbcType=VARCHAR},
+      </if>
+      <if test="stickScale != null">
+        stickScale = #{stickScale,jdbcType=VARCHAR},
+      </if>
+      <if test="stickCreateTime != null">
+        stickCreateTime = #{stickCreateTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="ifAuthorization != null">
+        ifAuthorization = #{ifAuthorization,jdbcType=VARCHAR},
+      </if>
+      <if test="isShowInFront != null">
+        isShowInFront = #{isShowInFront,jdbcType=BIT},
+      </if>
+    </set>
+    where companyId = #{companyId,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.example.model.UserCompany">
+    update user_company
+    set number = #{number,jdbcType=VARCHAR},
+      organizationCode = #{organizationCode,jdbcType=VARCHAR},
+      certificateType = #{certificateType,jdbcType=VARCHAR},
+      companyName = #{companyName,jdbcType=VARCHAR},
+      industry = #{industry,jdbcType=VARCHAR},
+      scale = #{scale,jdbcType=VARCHAR},
+      concepts = #{concepts,jdbcType=VARCHAR},
+      legalPersonName = #{legalPersonName,jdbcType=VARCHAR},
+      legalPersonIdentityNo = #{legalPersonIdentityNo,jdbcType=VARCHAR},
+      legalPersonPhoneNo = #{legalPersonPhoneNo,jdbcType=VARCHAR},
+      ifJointStockExchangeCenter = #{ifJointStockExchangeCenter,jdbcType=VARCHAR},
+      companyContractUserPhoneNo = #{companyContractUserPhoneNo,jdbcType=VARCHAR},
+      companyContractUserName = #{companyContractUserName,jdbcType=VARCHAR},
+      businessPath = #{businessPath,jdbcType=VARCHAR},
+      companyAuthorizationPath = #{companyAuthorizationPath,jdbcType=VARCHAR},
+      province = #{province,jdbcType=VARCHAR},
+      city = #{city,jdbcType=VARCHAR},
+      county = #{county,jdbcType=VARCHAR},
+      town = #{town,jdbcType=VARCHAR},
+      companyLocation = #{companyLocation,jdbcType=VARCHAR},
+      companySummary = #{companySummary,jdbcType=VARCHAR},
+      companyCharacteristics = #{companyCharacteristics,jdbcType=VARCHAR},
+      createTime = #{createTime,jdbcType=TIMESTAMP},
+      auditTime = #{auditTime,jdbcType=TIMESTAMP},
+      channel = #{channel,jdbcType=VARCHAR},
+      email = #{email,jdbcType=VARCHAR},
+      note = #{note,jdbcType=VARCHAR},
+      legalPersonPathFront = #{legalPersonPathFront,jdbcType=VARCHAR},
+      legalPersonPathBack = #{legalPersonPathBack,jdbcType=VARCHAR},
+      companyLogoPath = #{companyLogoPath,jdbcType=VARCHAR},
+      creditCollectionPath = #{creditCollectionPath,jdbcType=VARCHAR},
+      count = #{count,jdbcType=INTEGER},
+      applyUserId = #{applyUserId,jdbcType=VARCHAR},
+      updateTime = #{updateTime,jdbcType=TIMESTAMP},
+      currentType = #{currentType,jdbcType=BIT},
+      applyType = #{applyType,jdbcType=BIT},
+      applyStatus = #{applyStatus,jdbcType=BIT},
+      paCompanyId = #{paCompanyId,jdbcType=VARCHAR},
+      stickScale = #{stickScale,jdbcType=VARCHAR},
+      stickCreateTime = #{stickCreateTime,jdbcType=TIMESTAMP},
+      ifAuthorization = #{ifAuthorization,jdbcType=VARCHAR},
+      isShowInFront = #{isShowInFront,jdbcType=BIT}
+    where companyId = #{companyId,jdbcType=VARCHAR}
+  </update>
+  <resultMap id="BaseResultMap" type="com.example.model.UserCompany">
+    <constructor>
+      <idArg column="companyId" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="number" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="organizationCode" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="certificateType" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="companyName" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="industry" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="scale" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="concepts" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="legalPersonName" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="legalPersonIdentityNo" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="legalPersonPhoneNo" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="ifJointStockExchangeCenter" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="companyContractUserPhoneNo" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="companyContractUserName" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="businessPath" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="companyAuthorizationPath" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="province" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="city" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="county" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="town" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="companyLocation" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="companySummary" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="companyCharacteristics" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="createTime" javaType="java.util.Date" jdbcType="TIMESTAMP" />
+      <arg column="auditTime" javaType="java.util.Date" jdbcType="TIMESTAMP" />
+      <arg column="channel" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="email" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="note" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="legalPersonPathFront" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="legalPersonPathBack" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="companyLogoPath" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="creditCollectionPath" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="count" javaType="java.lang.Integer" jdbcType="INTEGER" />
+      <arg column="applyUserId" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="updateTime" javaType="java.util.Date" jdbcType="TIMESTAMP" />
+      <arg column="currentType" javaType="java.lang.Boolean" jdbcType="BIT" />
+      <arg column="applyType" javaType="java.lang.Boolean" jdbcType="BIT" />
+      <arg column="applyStatus" javaType="java.lang.Boolean" jdbcType="BIT" />
+      <arg column="paCompanyId" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="stickScale" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="stickCreateTime" javaType="java.util.Date" jdbcType="TIMESTAMP" />
+      <arg column="ifAuthorization" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="isShowInFront" javaType="java.lang.Boolean" jdbcType="BIT" />
+    </constructor>
+  </resultMap>
+  <sql id="Base_Column_List">
+    companyId, number, organizationCode, certificateType, companyName, industry, scale, 
+    concepts, legalPersonName, legalPersonIdentityNo, legalPersonPhoneNo, ifJointStockExchangeCenter, 
+    companyContractUserPhoneNo, companyContractUserName, businessPath, companyAuthorizationPath, 
+    province, city, county, town, companyLocation, companySummary, companyCharacteristics, 
+    createTime, auditTime, channel, email, note, legalPersonPathFront, legalPersonPathBack, 
+    companyLogoPath, creditCollectionPath, count, applyUserId, updateTime, currentType, 
+    applyType, applyStatus, paCompanyId, stickScale, stickCreateTime, ifAuthorization, 
+    isShowInFront
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from user_company
+    where companyId = #{companyid,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    delete from user_company
+    where companyId = #{companyid,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="com.example.model.UserCompany">
+    insert into user_company (companyId, number, organizationCode, 
+      certificateType, companyName, industry, 
+      scale, concepts, legalPersonName, 
+      legalPersonIdentityNo, legalPersonPhoneNo, 
+      ifJointStockExchangeCenter, companyContractUserPhoneNo, 
+      companyContractUserName, businessPath, 
+      companyAuthorizationPath, province, city, 
+      county, town, companyLocation, 
+      companySummary, companyCharacteristics, 
+      createTime, auditTime, channel, 
+      email, note, legalPersonPathFront, 
+      legalPersonPathBack, companyLogoPath, creditCollectionPath, 
+      count, applyUserId, updateTime, 
+      currentType, applyType, applyStatus, 
+      paCompanyId, stickScale, stickCreateTime, 
+      ifAuthorization, isShowInFront)
+    values (#{companyid,jdbcType=VARCHAR}, #{number,jdbcType=VARCHAR}, #{organizationcode,jdbcType=VARCHAR}, 
+      #{certificatetype,jdbcType=VARCHAR}, #{companyname,jdbcType=VARCHAR}, #{industry,jdbcType=VARCHAR}, 
+      #{scale,jdbcType=VARCHAR}, #{concepts,jdbcType=VARCHAR}, #{legalpersonname,jdbcType=VARCHAR}, 
+      #{legalpersonidentityno,jdbcType=VARCHAR}, #{legalpersonphoneno,jdbcType=VARCHAR}, 
+      #{ifjointstockexchangecenter,jdbcType=VARCHAR}, #{companycontractuserphoneno,jdbcType=VARCHAR}, 
+      #{companycontractusername,jdbcType=VARCHAR}, #{businesspath,jdbcType=VARCHAR}, 
+      #{companyauthorizationpath,jdbcType=VARCHAR}, #{province,jdbcType=VARCHAR}, #{city,jdbcType=VARCHAR}, 
+      #{county,jdbcType=VARCHAR}, #{town,jdbcType=VARCHAR}, #{companylocation,jdbcType=VARCHAR}, 
+      #{companysummary,jdbcType=VARCHAR}, #{companycharacteristics,jdbcType=VARCHAR}, 
+      #{createtime,jdbcType=TIMESTAMP}, #{audittime,jdbcType=TIMESTAMP}, #{channel,jdbcType=VARCHAR}, 
+      #{email,jdbcType=VARCHAR}, #{note,jdbcType=VARCHAR}, #{legalpersonpathfront,jdbcType=VARCHAR}, 
+      #{legalpersonpathback,jdbcType=VARCHAR}, #{companylogopath,jdbcType=VARCHAR}, #{creditcollectionpath,jdbcType=VARCHAR}, 
+      #{count,jdbcType=INTEGER}, #{applyuserid,jdbcType=VARCHAR}, #{updatetime,jdbcType=TIMESTAMP}, 
+      #{currenttype,jdbcType=BIT}, #{applytype,jdbcType=BIT}, #{applystatus,jdbcType=BIT}, 
+      #{pacompanyid,jdbcType=VARCHAR}, #{stickscale,jdbcType=VARCHAR}, #{stickcreatetime,jdbcType=TIMESTAMP}, 
+      #{ifauthorization,jdbcType=VARCHAR}, #{isshowinfront,jdbcType=BIT})
+  </insert>
+  <insert id="insertSelective" parameterType="com.example.model.UserCompany">
+    insert into user_company
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="companyid != null">
+        companyId,
+      </if>
+      <if test="number != null">
+        number,
+      </if>
+      <if test="organizationcode != null">
+        organizationCode,
+      </if>
+      <if test="certificatetype != null">
+        certificateType,
+      </if>
+      <if test="companyname != null">
+        companyName,
+      </if>
+      <if test="industry != null">
+        industry,
+      </if>
+      <if test="scale != null">
+        scale,
+      </if>
+      <if test="concepts != null">
+        concepts,
+      </if>
+      <if test="legalpersonname != null">
+        legalPersonName,
+      </if>
+      <if test="legalpersonidentityno != null">
+        legalPersonIdentityNo,
+      </if>
+      <if test="legalpersonphoneno != null">
+        legalPersonPhoneNo,
+      </if>
+      <if test="ifjointstockexchangecenter != null">
+        ifJointStockExchangeCenter,
+      </if>
+      <if test="companycontractuserphoneno != null">
+        companyContractUserPhoneNo,
+      </if>
+      <if test="companycontractusername != null">
+        companyContractUserName,
+      </if>
+      <if test="businesspath != null">
+        businessPath,
+      </if>
+      <if test="companyauthorizationpath != null">
+        companyAuthorizationPath,
+      </if>
+      <if test="province != null">
+        province,
+      </if>
+      <if test="city != null">
+        city,
+      </if>
+      <if test="county != null">
+        county,
+      </if>
+      <if test="town != null">
+        town,
+      </if>
+      <if test="companylocation != null">
+        companyLocation,
+      </if>
+      <if test="companysummary != null">
+        companySummary,
+      </if>
+      <if test="companycharacteristics != null">
+        companyCharacteristics,
+      </if>
+      <if test="createtime != null">
+        createTime,
+      </if>
+      <if test="audittime != null">
+        auditTime,
+      </if>
+      <if test="channel != null">
+        channel,
+      </if>
+      <if test="email != null">
+        email,
+      </if>
+      <if test="note != null">
+        note,
+      </if>
+      <if test="legalpersonpathfront != null">
+        legalPersonPathFront,
+      </if>
+      <if test="legalpersonpathback != null">
+        legalPersonPathBack,
+      </if>
+      <if test="companylogopath != null">
+        companyLogoPath,
+      </if>
+      <if test="creditcollectionpath != null">
+        creditCollectionPath,
+      </if>
+      <if test="count != null">
+        count,
+      </if>
+      <if test="applyuserid != null">
+        applyUserId,
+      </if>
+      <if test="updatetime != null">
+        updateTime,
+      </if>
+      <if test="currenttype != null">
+        currentType,
+      </if>
+      <if test="applytype != null">
+        applyType,
+      </if>
+      <if test="applystatus != null">
+        applyStatus,
+      </if>
+      <if test="pacompanyid != null">
+        paCompanyId,
+      </if>
+      <if test="stickscale != null">
+        stickScale,
+      </if>
+      <if test="stickcreatetime != null">
+        stickCreateTime,
+      </if>
+      <if test="ifauthorization != null">
+        ifAuthorization,
+      </if>
+      <if test="isshowinfront != null">
+        isShowInFront,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="companyid != null">
+        #{companyid,jdbcType=VARCHAR},
+      </if>
+      <if test="number != null">
+        #{number,jdbcType=VARCHAR},
+      </if>
+      <if test="organizationcode != null">
+        #{organizationcode,jdbcType=VARCHAR},
+      </if>
+      <if test="certificatetype != null">
+        #{certificatetype,jdbcType=VARCHAR},
+      </if>
+      <if test="companyname != null">
+        #{companyname,jdbcType=VARCHAR},
+      </if>
+      <if test="industry != null">
+        #{industry,jdbcType=VARCHAR},
+      </if>
+      <if test="scale != null">
+        #{scale,jdbcType=VARCHAR},
+      </if>
+      <if test="concepts != null">
+        #{concepts,jdbcType=VARCHAR},
+      </if>
+      <if test="legalpersonname != null">
+        #{legalpersonname,jdbcType=VARCHAR},
+      </if>
+      <if test="legalpersonidentityno != null">
+        #{legalpersonidentityno,jdbcType=VARCHAR},
+      </if>
+      <if test="legalpersonphoneno != null">
+        #{legalpersonphoneno,jdbcType=VARCHAR},
+      </if>
+      <if test="ifjointstockexchangecenter != null">
+        #{ifjointstockexchangecenter,jdbcType=VARCHAR},
+      </if>
+      <if test="companycontractuserphoneno != null">
+        #{companycontractuserphoneno,jdbcType=VARCHAR},
+      </if>
+      <if test="companycontractusername != null">
+        #{companycontractusername,jdbcType=VARCHAR},
+      </if>
+      <if test="businesspath != null">
+        #{businesspath,jdbcType=VARCHAR},
+      </if>
+      <if test="companyauthorizationpath != null">
+        #{companyauthorizationpath,jdbcType=VARCHAR},
+      </if>
+      <if test="province != null">
+        #{province,jdbcType=VARCHAR},
+      </if>
+      <if test="city != null">
+        #{city,jdbcType=VARCHAR},
+      </if>
+      <if test="county != null">
+        #{county,jdbcType=VARCHAR},
+      </if>
+      <if test="town != null">
+        #{town,jdbcType=VARCHAR},
+      </if>
+      <if test="companylocation != null">
+        #{companylocation,jdbcType=VARCHAR},
+      </if>
+      <if test="companysummary != null">
+        #{companysummary,jdbcType=VARCHAR},
+      </if>
+      <if test="companycharacteristics != null">
+        #{companycharacteristics,jdbcType=VARCHAR},
+      </if>
+      <if test="createtime != null">
+        #{createtime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="audittime != null">
+        #{audittime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="channel != null">
+        #{channel,jdbcType=VARCHAR},
+      </if>
+      <if test="email != null">
+        #{email,jdbcType=VARCHAR},
+      </if>
+      <if test="note != null">
+        #{note,jdbcType=VARCHAR},
+      </if>
+      <if test="legalpersonpathfront != null">
+        #{legalpersonpathfront,jdbcType=VARCHAR},
+      </if>
+      <if test="legalpersonpathback != null">
+        #{legalpersonpathback,jdbcType=VARCHAR},
+      </if>
+      <if test="companylogopath != null">
+        #{companylogopath,jdbcType=VARCHAR},
+      </if>
+      <if test="creditcollectionpath != null">
+        #{creditcollectionpath,jdbcType=VARCHAR},
+      </if>
+      <if test="count != null">
+        #{count,jdbcType=INTEGER},
+      </if>
+      <if test="applyuserid != null">
+        #{applyuserid,jdbcType=VARCHAR},
+      </if>
+      <if test="updatetime != null">
+        #{updatetime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="currenttype != null">
+        #{currenttype,jdbcType=BIT},
+      </if>
+      <if test="applytype != null">
+        #{applytype,jdbcType=BIT},
+      </if>
+      <if test="applystatus != null">
+        #{applystatus,jdbcType=BIT},
+      </if>
+      <if test="pacompanyid != null">
+        #{pacompanyid,jdbcType=VARCHAR},
+      </if>
+      <if test="stickscale != null">
+        #{stickscale,jdbcType=VARCHAR},
+      </if>
+      <if test="stickcreatetime != null">
+        #{stickcreatetime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="ifauthorization != null">
+        #{ifauthorization,jdbcType=VARCHAR},
+      </if>
+      <if test="isshowinfront != null">
+        #{isshowinfront,jdbcType=BIT},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.example.model.UserCompany">
+    update user_company
+    <set>
+      <if test="number != null">
+        number = #{number,jdbcType=VARCHAR},
+      </if>
+      <if test="organizationcode != null">
+        organizationCode = #{organizationcode,jdbcType=VARCHAR},
+      </if>
+      <if test="certificatetype != null">
+        certificateType = #{certificatetype,jdbcType=VARCHAR},
+      </if>
+      <if test="companyname != null">
+        companyName = #{companyname,jdbcType=VARCHAR},
+      </if>
+      <if test="industry != null">
+        industry = #{industry,jdbcType=VARCHAR},
+      </if>
+      <if test="scale != null">
+        scale = #{scale,jdbcType=VARCHAR},
+      </if>
+      <if test="concepts != null">
+        concepts = #{concepts,jdbcType=VARCHAR},
+      </if>
+      <if test="legalpersonname != null">
+        legalPersonName = #{legalpersonname,jdbcType=VARCHAR},
+      </if>
+      <if test="legalpersonidentityno != null">
+        legalPersonIdentityNo = #{legalpersonidentityno,jdbcType=VARCHAR},
+      </if>
+      <if test="legalpersonphoneno != null">
+        legalPersonPhoneNo = #{legalpersonphoneno,jdbcType=VARCHAR},
+      </if>
+      <if test="ifjointstockexchangecenter != null">
+        ifJointStockExchangeCenter = #{ifjointstockexchangecenter,jdbcType=VARCHAR},
+      </if>
+      <if test="companycontractuserphoneno != null">
+        companyContractUserPhoneNo = #{companycontractuserphoneno,jdbcType=VARCHAR},
+      </if>
+      <if test="companycontractusername != null">
+        companyContractUserName = #{companycontractusername,jdbcType=VARCHAR},
+      </if>
+      <if test="businesspath != null">
+        businessPath = #{businesspath,jdbcType=VARCHAR},
+      </if>
+      <if test="companyauthorizationpath != null">
+        companyAuthorizationPath = #{companyauthorizationpath,jdbcType=VARCHAR},
+      </if>
+      <if test="province != null">
+        province = #{province,jdbcType=VARCHAR},
+      </if>
+      <if test="city != null">
+        city = #{city,jdbcType=VARCHAR},
+      </if>
+      <if test="county != null">
+        county = #{county,jdbcType=VARCHAR},
+      </if>
+      <if test="town != null">
+        town = #{town,jdbcType=VARCHAR},
+      </if>
+      <if test="companylocation != null">
+        companyLocation = #{companylocation,jdbcType=VARCHAR},
+      </if>
+      <if test="companysummary != null">
+        companySummary = #{companysummary,jdbcType=VARCHAR},
+      </if>
+      <if test="companycharacteristics != null">
+        companyCharacteristics = #{companycharacteristics,jdbcType=VARCHAR},
+      </if>
+      <if test="createtime != null">
+        createTime = #{createtime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="audittime != null">
+        auditTime = #{audittime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="channel != null">
+        channel = #{channel,jdbcType=VARCHAR},
+      </if>
+      <if test="email != null">
+        email = #{email,jdbcType=VARCHAR},
+      </if>
+      <if test="note != null">
+        note = #{note,jdbcType=VARCHAR},
+      </if>
+      <if test="legalpersonpathfront != null">
+        legalPersonPathFront = #{legalpersonpathfront,jdbcType=VARCHAR},
+      </if>
+      <if test="legalpersonpathback != null">
+        legalPersonPathBack = #{legalpersonpathback,jdbcType=VARCHAR},
+      </if>
+      <if test="companylogopath != null">
+        companyLogoPath = #{companylogopath,jdbcType=VARCHAR},
+      </if>
+      <if test="creditcollectionpath != null">
+        creditCollectionPath = #{creditcollectionpath,jdbcType=VARCHAR},
+      </if>
+      <if test="count != null">
+        count = #{count,jdbcType=INTEGER},
+      </if>
+      <if test="applyuserid != null">
+        applyUserId = #{applyuserid,jdbcType=VARCHAR},
+      </if>
+      <if test="updatetime != null">
+        updateTime = #{updatetime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="currenttype != null">
+        currentType = #{currenttype,jdbcType=BIT},
+      </if>
+      <if test="applytype != null">
+        applyType = #{applytype,jdbcType=BIT},
+      </if>
+      <if test="applystatus != null">
+        applyStatus = #{applystatus,jdbcType=BIT},
+      </if>
+      <if test="pacompanyid != null">
+        paCompanyId = #{pacompanyid,jdbcType=VARCHAR},
+      </if>
+      <if test="stickscale != null">
+        stickScale = #{stickscale,jdbcType=VARCHAR},
+      </if>
+      <if test="stickcreatetime != null">
+        stickCreateTime = #{stickcreatetime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="ifauthorization != null">
+        ifAuthorization = #{ifauthorization,jdbcType=VARCHAR},
+      </if>
+      <if test="isshowinfront != null">
+        isShowInFront = #{isshowinfront,jdbcType=BIT},
+      </if>
+    </set>
+    where companyId = #{companyid,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.example.model.UserCompany">
+    update user_company
+    set number = #{number,jdbcType=VARCHAR},
+      organizationCode = #{organizationcode,jdbcType=VARCHAR},
+      certificateType = #{certificatetype,jdbcType=VARCHAR},
+      companyName = #{companyname,jdbcType=VARCHAR},
+      industry = #{industry,jdbcType=VARCHAR},
+      scale = #{scale,jdbcType=VARCHAR},
+      concepts = #{concepts,jdbcType=VARCHAR},
+      legalPersonName = #{legalpersonname,jdbcType=VARCHAR},
+      legalPersonIdentityNo = #{legalpersonidentityno,jdbcType=VARCHAR},
+      legalPersonPhoneNo = #{legalpersonphoneno,jdbcType=VARCHAR},
+      ifJointStockExchangeCenter = #{ifjointstockexchangecenter,jdbcType=VARCHAR},
+      companyContractUserPhoneNo = #{companycontractuserphoneno,jdbcType=VARCHAR},
+      companyContractUserName = #{companycontractusername,jdbcType=VARCHAR},
+      businessPath = #{businesspath,jdbcType=VARCHAR},
+      companyAuthorizationPath = #{companyauthorizationpath,jdbcType=VARCHAR},
+      province = #{province,jdbcType=VARCHAR},
+      city = #{city,jdbcType=VARCHAR},
+      county = #{county,jdbcType=VARCHAR},
+      town = #{town,jdbcType=VARCHAR},
+      companyLocation = #{companylocation,jdbcType=VARCHAR},
+      companySummary = #{companysummary,jdbcType=VARCHAR},
+      companyCharacteristics = #{companycharacteristics,jdbcType=VARCHAR},
+      createTime = #{createtime,jdbcType=TIMESTAMP},
+      auditTime = #{audittime,jdbcType=TIMESTAMP},
+      channel = #{channel,jdbcType=VARCHAR},
+      email = #{email,jdbcType=VARCHAR},
+      note = #{note,jdbcType=VARCHAR},
+      legalPersonPathFront = #{legalpersonpathfront,jdbcType=VARCHAR},
+      legalPersonPathBack = #{legalpersonpathback,jdbcType=VARCHAR},
+      companyLogoPath = #{companylogopath,jdbcType=VARCHAR},
+      creditCollectionPath = #{creditcollectionpath,jdbcType=VARCHAR},
+      count = #{count,jdbcType=INTEGER},
+      applyUserId = #{applyuserid,jdbcType=VARCHAR},
+      updateTime = #{updatetime,jdbcType=TIMESTAMP},
+      currentType = #{currenttype,jdbcType=BIT},
+      applyType = #{applytype,jdbcType=BIT},
+      applyStatus = #{applystatus,jdbcType=BIT},
+      paCompanyId = #{pacompanyid,jdbcType=VARCHAR},
+      stickScale = #{stickscale,jdbcType=VARCHAR},
+      stickCreateTime = #{stickcreatetime,jdbcType=TIMESTAMP},
+      ifAuthorization = #{ifauthorization,jdbcType=VARCHAR},
+      isShowInFront = #{isshowinfront,jdbcType=BIT}
+    where companyId = #{companyid,jdbcType=VARCHAR}
+  </update>
+  <resultMap id="BaseResultMap" type="com.example.model.UserCompany">
+    <constructor>
+      <idArg column="companyId" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="number" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="organizationCode" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="certificateType" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="companyName" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="industry" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="scale" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="concepts" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="legalPersonName" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="legalPersonIdentityNo" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="legalPersonPhoneNo" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="ifJointStockExchangeCenter" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="companyContractUserPhoneNo" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="companyContractUserName" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="businessPath" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="companyAuthorizationPath" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="province" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="city" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="county" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="town" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="companyLocation" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="companySummary" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="companyCharacteristics" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="createTime" javaType="java.util.Date" jdbcType="TIMESTAMP" />
+      <arg column="auditTime" javaType="java.util.Date" jdbcType="TIMESTAMP" />
+      <arg column="channel" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="email" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="note" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="legalPersonPathFront" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="legalPersonPathBack" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="companyLogoPath" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="creditCollectionPath" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="count" javaType="java.lang.Integer" jdbcType="INTEGER" />
+      <arg column="applyUserId" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="updateTime" javaType="java.util.Date" jdbcType="TIMESTAMP" />
+      <arg column="currentType" javaType="java.lang.Boolean" jdbcType="BIT" />
+      <arg column="applyType" javaType="java.lang.Boolean" jdbcType="BIT" />
+      <arg column="applyStatus" javaType="java.lang.Boolean" jdbcType="BIT" />
+      <arg column="paCompanyId" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="stickScale" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="stickCreateTime" javaType="java.util.Date" jdbcType="TIMESTAMP" />
+      <arg column="ifAuthorization" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="isShowInFront" javaType="java.lang.Boolean" jdbcType="BIT" />
+    </constructor>
+  </resultMap>
+  <sql id="Base_Column_List">
+    companyId, number, organizationCode, certificateType, companyName, industry, scale, 
+    concepts, legalPersonName, legalPersonIdentityNo, legalPersonPhoneNo, ifJointStockExchangeCenter, 
+    companyContractUserPhoneNo, companyContractUserName, businessPath, companyAuthorizationPath, 
+    province, city, county, town, companyLocation, companySummary, companyCharacteristics, 
+    createTime, auditTime, channel, email, note, legalPersonPathFront, legalPersonPathBack, 
+    companyLogoPath, creditCollectionPath, count, applyUserId, updateTime, currentType, 
+    applyType, applyStatus, paCompanyId, stickScale, stickCreateTime, ifAuthorization, 
+    isShowInFront
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from user_company
+    where companyId = #{companyid,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    delete from user_company
+    where companyId = #{companyid,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="com.example.model.UserCompany">
+    insert into user_company (companyId, number, organizationCode, 
+      certificateType, companyName, industry, 
+      scale, concepts, legalPersonName, 
+      legalPersonIdentityNo, legalPersonPhoneNo, 
+      ifJointStockExchangeCenter, companyContractUserPhoneNo, 
+      companyContractUserName, businessPath, 
+      companyAuthorizationPath, province, city, 
+      county, town, companyLocation, 
+      companySummary, companyCharacteristics, 
+      createTime, auditTime, channel, 
+      email, note, legalPersonPathFront, 
+      legalPersonPathBack, companyLogoPath, creditCollectionPath, 
+      count, applyUserId, updateTime, 
+      currentType, applyType, applyStatus, 
+      paCompanyId, stickScale, stickCreateTime, 
+      ifAuthorization, isShowInFront)
+    values (#{companyid,jdbcType=VARCHAR}, #{number,jdbcType=VARCHAR}, #{organizationcode,jdbcType=VARCHAR}, 
+      #{certificatetype,jdbcType=VARCHAR}, #{companyname,jdbcType=VARCHAR}, #{industry,jdbcType=VARCHAR}, 
+      #{scale,jdbcType=VARCHAR}, #{concepts,jdbcType=VARCHAR}, #{legalpersonname,jdbcType=VARCHAR}, 
+      #{legalpersonidentityno,jdbcType=VARCHAR}, #{legalpersonphoneno,jdbcType=VARCHAR}, 
+      #{ifjointstockexchangecenter,jdbcType=VARCHAR}, #{companycontractuserphoneno,jdbcType=VARCHAR}, 
+      #{companycontractusername,jdbcType=VARCHAR}, #{businesspath,jdbcType=VARCHAR}, 
+      #{companyauthorizationpath,jdbcType=VARCHAR}, #{province,jdbcType=VARCHAR}, #{city,jdbcType=VARCHAR}, 
+      #{county,jdbcType=VARCHAR}, #{town,jdbcType=VARCHAR}, #{companylocation,jdbcType=VARCHAR}, 
+      #{companysummary,jdbcType=VARCHAR}, #{companycharacteristics,jdbcType=VARCHAR}, 
+      #{createtime,jdbcType=TIMESTAMP}, #{audittime,jdbcType=TIMESTAMP}, #{channel,jdbcType=VARCHAR}, 
+      #{email,jdbcType=VARCHAR}, #{note,jdbcType=VARCHAR}, #{legalpersonpathfront,jdbcType=VARCHAR}, 
+      #{legalpersonpathback,jdbcType=VARCHAR}, #{companylogopath,jdbcType=VARCHAR}, #{creditcollectionpath,jdbcType=VARCHAR}, 
+      #{count,jdbcType=INTEGER}, #{applyuserid,jdbcType=VARCHAR}, #{updatetime,jdbcType=TIMESTAMP}, 
+      #{currenttype,jdbcType=BIT}, #{applytype,jdbcType=BIT}, #{applystatus,jdbcType=BIT}, 
+      #{pacompanyid,jdbcType=VARCHAR}, #{stickscale,jdbcType=VARCHAR}, #{stickcreatetime,jdbcType=TIMESTAMP}, 
+      #{ifauthorization,jdbcType=VARCHAR}, #{isshowinfront,jdbcType=BIT})
+  </insert>
+  <insert id="insertSelective" parameterType="com.example.model.UserCompany">
+    insert into user_company
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="companyid != null">
+        companyId,
+      </if>
+      <if test="number != null">
+        number,
+      </if>
+      <if test="organizationcode != null">
+        organizationCode,
+      </if>
+      <if test="certificatetype != null">
+        certificateType,
+      </if>
+      <if test="companyname != null">
+        companyName,
+      </if>
+      <if test="industry != null">
+        industry,
+      </if>
+      <if test="scale != null">
+        scale,
+      </if>
+      <if test="concepts != null">
+        concepts,
+      </if>
+      <if test="legalpersonname != null">
+        legalPersonName,
+      </if>
+      <if test="legalpersonidentityno != null">
+        legalPersonIdentityNo,
+      </if>
+      <if test="legalpersonphoneno != null">
+        legalPersonPhoneNo,
+      </if>
+      <if test="ifjointstockexchangecenter != null">
+        ifJointStockExchangeCenter,
+      </if>
+      <if test="companycontractuserphoneno != null">
+        companyContractUserPhoneNo,
+      </if>
+      <if test="companycontractusername != null">
+        companyContractUserName,
+      </if>
+      <if test="businesspath != null">
+        businessPath,
+      </if>
+      <if test="companyauthorizationpath != null">
+        companyAuthorizationPath,
+      </if>
+      <if test="province != null">
+        province,
+      </if>
+      <if test="city != null">
+        city,
+      </if>
+      <if test="county != null">
+        county,
+      </if>
+      <if test="town != null">
+        town,
+      </if>
+      <if test="companylocation != null">
+        companyLocation,
+      </if>
+      <if test="companysummary != null">
+        companySummary,
+      </if>
+      <if test="companycharacteristics != null">
+        companyCharacteristics,
+      </if>
+      <if test="createtime != null">
+        createTime,
+      </if>
+      <if test="audittime != null">
+        auditTime,
+      </if>
+      <if test="channel != null">
+        channel,
+      </if>
+      <if test="email != null">
+        email,
+      </if>
+      <if test="note != null">
+        note,
+      </if>
+      <if test="legalpersonpathfront != null">
+        legalPersonPathFront,
+      </if>
+      <if test="legalpersonpathback != null">
+        legalPersonPathBack,
+      </if>
+      <if test="companylogopath != null">
+        companyLogoPath,
+      </if>
+      <if test="creditcollectionpath != null">
+        creditCollectionPath,
+      </if>
+      <if test="count != null">
+        count,
+      </if>
+      <if test="applyuserid != null">
+        applyUserId,
+      </if>
+      <if test="updatetime != null">
+        updateTime,
+      </if>
+      <if test="currenttype != null">
+        currentType,
+      </if>
+      <if test="applytype != null">
+        applyType,
+      </if>
+      <if test="applystatus != null">
+        applyStatus,
+      </if>
+      <if test="pacompanyid != null">
+        paCompanyId,
+      </if>
+      <if test="stickscale != null">
+        stickScale,
+      </if>
+      <if test="stickcreatetime != null">
+        stickCreateTime,
+      </if>
+      <if test="ifauthorization != null">
+        ifAuthorization,
+      </if>
+      <if test="isshowinfront != null">
+        isShowInFront,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="companyid != null">
+        #{companyid,jdbcType=VARCHAR},
+      </if>
+      <if test="number != null">
+        #{number,jdbcType=VARCHAR},
+      </if>
+      <if test="organizationcode != null">
+        #{organizationcode,jdbcType=VARCHAR},
+      </if>
+      <if test="certificatetype != null">
+        #{certificatetype,jdbcType=VARCHAR},
+      </if>
+      <if test="companyname != null">
+        #{companyname,jdbcType=VARCHAR},
+      </if>
+      <if test="industry != null">
+        #{industry,jdbcType=VARCHAR},
+      </if>
+      <if test="scale != null">
+        #{scale,jdbcType=VARCHAR},
+      </if>
+      <if test="concepts != null">
+        #{concepts,jdbcType=VARCHAR},
+      </if>
+      <if test="legalpersonname != null">
+        #{legalpersonname,jdbcType=VARCHAR},
+      </if>
+      <if test="legalpersonidentityno != null">
+        #{legalpersonidentityno,jdbcType=VARCHAR},
+      </if>
+      <if test="legalpersonphoneno != null">
+        #{legalpersonphoneno,jdbcType=VARCHAR},
+      </if>
+      <if test="ifjointstockexchangecenter != null">
+        #{ifjointstockexchangecenter,jdbcType=VARCHAR},
+      </if>
+      <if test="companycontractuserphoneno != null">
+        #{companycontractuserphoneno,jdbcType=VARCHAR},
+      </if>
+      <if test="companycontractusername != null">
+        #{companycontractusername,jdbcType=VARCHAR},
+      </if>
+      <if test="businesspath != null">
+        #{businesspath,jdbcType=VARCHAR},
+      </if>
+      <if test="companyauthorizationpath != null">
+        #{companyauthorizationpath,jdbcType=VARCHAR},
+      </if>
+      <if test="province != null">
+        #{province,jdbcType=VARCHAR},
+      </if>
+      <if test="city != null">
+        #{city,jdbcType=VARCHAR},
+      </if>
+      <if test="county != null">
+        #{county,jdbcType=VARCHAR},
+      </if>
+      <if test="town != null">
+        #{town,jdbcType=VARCHAR},
+      </if>
+      <if test="companylocation != null">
+        #{companylocation,jdbcType=VARCHAR},
+      </if>
+      <if test="companysummary != null">
+        #{companysummary,jdbcType=VARCHAR},
+      </if>
+      <if test="companycharacteristics != null">
+        #{companycharacteristics,jdbcType=VARCHAR},
+      </if>
+      <if test="createtime != null">
+        #{createtime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="audittime != null">
+        #{audittime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="channel != null">
+        #{channel,jdbcType=VARCHAR},
+      </if>
+      <if test="email != null">
+        #{email,jdbcType=VARCHAR},
+      </if>
+      <if test="note != null">
+        #{note,jdbcType=VARCHAR},
+      </if>
+      <if test="legalpersonpathfront != null">
+        #{legalpersonpathfront,jdbcType=VARCHAR},
+      </if>
+      <if test="legalpersonpathback != null">
+        #{legalpersonpathback,jdbcType=VARCHAR},
+      </if>
+      <if test="companylogopath != null">
+        #{companylogopath,jdbcType=VARCHAR},
+      </if>
+      <if test="creditcollectionpath != null">
+        #{creditcollectionpath,jdbcType=VARCHAR},
+      </if>
+      <if test="count != null">
+        #{count,jdbcType=INTEGER},
+      </if>
+      <if test="applyuserid != null">
+        #{applyuserid,jdbcType=VARCHAR},
+      </if>
+      <if test="updatetime != null">
+        #{updatetime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="currenttype != null">
+        #{currenttype,jdbcType=BIT},
+      </if>
+      <if test="applytype != null">
+        #{applytype,jdbcType=BIT},
+      </if>
+      <if test="applystatus != null">
+        #{applystatus,jdbcType=BIT},
+      </if>
+      <if test="pacompanyid != null">
+        #{pacompanyid,jdbcType=VARCHAR},
+      </if>
+      <if test="stickscale != null">
+        #{stickscale,jdbcType=VARCHAR},
+      </if>
+      <if test="stickcreatetime != null">
+        #{stickcreatetime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="ifauthorization != null">
+        #{ifauthorization,jdbcType=VARCHAR},
+      </if>
+      <if test="isshowinfront != null">
+        #{isshowinfront,jdbcType=BIT},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.example.model.UserCompany">
+    update user_company
+    <set>
+      <if test="number != null">
+        number = #{number,jdbcType=VARCHAR},
+      </if>
+      <if test="organizationcode != null">
+        organizationCode = #{organizationcode,jdbcType=VARCHAR},
+      </if>
+      <if test="certificatetype != null">
+        certificateType = #{certificatetype,jdbcType=VARCHAR},
+      </if>
+      <if test="companyname != null">
+        companyName = #{companyname,jdbcType=VARCHAR},
+      </if>
+      <if test="industry != null">
+        industry = #{industry,jdbcType=VARCHAR},
+      </if>
+      <if test="scale != null">
+        scale = #{scale,jdbcType=VARCHAR},
+      </if>
+      <if test="concepts != null">
+        concepts = #{concepts,jdbcType=VARCHAR},
+      </if>
+      <if test="legalpersonname != null">
+        legalPersonName = #{legalpersonname,jdbcType=VARCHAR},
+      </if>
+      <if test="legalpersonidentityno != null">
+        legalPersonIdentityNo = #{legalpersonidentityno,jdbcType=VARCHAR},
+      </if>
+      <if test="legalpersonphoneno != null">
+        legalPersonPhoneNo = #{legalpersonphoneno,jdbcType=VARCHAR},
+      </if>
+      <if test="ifjointstockexchangecenter != null">
+        ifJointStockExchangeCenter = #{ifjointstockexchangecenter,jdbcType=VARCHAR},
+      </if>
+      <if test="companycontractuserphoneno != null">
+        companyContractUserPhoneNo = #{companycontractuserphoneno,jdbcType=VARCHAR},
+      </if>
+      <if test="companycontractusername != null">
+        companyContractUserName = #{companycontractusername,jdbcType=VARCHAR},
+      </if>
+      <if test="businesspath != null">
+        businessPath = #{businesspath,jdbcType=VARCHAR},
+      </if>
+      <if test="companyauthorizationpath != null">
+        companyAuthorizationPath = #{companyauthorizationpath,jdbcType=VARCHAR},
+      </if>
+      <if test="province != null">
+        province = #{province,jdbcType=VARCHAR},
+      </if>
+      <if test="city != null">
+        city = #{city,jdbcType=VARCHAR},
+      </if>
+      <if test="county != null">
+        county = #{county,jdbcType=VARCHAR},
+      </if>
+      <if test="town != null">
+        town = #{town,jdbcType=VARCHAR},
+      </if>
+      <if test="companylocation != null">
+        companyLocation = #{companylocation,jdbcType=VARCHAR},
+      </if>
+      <if test="companysummary != null">
+        companySummary = #{companysummary,jdbcType=VARCHAR},
+      </if>
+      <if test="companycharacteristics != null">
+        companyCharacteristics = #{companycharacteristics,jdbcType=VARCHAR},
+      </if>
+      <if test="createtime != null">
+        createTime = #{createtime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="audittime != null">
+        auditTime = #{audittime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="channel != null">
+        channel = #{channel,jdbcType=VARCHAR},
+      </if>
+      <if test="email != null">
+        email = #{email,jdbcType=VARCHAR},
+      </if>
+      <if test="note != null">
+        note = #{note,jdbcType=VARCHAR},
+      </if>
+      <if test="legalpersonpathfront != null">
+        legalPersonPathFront = #{legalpersonpathfront,jdbcType=VARCHAR},
+      </if>
+      <if test="legalpersonpathback != null">
+        legalPersonPathBack = #{legalpersonpathback,jdbcType=VARCHAR},
+      </if>
+      <if test="companylogopath != null">
+        companyLogoPath = #{companylogopath,jdbcType=VARCHAR},
+      </if>
+      <if test="creditcollectionpath != null">
+        creditCollectionPath = #{creditcollectionpath,jdbcType=VARCHAR},
+      </if>
+      <if test="count != null">
+        count = #{count,jdbcType=INTEGER},
+      </if>
+      <if test="applyuserid != null">
+        applyUserId = #{applyuserid,jdbcType=VARCHAR},
+      </if>
+      <if test="updatetime != null">
+        updateTime = #{updatetime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="currenttype != null">
+        currentType = #{currenttype,jdbcType=BIT},
+      </if>
+      <if test="applytype != null">
+        applyType = #{applytype,jdbcType=BIT},
+      </if>
+      <if test="applystatus != null">
+        applyStatus = #{applystatus,jdbcType=BIT},
+      </if>
+      <if test="pacompanyid != null">
+        paCompanyId = #{pacompanyid,jdbcType=VARCHAR},
+      </if>
+      <if test="stickscale != null">
+        stickScale = #{stickscale,jdbcType=VARCHAR},
+      </if>
+      <if test="stickcreatetime != null">
+        stickCreateTime = #{stickcreatetime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="ifauthorization != null">
+        ifAuthorization = #{ifauthorization,jdbcType=VARCHAR},
+      </if>
+      <if test="isshowinfront != null">
+        isShowInFront = #{isshowinfront,jdbcType=BIT},
+      </if>
+    </set>
+    where companyId = #{companyid,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.example.model.UserCompany">
+    update user_company
+    set number = #{number,jdbcType=VARCHAR},
+      organizationCode = #{organizationcode,jdbcType=VARCHAR},
+      certificateType = #{certificatetype,jdbcType=VARCHAR},
+      companyName = #{companyname,jdbcType=VARCHAR},
+      industry = #{industry,jdbcType=VARCHAR},
+      scale = #{scale,jdbcType=VARCHAR},
+      concepts = #{concepts,jdbcType=VARCHAR},
+      legalPersonName = #{legalpersonname,jdbcType=VARCHAR},
+      legalPersonIdentityNo = #{legalpersonidentityno,jdbcType=VARCHAR},
+      legalPersonPhoneNo = #{legalpersonphoneno,jdbcType=VARCHAR},
+      ifJointStockExchangeCenter = #{ifjointstockexchangecenter,jdbcType=VARCHAR},
+      companyContractUserPhoneNo = #{companycontractuserphoneno,jdbcType=VARCHAR},
+      companyContractUserName = #{companycontractusername,jdbcType=VARCHAR},
+      businessPath = #{businesspath,jdbcType=VARCHAR},
+      companyAuthorizationPath = #{companyauthorizationpath,jdbcType=VARCHAR},
+      province = #{province,jdbcType=VARCHAR},
+      city = #{city,jdbcType=VARCHAR},
+      county = #{county,jdbcType=VARCHAR},
+      town = #{town,jdbcType=VARCHAR},
+      companyLocation = #{companylocation,jdbcType=VARCHAR},
+      companySummary = #{companysummary,jdbcType=VARCHAR},
+      companyCharacteristics = #{companycharacteristics,jdbcType=VARCHAR},
+      createTime = #{createtime,jdbcType=TIMESTAMP},
+      auditTime = #{audittime,jdbcType=TIMESTAMP},
+      channel = #{channel,jdbcType=VARCHAR},
+      email = #{email,jdbcType=VARCHAR},
+      note = #{note,jdbcType=VARCHAR},
+      legalPersonPathFront = #{legalpersonpathfront,jdbcType=VARCHAR},
+      legalPersonPathBack = #{legalpersonpathback,jdbcType=VARCHAR},
+      companyLogoPath = #{companylogopath,jdbcType=VARCHAR},
+      creditCollectionPath = #{creditcollectionpath,jdbcType=VARCHAR},
+      count = #{count,jdbcType=INTEGER},
+      applyUserId = #{applyuserid,jdbcType=VARCHAR},
+      updateTime = #{updatetime,jdbcType=TIMESTAMP},
+      currentType = #{currenttype,jdbcType=BIT},
+      applyType = #{applytype,jdbcType=BIT},
+      applyStatus = #{applystatus,jdbcType=BIT},
+      paCompanyId = #{pacompanyid,jdbcType=VARCHAR},
+      stickScale = #{stickscale,jdbcType=VARCHAR},
+      stickCreateTime = #{stickcreatetime,jdbcType=TIMESTAMP},
+      ifAuthorization = #{ifauthorization,jdbcType=VARCHAR},
+      isShowInFront = #{isshowinfront,jdbcType=BIT}
+    where companyId = #{companyid,jdbcType=VARCHAR}
+  </update>
+  <resultMap id="BaseResultMap" type="com.example.model.UserCompany">
+    <constructor>
+      <idArg column="companyId" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="number" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="organizationCode" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="certificateType" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="companyName" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="industry" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="scale" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="concepts" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="legalPersonName" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="legalPersonIdentityNo" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="legalPersonPhoneNo" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="ifJointStockExchangeCenter" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="companyContractUserPhoneNo" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="companyContractUserName" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="businessPath" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="companyAuthorizationPath" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="province" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="city" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="county" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="town" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="companyLocation" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="companySummary" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="companyCharacteristics" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="createTime" javaType="java.util.Date" jdbcType="TIMESTAMP" />
+      <arg column="auditTime" javaType="java.util.Date" jdbcType="TIMESTAMP" />
+      <arg column="channel" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="email" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="note" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="legalPersonPathFront" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="legalPersonPathBack" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="companyLogoPath" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="creditCollectionPath" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="count" javaType="java.lang.Integer" jdbcType="INTEGER" />
+      <arg column="applyUserId" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="updateTime" javaType="java.util.Date" jdbcType="TIMESTAMP" />
+      <arg column="currentType" javaType="java.lang.Boolean" jdbcType="BIT" />
+      <arg column="applyType" javaType="java.lang.Boolean" jdbcType="BIT" />
+      <arg column="applyStatus" javaType="java.lang.Boolean" jdbcType="BIT" />
+      <arg column="paCompanyId" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="stickScale" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="stickCreateTime" javaType="java.util.Date" jdbcType="TIMESTAMP" />
+      <arg column="ifAuthorization" javaType="java.lang.String" jdbcType="VARCHAR" />
+    </constructor>
+  </resultMap>
+  <sql id="Base_Column_List">
+    companyId, number, organizationCode, certificateType, companyName, industry, scale, 
+    concepts, legalPersonName, legalPersonIdentityNo, legalPersonPhoneNo, ifJointStockExchangeCenter, 
+    companyContractUserPhoneNo, companyContractUserName, businessPath, companyAuthorizationPath, 
+    province, city, county, town, companyLocation, companySummary, companyCharacteristics, 
+    createTime, auditTime, channel, email, note, legalPersonPathFront, legalPersonPathBack, 
+    companyLogoPath, creditCollectionPath, count, applyUserId, updateTime, currentType, 
+    applyType, applyStatus, paCompanyId, stickScale, stickCreateTime, ifAuthorization
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from user_company
+    where companyId = #{companyid,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    delete from user_company
+    where companyId = #{companyid,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="com.example.model.UserCompany">
+    insert into user_company (companyId, number, organizationCode, 
+      certificateType, companyName, industry, 
+      scale, concepts, legalPersonName, 
+      legalPersonIdentityNo, legalPersonPhoneNo, 
+      ifJointStockExchangeCenter, companyContractUserPhoneNo, 
+      companyContractUserName, businessPath, 
+      companyAuthorizationPath, province, city, 
+      county, town, companyLocation, 
+      companySummary, companyCharacteristics, 
+      createTime, auditTime, channel, 
+      email, note, legalPersonPathFront, 
+      legalPersonPathBack, companyLogoPath, creditCollectionPath, 
+      count, applyUserId, updateTime, 
+      currentType, applyType, applyStatus, 
+      paCompanyId, stickScale, stickCreateTime, 
+      ifAuthorization)
+    values (#{companyid,jdbcType=VARCHAR}, #{number,jdbcType=VARCHAR}, #{organizationcode,jdbcType=VARCHAR}, 
+      #{certificatetype,jdbcType=VARCHAR}, #{companyname,jdbcType=VARCHAR}, #{industry,jdbcType=VARCHAR}, 
+      #{scale,jdbcType=VARCHAR}, #{concepts,jdbcType=VARCHAR}, #{legalpersonname,jdbcType=VARCHAR}, 
+      #{legalpersonidentityno,jdbcType=VARCHAR}, #{legalpersonphoneno,jdbcType=VARCHAR}, 
+      #{ifjointstockexchangecenter,jdbcType=VARCHAR}, #{companycontractuserphoneno,jdbcType=VARCHAR}, 
+      #{companycontractusername,jdbcType=VARCHAR}, #{businesspath,jdbcType=VARCHAR}, 
+      #{companyauthorizationpath,jdbcType=VARCHAR}, #{province,jdbcType=VARCHAR}, #{city,jdbcType=VARCHAR}, 
+      #{county,jdbcType=VARCHAR}, #{town,jdbcType=VARCHAR}, #{companylocation,jdbcType=VARCHAR}, 
+      #{companysummary,jdbcType=VARCHAR}, #{companycharacteristics,jdbcType=VARCHAR}, 
+      #{createtime,jdbcType=TIMESTAMP}, #{audittime,jdbcType=TIMESTAMP}, #{channel,jdbcType=VARCHAR}, 
+      #{email,jdbcType=VARCHAR}, #{note,jdbcType=VARCHAR}, #{legalpersonpathfront,jdbcType=VARCHAR}, 
+      #{legalpersonpathback,jdbcType=VARCHAR}, #{companylogopath,jdbcType=VARCHAR}, #{creditcollectionpath,jdbcType=VARCHAR}, 
+      #{count,jdbcType=INTEGER}, #{applyuserid,jdbcType=VARCHAR}, #{updatetime,jdbcType=TIMESTAMP}, 
+      #{currenttype,jdbcType=BIT}, #{applytype,jdbcType=BIT}, #{applystatus,jdbcType=BIT}, 
+      #{pacompanyid,jdbcType=VARCHAR}, #{stickscale,jdbcType=VARCHAR}, #{stickcreatetime,jdbcType=TIMESTAMP}, 
+      #{ifauthorization,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.example.model.UserCompany">
+    insert into user_company
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="companyid != null">
+        companyId,
+      </if>
+      <if test="number != null">
+        number,
+      </if>
+      <if test="organizationcode != null">
+        organizationCode,
+      </if>
+      <if test="certificatetype != null">
+        certificateType,
+      </if>
+      <if test="companyname != null">
+        companyName,
+      </if>
+      <if test="industry != null">
+        industry,
+      </if>
+      <if test="scale != null">
+        scale,
+      </if>
+      <if test="concepts != null">
+        concepts,
+      </if>
+      <if test="legalpersonname != null">
+        legalPersonName,
+      </if>
+      <if test="legalpersonidentityno != null">
+        legalPersonIdentityNo,
+      </if>
+      <if test="legalpersonphoneno != null">
+        legalPersonPhoneNo,
+      </if>
+      <if test="ifjointstockexchangecenter != null">
+        ifJointStockExchangeCenter,
+      </if>
+      <if test="companycontractuserphoneno != null">
+        companyContractUserPhoneNo,
+      </if>
+      <if test="companycontractusername != null">
+        companyContractUserName,
+      </if>
+      <if test="businesspath != null">
+        businessPath,
+      </if>
+      <if test="companyauthorizationpath != null">
+        companyAuthorizationPath,
+      </if>
+      <if test="province != null">
+        province,
+      </if>
+      <if test="city != null">
+        city,
+      </if>
+      <if test="county != null">
+        county,
+      </if>
+      <if test="town != null">
+        town,
+      </if>
+      <if test="companylocation != null">
+        companyLocation,
+      </if>
+      <if test="companysummary != null">
+        companySummary,
+      </if>
+      <if test="companycharacteristics != null">
+        companyCharacteristics,
+      </if>
+      <if test="createtime != null">
+        createTime,
+      </if>
+      <if test="audittime != null">
+        auditTime,
+      </if>
+      <if test="channel != null">
+        channel,
+      </if>
+      <if test="email != null">
+        email,
+      </if>
+      <if test="note != null">
+        note,
+      </if>
+      <if test="legalpersonpathfront != null">
+        legalPersonPathFront,
+      </if>
+      <if test="legalpersonpathback != null">
+        legalPersonPathBack,
+      </if>
+      <if test="companylogopath != null">
+        companyLogoPath,
+      </if>
+      <if test="creditcollectionpath != null">
+        creditCollectionPath,
+      </if>
+      <if test="count != null">
+        count,
+      </if>
+      <if test="applyuserid != null">
+        applyUserId,
+      </if>
+      <if test="updatetime != null">
+        updateTime,
+      </if>
+      <if test="currenttype != null">
+        currentType,
+      </if>
+      <if test="applytype != null">
+        applyType,
+      </if>
+      <if test="applystatus != null">
+        applyStatus,
+      </if>
+      <if test="pacompanyid != null">
+        paCompanyId,
+      </if>
+      <if test="stickscale != null">
+        stickScale,
+      </if>
+      <if test="stickcreatetime != null">
+        stickCreateTime,
+      </if>
+      <if test="ifauthorization != null">
+        ifAuthorization,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="companyid != null">
+        #{companyid,jdbcType=VARCHAR},
+      </if>
+      <if test="number != null">
+        #{number,jdbcType=VARCHAR},
+      </if>
+      <if test="organizationcode != null">
+        #{organizationcode,jdbcType=VARCHAR},
+      </if>
+      <if test="certificatetype != null">
+        #{certificatetype,jdbcType=VARCHAR},
+      </if>
+      <if test="companyname != null">
+        #{companyname,jdbcType=VARCHAR},
+      </if>
+      <if test="industry != null">
+        #{industry,jdbcType=VARCHAR},
+      </if>
+      <if test="scale != null">
+        #{scale,jdbcType=VARCHAR},
+      </if>
+      <if test="concepts != null">
+        #{concepts,jdbcType=VARCHAR},
+      </if>
+      <if test="legalpersonname != null">
+        #{legalpersonname,jdbcType=VARCHAR},
+      </if>
+      <if test="legalpersonidentityno != null">
+        #{legalpersonidentityno,jdbcType=VARCHAR},
+      </if>
+      <if test="legalpersonphoneno != null">
+        #{legalpersonphoneno,jdbcType=VARCHAR},
+      </if>
+      <if test="ifjointstockexchangecenter != null">
+        #{ifjointstockexchangecenter,jdbcType=VARCHAR},
+      </if>
+      <if test="companycontractuserphoneno != null">
+        #{companycontractuserphoneno,jdbcType=VARCHAR},
+      </if>
+      <if test="companycontractusername != null">
+        #{companycontractusername,jdbcType=VARCHAR},
+      </if>
+      <if test="businesspath != null">
+        #{businesspath,jdbcType=VARCHAR},
+      </if>
+      <if test="companyauthorizationpath != null">
+        #{companyauthorizationpath,jdbcType=VARCHAR},
+      </if>
+      <if test="province != null">
+        #{province,jdbcType=VARCHAR},
+      </if>
+      <if test="city != null">
+        #{city,jdbcType=VARCHAR},
+      </if>
+      <if test="county != null">
+        #{county,jdbcType=VARCHAR},
+      </if>
+      <if test="town != null">
+        #{town,jdbcType=VARCHAR},
+      </if>
+      <if test="companylocation != null">
+        #{companylocation,jdbcType=VARCHAR},
+      </if>
+      <if test="companysummary != null">
+        #{companysummary,jdbcType=VARCHAR},
+      </if>
+      <if test="companycharacteristics != null">
+        #{companycharacteristics,jdbcType=VARCHAR},
+      </if>
+      <if test="createtime != null">
+        #{createtime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="audittime != null">
+        #{audittime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="channel != null">
+        #{channel,jdbcType=VARCHAR},
+      </if>
+      <if test="email != null">
+        #{email,jdbcType=VARCHAR},
+      </if>
+      <if test="note != null">
+        #{note,jdbcType=VARCHAR},
+      </if>
+      <if test="legalpersonpathfront != null">
+        #{legalpersonpathfront,jdbcType=VARCHAR},
+      </if>
+      <if test="legalpersonpathback != null">
+        #{legalpersonpathback,jdbcType=VARCHAR},
+      </if>
+      <if test="companylogopath != null">
+        #{companylogopath,jdbcType=VARCHAR},
+      </if>
+      <if test="creditcollectionpath != null">
+        #{creditcollectionpath,jdbcType=VARCHAR},
+      </if>
+      <if test="count != null">
+        #{count,jdbcType=INTEGER},
+      </if>
+      <if test="applyuserid != null">
+        #{applyuserid,jdbcType=VARCHAR},
+      </if>
+      <if test="updatetime != null">
+        #{updatetime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="currenttype != null">
+        #{currenttype,jdbcType=BIT},
+      </if>
+      <if test="applytype != null">
+        #{applytype,jdbcType=BIT},
+      </if>
+      <if test="applystatus != null">
+        #{applystatus,jdbcType=BIT},
+      </if>
+      <if test="pacompanyid != null">
+        #{pacompanyid,jdbcType=VARCHAR},
+      </if>
+      <if test="stickscale != null">
+        #{stickscale,jdbcType=VARCHAR},
+      </if>
+      <if test="stickcreatetime != null">
+        #{stickcreatetime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="ifauthorization != null">
+        #{ifauthorization,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.example.model.UserCompany">
+    update user_company
+    <set>
+      <if test="number != null">
+        number = #{number,jdbcType=VARCHAR},
+      </if>
+      <if test="organizationcode != null">
+        organizationCode = #{organizationcode,jdbcType=VARCHAR},
+      </if>
+      <if test="certificatetype != null">
+        certificateType = #{certificatetype,jdbcType=VARCHAR},
+      </if>
+      <if test="companyname != null">
+        companyName = #{companyname,jdbcType=VARCHAR},
+      </if>
+      <if test="industry != null">
+        industry = #{industry,jdbcType=VARCHAR},
+      </if>
+      <if test="scale != null">
+        scale = #{scale,jdbcType=VARCHAR},
+      </if>
+      <if test="concepts != null">
+        concepts = #{concepts,jdbcType=VARCHAR},
+      </if>
+      <if test="legalpersonname != null">
+        legalPersonName = #{legalpersonname,jdbcType=VARCHAR},
+      </if>
+      <if test="legalpersonidentityno != null">
+        legalPersonIdentityNo = #{legalpersonidentityno,jdbcType=VARCHAR},
+      </if>
+      <if test="legalpersonphoneno != null">
+        legalPersonPhoneNo = #{legalpersonphoneno,jdbcType=VARCHAR},
+      </if>
+      <if test="ifjointstockexchangecenter != null">
+        ifJointStockExchangeCenter = #{ifjointstockexchangecenter,jdbcType=VARCHAR},
+      </if>
+      <if test="companycontractuserphoneno != null">
+        companyContractUserPhoneNo = #{companycontractuserphoneno,jdbcType=VARCHAR},
+      </if>
+      <if test="companycontractusername != null">
+        companyContractUserName = #{companycontractusername,jdbcType=VARCHAR},
+      </if>
+      <if test="businesspath != null">
+        businessPath = #{businesspath,jdbcType=VARCHAR},
+      </if>
+      <if test="companyauthorizationpath != null">
+        companyAuthorizationPath = #{companyauthorizationpath,jdbcType=VARCHAR},
+      </if>
+      <if test="province != null">
+        province = #{province,jdbcType=VARCHAR},
+      </if>
+      <if test="city != null">
+        city = #{city,jdbcType=VARCHAR},
+      </if>
+      <if test="county != null">
+        county = #{county,jdbcType=VARCHAR},
+      </if>
+      <if test="town != null">
+        town = #{town,jdbcType=VARCHAR},
+      </if>
+      <if test="companylocation != null">
+        companyLocation = #{companylocation,jdbcType=VARCHAR},
+      </if>
+      <if test="companysummary != null">
+        companySummary = #{companysummary,jdbcType=VARCHAR},
+      </if>
+      <if test="companycharacteristics != null">
+        companyCharacteristics = #{companycharacteristics,jdbcType=VARCHAR},
+      </if>
+      <if test="createtime != null">
+        createTime = #{createtime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="audittime != null">
+        auditTime = #{audittime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="channel != null">
+        channel = #{channel,jdbcType=VARCHAR},
+      </if>
+      <if test="email != null">
+        email = #{email,jdbcType=VARCHAR},
+      </if>
+      <if test="note != null">
+        note = #{note,jdbcType=VARCHAR},
+      </if>
+      <if test="legalpersonpathfront != null">
+        legalPersonPathFront = #{legalpersonpathfront,jdbcType=VARCHAR},
+      </if>
+      <if test="legalpersonpathback != null">
+        legalPersonPathBack = #{legalpersonpathback,jdbcType=VARCHAR},
+      </if>
+      <if test="companylogopath != null">
+        companyLogoPath = #{companylogopath,jdbcType=VARCHAR},
+      </if>
+      <if test="creditcollectionpath != null">
+        creditCollectionPath = #{creditcollectionpath,jdbcType=VARCHAR},
+      </if>
+      <if test="count != null">
+        count = #{count,jdbcType=INTEGER},
+      </if>
+      <if test="applyuserid != null">
+        applyUserId = #{applyuserid,jdbcType=VARCHAR},
+      </if>
+      <if test="updatetime != null">
+        updateTime = #{updatetime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="currenttype != null">
+        currentType = #{currenttype,jdbcType=BIT},
+      </if>
+      <if test="applytype != null">
+        applyType = #{applytype,jdbcType=BIT},
+      </if>
+      <if test="applystatus != null">
+        applyStatus = #{applystatus,jdbcType=BIT},
+      </if>
+      <if test="pacompanyid != null">
+        paCompanyId = #{pacompanyid,jdbcType=VARCHAR},
+      </if>
+      <if test="stickscale != null">
+        stickScale = #{stickscale,jdbcType=VARCHAR},
+      </if>
+      <if test="stickcreatetime != null">
+        stickCreateTime = #{stickcreatetime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="ifauthorization != null">
+        ifAuthorization = #{ifauthorization,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where companyId = #{companyid,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.example.model.UserCompany">
+    update user_company
+    set number = #{number,jdbcType=VARCHAR},
+      organizationCode = #{organizationcode,jdbcType=VARCHAR},
+      certificateType = #{certificatetype,jdbcType=VARCHAR},
+      companyName = #{companyname,jdbcType=VARCHAR},
+      industry = #{industry,jdbcType=VARCHAR},
+      scale = #{scale,jdbcType=VARCHAR},
+      concepts = #{concepts,jdbcType=VARCHAR},
+      legalPersonName = #{legalpersonname,jdbcType=VARCHAR},
+      legalPersonIdentityNo = #{legalpersonidentityno,jdbcType=VARCHAR},
+      legalPersonPhoneNo = #{legalpersonphoneno,jdbcType=VARCHAR},
+      ifJointStockExchangeCenter = #{ifjointstockexchangecenter,jdbcType=VARCHAR},
+      companyContractUserPhoneNo = #{companycontractuserphoneno,jdbcType=VARCHAR},
+      companyContractUserName = #{companycontractusername,jdbcType=VARCHAR},
+      businessPath = #{businesspath,jdbcType=VARCHAR},
+      companyAuthorizationPath = #{companyauthorizationpath,jdbcType=VARCHAR},
+      province = #{province,jdbcType=VARCHAR},
+      city = #{city,jdbcType=VARCHAR},
+      county = #{county,jdbcType=VARCHAR},
+      town = #{town,jdbcType=VARCHAR},
+      companyLocation = #{companylocation,jdbcType=VARCHAR},
+      companySummary = #{companysummary,jdbcType=VARCHAR},
+      companyCharacteristics = #{companycharacteristics,jdbcType=VARCHAR},
+      createTime = #{createtime,jdbcType=TIMESTAMP},
+      auditTime = #{audittime,jdbcType=TIMESTAMP},
+      channel = #{channel,jdbcType=VARCHAR},
+      email = #{email,jdbcType=VARCHAR},
+      note = #{note,jdbcType=VARCHAR},
+      legalPersonPathFront = #{legalpersonpathfront,jdbcType=VARCHAR},
+      legalPersonPathBack = #{legalpersonpathback,jdbcType=VARCHAR},
+      companyLogoPath = #{companylogopath,jdbcType=VARCHAR},
+      creditCollectionPath = #{creditcollectionpath,jdbcType=VARCHAR},
+      count = #{count,jdbcType=INTEGER},
+      applyUserId = #{applyuserid,jdbcType=VARCHAR},
+      updateTime = #{updatetime,jdbcType=TIMESTAMP},
+      currentType = #{currenttype,jdbcType=BIT},
+      applyType = #{applytype,jdbcType=BIT},
+      applyStatus = #{applystatus,jdbcType=BIT},
+      paCompanyId = #{pacompanyid,jdbcType=VARCHAR},
+      stickScale = #{stickscale,jdbcType=VARCHAR},
+      stickCreateTime = #{stickcreatetime,jdbcType=TIMESTAMP},
+      ifAuthorization = #{ifauthorization,jdbcType=VARCHAR}
+    where companyId = #{companyid,jdbcType=VARCHAR}
+  </update>
+  <resultMap id="BaseResultMap" type="com.example.model.UserCompany">
+    <constructor>
+      <idArg column="companyId" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="number" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="organizationCode" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="certificateType" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="companyName" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="industry" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="scale" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="concepts" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="legalPersonName" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="legalPersonIdentityNo" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="legalPersonPhoneNo" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="ifJointStockExchangeCenter" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="companyContractUserPhoneNo" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="companyContractUserName" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="businessPath" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="companyAuthorizationPath" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="province" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="city" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="county" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="town" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="companyLocation" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="companySummary" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="companyCharacteristics" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="createTime" javaType="java.util.Date" jdbcType="TIMESTAMP" />
+      <arg column="auditTime" javaType="java.util.Date" jdbcType="TIMESTAMP" />
+      <arg column="channel" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="email" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="note" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="legalPersonPathFront" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="legalPersonPathBack" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="companyLogoPath" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="creditCollectionPath" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="count" javaType="java.lang.Integer" jdbcType="INTEGER" />
+      <arg column="applyUserId" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="updateTime" javaType="java.util.Date" jdbcType="TIMESTAMP" />
+      <arg column="currentType" javaType="java.lang.Boolean" jdbcType="BIT" />
+      <arg column="applyType" javaType="java.lang.Boolean" jdbcType="BIT" />
+      <arg column="applyStatus" javaType="java.lang.Boolean" jdbcType="BIT" />
+      <arg column="paCompanyId" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="stickScale" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="stickCreateTime" javaType="java.util.Date" jdbcType="TIMESTAMP" />
+      <arg column="ifAuthorization" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="isShowInFront" javaType="java.lang.Boolean" jdbcType="BIT" />
+    </constructor>
+  </resultMap>
+  <sql id="Base_Column_List">
+    companyId, number, organizationCode, certificateType, companyName, industry, scale, 
+    concepts, legalPersonName, legalPersonIdentityNo, legalPersonPhoneNo, ifJointStockExchangeCenter, 
+    companyContractUserPhoneNo, companyContractUserName, businessPath, companyAuthorizationPath, 
+    province, city, county, town, companyLocation, companySummary, companyCharacteristics, 
+    createTime, auditTime, channel, email, note, legalPersonPathFront, legalPersonPathBack, 
+    companyLogoPath, creditCollectionPath, count, applyUserId, updateTime, currentType, 
+    applyType, applyStatus, paCompanyId, stickScale, stickCreateTime, ifAuthorization, 
+    isShowInFront
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from user_company
+    where companyId = #{companyid,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    delete from user_company
+    where companyId = #{companyid,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="com.example.model.UserCompany">
+    insert into user_company (companyId, number, organizationCode, 
+      certificateType, companyName, industry, 
+      scale, concepts, legalPersonName, 
+      legalPersonIdentityNo, legalPersonPhoneNo, 
+      ifJointStockExchangeCenter, companyContractUserPhoneNo, 
+      companyContractUserName, businessPath, 
+      companyAuthorizationPath, province, city, 
+      county, town, companyLocation, 
+      companySummary, companyCharacteristics, 
+      createTime, auditTime, channel, 
+      email, note, legalPersonPathFront, 
+      legalPersonPathBack, companyLogoPath, creditCollectionPath, 
+      count, applyUserId, updateTime, 
+      currentType, applyType, applyStatus, 
+      paCompanyId, stickScale, stickCreateTime, 
+      ifAuthorization, isShowInFront)
+    values (#{companyid,jdbcType=VARCHAR}, #{number,jdbcType=VARCHAR}, #{organizationcode,jdbcType=VARCHAR}, 
+      #{certificatetype,jdbcType=VARCHAR}, #{companyname,jdbcType=VARCHAR}, #{industry,jdbcType=VARCHAR}, 
+      #{scale,jdbcType=VARCHAR}, #{concepts,jdbcType=VARCHAR}, #{legalpersonname,jdbcType=VARCHAR}, 
+      #{legalpersonidentityno,jdbcType=VARCHAR}, #{legalpersonphoneno,jdbcType=VARCHAR}, 
+      #{ifjointstockexchangecenter,jdbcType=VARCHAR}, #{companycontractuserphoneno,jdbcType=VARCHAR}, 
+      #{companycontractusername,jdbcType=VARCHAR}, #{businesspath,jdbcType=VARCHAR}, 
+      #{companyauthorizationpath,jdbcType=VARCHAR}, #{province,jdbcType=VARCHAR}, #{city,jdbcType=VARCHAR}, 
+      #{county,jdbcType=VARCHAR}, #{town,jdbcType=VARCHAR}, #{companylocation,jdbcType=VARCHAR}, 
+      #{companysummary,jdbcType=VARCHAR}, #{companycharacteristics,jdbcType=VARCHAR}, 
+      #{createtime,jdbcType=TIMESTAMP}, #{audittime,jdbcType=TIMESTAMP}, #{channel,jdbcType=VARCHAR}, 
+      #{email,jdbcType=VARCHAR}, #{note,jdbcType=VARCHAR}, #{legalpersonpathfront,jdbcType=VARCHAR}, 
+      #{legalpersonpathback,jdbcType=VARCHAR}, #{companylogopath,jdbcType=VARCHAR}, #{creditcollectionpath,jdbcType=VARCHAR}, 
+      #{count,jdbcType=INTEGER}, #{applyuserid,jdbcType=VARCHAR}, #{updatetime,jdbcType=TIMESTAMP}, 
+      #{currenttype,jdbcType=BIT}, #{applytype,jdbcType=BIT}, #{applystatus,jdbcType=BIT}, 
+      #{pacompanyid,jdbcType=VARCHAR}, #{stickscale,jdbcType=VARCHAR}, #{stickcreatetime,jdbcType=TIMESTAMP}, 
+      #{ifauthorization,jdbcType=VARCHAR}, #{isshowinfront,jdbcType=BIT})
+  </insert>
+  <insert id="insertSelective" parameterType="com.example.model.UserCompany">
+    insert into user_company
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="companyid != null">
+        companyId,
+      </if>
+      <if test="number != null">
+        number,
+      </if>
+      <if test="organizationcode != null">
+        organizationCode,
+      </if>
+      <if test="certificatetype != null">
+        certificateType,
+      </if>
+      <if test="companyname != null">
+        companyName,
+      </if>
+      <if test="industry != null">
+        industry,
+      </if>
+      <if test="scale != null">
+        scale,
+      </if>
+      <if test="concepts != null">
+        concepts,
+      </if>
+      <if test="legalpersonname != null">
+        legalPersonName,
+      </if>
+      <if test="legalpersonidentityno != null">
+        legalPersonIdentityNo,
+      </if>
+      <if test="legalpersonphoneno != null">
+        legalPersonPhoneNo,
+      </if>
+      <if test="ifjointstockexchangecenter != null">
+        ifJointStockExchangeCenter,
+      </if>
+      <if test="companycontractuserphoneno != null">
+        companyContractUserPhoneNo,
+      </if>
+      <if test="companycontractusername != null">
+        companyContractUserName,
+      </if>
+      <if test="businesspath != null">
+        businessPath,
+      </if>
+      <if test="companyauthorizationpath != null">
+        companyAuthorizationPath,
+      </if>
+      <if test="province != null">
+        province,
+      </if>
+      <if test="city != null">
+        city,
+      </if>
+      <if test="county != null">
+        county,
+      </if>
+      <if test="town != null">
+        town,
+      </if>
+      <if test="companylocation != null">
+        companyLocation,
+      </if>
+      <if test="companysummary != null">
+        companySummary,
+      </if>
+      <if test="companycharacteristics != null">
+        companyCharacteristics,
+      </if>
+      <if test="createtime != null">
+        createTime,
+      </if>
+      <if test="audittime != null">
+        auditTime,
+      </if>
+      <if test="channel != null">
+        channel,
+      </if>
+      <if test="email != null">
+        email,
+      </if>
+      <if test="note != null">
+        note,
+      </if>
+      <if test="legalpersonpathfront != null">
+        legalPersonPathFront,
+      </if>
+      <if test="legalpersonpathback != null">
+        legalPersonPathBack,
+      </if>
+      <if test="companylogopath != null">
+        companyLogoPath,
+      </if>
+      <if test="creditcollectionpath != null">
+        creditCollectionPath,
+      </if>
+      <if test="count != null">
+        count,
+      </if>
+      <if test="applyuserid != null">
+        applyUserId,
+      </if>
+      <if test="updatetime != null">
+        updateTime,
+      </if>
+      <if test="currenttype != null">
+        currentType,
+      </if>
+      <if test="applytype != null">
+        applyType,
+      </if>
+      <if test="applystatus != null">
+        applyStatus,
+      </if>
+      <if test="pacompanyid != null">
+        paCompanyId,
+      </if>
+      <if test="stickscale != null">
+        stickScale,
+      </if>
+      <if test="stickcreatetime != null">
+        stickCreateTime,
+      </if>
+      <if test="ifauthorization != null">
+        ifAuthorization,
+      </if>
+      <if test="isshowinfront != null">
+        isShowInFront,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="companyid != null">
+        #{companyid,jdbcType=VARCHAR},
+      </if>
+      <if test="number != null">
+        #{number,jdbcType=VARCHAR},
+      </if>
+      <if test="organizationcode != null">
+        #{organizationcode,jdbcType=VARCHAR},
+      </if>
+      <if test="certificatetype != null">
+        #{certificatetype,jdbcType=VARCHAR},
+      </if>
+      <if test="companyname != null">
+        #{companyname,jdbcType=VARCHAR},
+      </if>
+      <if test="industry != null">
+        #{industry,jdbcType=VARCHAR},
+      </if>
+      <if test="scale != null">
+        #{scale,jdbcType=VARCHAR},
+      </if>
+      <if test="concepts != null">
+        #{concepts,jdbcType=VARCHAR},
+      </if>
+      <if test="legalpersonname != null">
+        #{legalpersonname,jdbcType=VARCHAR},
+      </if>
+      <if test="legalpersonidentityno != null">
+        #{legalpersonidentityno,jdbcType=VARCHAR},
+      </if>
+      <if test="legalpersonphoneno != null">
+        #{legalpersonphoneno,jdbcType=VARCHAR},
+      </if>
+      <if test="ifjointstockexchangecenter != null">
+        #{ifjointstockexchangecenter,jdbcType=VARCHAR},
+      </if>
+      <if test="companycontractuserphoneno != null">
+        #{companycontractuserphoneno,jdbcType=VARCHAR},
+      </if>
+      <if test="companycontractusername != null">
+        #{companycontractusername,jdbcType=VARCHAR},
+      </if>
+      <if test="businesspath != null">
+        #{businesspath,jdbcType=VARCHAR},
+      </if>
+      <if test="companyauthorizationpath != null">
+        #{companyauthorizationpath,jdbcType=VARCHAR},
+      </if>
+      <if test="province != null">
+        #{province,jdbcType=VARCHAR},
+      </if>
+      <if test="city != null">
+        #{city,jdbcType=VARCHAR},
+      </if>
+      <if test="county != null">
+        #{county,jdbcType=VARCHAR},
+      </if>
+      <if test="town != null">
+        #{town,jdbcType=VARCHAR},
+      </if>
+      <if test="companylocation != null">
+        #{companylocation,jdbcType=VARCHAR},
+      </if>
+      <if test="companysummary != null">
+        #{companysummary,jdbcType=VARCHAR},
+      </if>
+      <if test="companycharacteristics != null">
+        #{companycharacteristics,jdbcType=VARCHAR},
+      </if>
+      <if test="createtime != null">
+        #{createtime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="audittime != null">
+        #{audittime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="channel != null">
+        #{channel,jdbcType=VARCHAR},
+      </if>
+      <if test="email != null">
+        #{email,jdbcType=VARCHAR},
+      </if>
+      <if test="note != null">
+        #{note,jdbcType=VARCHAR},
+      </if>
+      <if test="legalpersonpathfront != null">
+        #{legalpersonpathfront,jdbcType=VARCHAR},
+      </if>
+      <if test="legalpersonpathback != null">
+        #{legalpersonpathback,jdbcType=VARCHAR},
+      </if>
+      <if test="companylogopath != null">
+        #{companylogopath,jdbcType=VARCHAR},
+      </if>
+      <if test="creditcollectionpath != null">
+        #{creditcollectionpath,jdbcType=VARCHAR},
+      </if>
+      <if test="count != null">
+        #{count,jdbcType=INTEGER},
+      </if>
+      <if test="applyuserid != null">
+        #{applyuserid,jdbcType=VARCHAR},
+      </if>
+      <if test="updatetime != null">
+        #{updatetime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="currenttype != null">
+        #{currenttype,jdbcType=BIT},
+      </if>
+      <if test="applytype != null">
+        #{applytype,jdbcType=BIT},
+      </if>
+      <if test="applystatus != null">
+        #{applystatus,jdbcType=BIT},
+      </if>
+      <if test="pacompanyid != null">
+        #{pacompanyid,jdbcType=VARCHAR},
+      </if>
+      <if test="stickscale != null">
+        #{stickscale,jdbcType=VARCHAR},
+      </if>
+      <if test="stickcreatetime != null">
+        #{stickcreatetime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="ifauthorization != null">
+        #{ifauthorization,jdbcType=VARCHAR},
+      </if>
+      <if test="isshowinfront != null">
+        #{isshowinfront,jdbcType=BIT},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.example.model.UserCompany">
+    update user_company
+    <set>
+      <if test="number != null">
+        number = #{number,jdbcType=VARCHAR},
+      </if>
+      <if test="organizationcode != null">
+        organizationCode = #{organizationcode,jdbcType=VARCHAR},
+      </if>
+      <if test="certificatetype != null">
+        certificateType = #{certificatetype,jdbcType=VARCHAR},
+      </if>
+      <if test="companyname != null">
+        companyName = #{companyname,jdbcType=VARCHAR},
+      </if>
+      <if test="industry != null">
+        industry = #{industry,jdbcType=VARCHAR},
+      </if>
+      <if test="scale != null">
+        scale = #{scale,jdbcType=VARCHAR},
+      </if>
+      <if test="concepts != null">
+        concepts = #{concepts,jdbcType=VARCHAR},
+      </if>
+      <if test="legalpersonname != null">
+        legalPersonName = #{legalpersonname,jdbcType=VARCHAR},
+      </if>
+      <if test="legalpersonidentityno != null">
+        legalPersonIdentityNo = #{legalpersonidentityno,jdbcType=VARCHAR},
+      </if>
+      <if test="legalpersonphoneno != null">
+        legalPersonPhoneNo = #{legalpersonphoneno,jdbcType=VARCHAR},
+      </if>
+      <if test="ifjointstockexchangecenter != null">
+        ifJointStockExchangeCenter = #{ifjointstockexchangecenter,jdbcType=VARCHAR},
+      </if>
+      <if test="companycontractuserphoneno != null">
+        companyContractUserPhoneNo = #{companycontractuserphoneno,jdbcType=VARCHAR},
+      </if>
+      <if test="companycontractusername != null">
+        companyContractUserName = #{companycontractusername,jdbcType=VARCHAR},
+      </if>
+      <if test="businesspath != null">
+        businessPath = #{businesspath,jdbcType=VARCHAR},
+      </if>
+      <if test="companyauthorizationpath != null">
+        companyAuthorizationPath = #{companyauthorizationpath,jdbcType=VARCHAR},
+      </if>
+      <if test="province != null">
+        province = #{province,jdbcType=VARCHAR},
+      </if>
+      <if test="city != null">
+        city = #{city,jdbcType=VARCHAR},
+      </if>
+      <if test="county != null">
+        county = #{county,jdbcType=VARCHAR},
+      </if>
+      <if test="town != null">
+        town = #{town,jdbcType=VARCHAR},
+      </if>
+      <if test="companylocation != null">
+        companyLocation = #{companylocation,jdbcType=VARCHAR},
+      </if>
+      <if test="companysummary != null">
+        companySummary = #{companysummary,jdbcType=VARCHAR},
+      </if>
+      <if test="companycharacteristics != null">
+        companyCharacteristics = #{companycharacteristics,jdbcType=VARCHAR},
+      </if>
+      <if test="createtime != null">
+        createTime = #{createtime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="audittime != null">
+        auditTime = #{audittime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="channel != null">
+        channel = #{channel,jdbcType=VARCHAR},
+      </if>
+      <if test="email != null">
+        email = #{email,jdbcType=VARCHAR},
+      </if>
+      <if test="note != null">
+        note = #{note,jdbcType=VARCHAR},
+      </if>
+      <if test="legalpersonpathfront != null">
+        legalPersonPathFront = #{legalpersonpathfront,jdbcType=VARCHAR},
+      </if>
+      <if test="legalpersonpathback != null">
+        legalPersonPathBack = #{legalpersonpathback,jdbcType=VARCHAR},
+      </if>
+      <if test="companylogopath != null">
+        companyLogoPath = #{companylogopath,jdbcType=VARCHAR},
+      </if>
+      <if test="creditcollectionpath != null">
+        creditCollectionPath = #{creditcollectionpath,jdbcType=VARCHAR},
+      </if>
+      <if test="count != null">
+        count = #{count,jdbcType=INTEGER},
+      </if>
+      <if test="applyuserid != null">
+        applyUserId = #{applyuserid,jdbcType=VARCHAR},
+      </if>
+      <if test="updatetime != null">
+        updateTime = #{updatetime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="currenttype != null">
+        currentType = #{currenttype,jdbcType=BIT},
+      </if>
+      <if test="applytype != null">
+        applyType = #{applytype,jdbcType=BIT},
+      </if>
+      <if test="applystatus != null">
+        applyStatus = #{applystatus,jdbcType=BIT},
+      </if>
+      <if test="pacompanyid != null">
+        paCompanyId = #{pacompanyid,jdbcType=VARCHAR},
+      </if>
+      <if test="stickscale != null">
+        stickScale = #{stickscale,jdbcType=VARCHAR},
+      </if>
+      <if test="stickcreatetime != null">
+        stickCreateTime = #{stickcreatetime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="ifauthorization != null">
+        ifAuthorization = #{ifauthorization,jdbcType=VARCHAR},
+      </if>
+      <if test="isshowinfront != null">
+        isShowInFront = #{isshowinfront,jdbcType=BIT},
+      </if>
+    </set>
+    where companyId = #{companyid,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.example.model.UserCompany">
+    update user_company
+    set number = #{number,jdbcType=VARCHAR},
+      organizationCode = #{organizationcode,jdbcType=VARCHAR},
+      certificateType = #{certificatetype,jdbcType=VARCHAR},
+      companyName = #{companyname,jdbcType=VARCHAR},
+      industry = #{industry,jdbcType=VARCHAR},
+      scale = #{scale,jdbcType=VARCHAR},
+      concepts = #{concepts,jdbcType=VARCHAR},
+      legalPersonName = #{legalpersonname,jdbcType=VARCHAR},
+      legalPersonIdentityNo = #{legalpersonidentityno,jdbcType=VARCHAR},
+      legalPersonPhoneNo = #{legalpersonphoneno,jdbcType=VARCHAR},
+      ifJointStockExchangeCenter = #{ifjointstockexchangecenter,jdbcType=VARCHAR},
+      companyContractUserPhoneNo = #{companycontractuserphoneno,jdbcType=VARCHAR},
+      companyContractUserName = #{companycontractusername,jdbcType=VARCHAR},
+      businessPath = #{businesspath,jdbcType=VARCHAR},
+      companyAuthorizationPath = #{companyauthorizationpath,jdbcType=VARCHAR},
+      province = #{province,jdbcType=VARCHAR},
+      city = #{city,jdbcType=VARCHAR},
+      county = #{county,jdbcType=VARCHAR},
+      town = #{town,jdbcType=VARCHAR},
+      companyLocation = #{companylocation,jdbcType=VARCHAR},
+      companySummary = #{companysummary,jdbcType=VARCHAR},
+      companyCharacteristics = #{companycharacteristics,jdbcType=VARCHAR},
+      createTime = #{createtime,jdbcType=TIMESTAMP},
+      auditTime = #{audittime,jdbcType=TIMESTAMP},
+      channel = #{channel,jdbcType=VARCHAR},
+      email = #{email,jdbcType=VARCHAR},
+      note = #{note,jdbcType=VARCHAR},
+      legalPersonPathFront = #{legalpersonpathfront,jdbcType=VARCHAR},
+      legalPersonPathBack = #{legalpersonpathback,jdbcType=VARCHAR},
+      companyLogoPath = #{companylogopath,jdbcType=VARCHAR},
+      creditCollectionPath = #{creditcollectionpath,jdbcType=VARCHAR},
+      count = #{count,jdbcType=INTEGER},
+      applyUserId = #{applyuserid,jdbcType=VARCHAR},
+      updateTime = #{updatetime,jdbcType=TIMESTAMP},
+      currentType = #{currenttype,jdbcType=BIT},
+      applyType = #{applytype,jdbcType=BIT},
+      applyStatus = #{applystatus,jdbcType=BIT},
+      paCompanyId = #{pacompanyid,jdbcType=VARCHAR},
+      stickScale = #{stickscale,jdbcType=VARCHAR},
+      stickCreateTime = #{stickcreatetime,jdbcType=TIMESTAMP},
+      ifAuthorization = #{ifauthorization,jdbcType=VARCHAR},
+      isShowInFront = #{isshowinfront,jdbcType=BIT}
+    where companyId = #{companyid,jdbcType=VARCHAR}
+  </update>
+  <resultMap id="BaseResultMap" type="com.example.model.UserCompany">
+    <constructor>
+      <idArg column="companyId" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="number" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="organizationCode" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="certificateType" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="companyName" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="industry" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="scale" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="concepts" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="legalPersonName" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="legalPersonIdentityNo" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="legalPersonPhoneNo" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="ifJointStockExchangeCenter" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="companyContractUserPhoneNo" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="companyContractUserName" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="businessPath" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="companyAuthorizationPath" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="province" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="city" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="county" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="town" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="companyLocation" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="companySummary" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="companyCharacteristics" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="createTime" javaType="java.util.Date" jdbcType="TIMESTAMP" />
+      <arg column="auditTime" javaType="java.util.Date" jdbcType="TIMESTAMP" />
+      <arg column="channel" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="email" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="note" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="legalPersonPathFront" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="legalPersonPathBack" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="companyLogoPath" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="creditCollectionPath" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="count" javaType="java.lang.Integer" jdbcType="INTEGER" />
+      <arg column="applyUserId" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="updateTime" javaType="java.util.Date" jdbcType="TIMESTAMP" />
+      <arg column="currentType" javaType="java.lang.Boolean" jdbcType="BIT" />
+      <arg column="applyType" javaType="java.lang.Boolean" jdbcType="BIT" />
+      <arg column="applyStatus" javaType="java.lang.Boolean" jdbcType="BIT" />
+      <arg column="paCompanyId" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="stickScale" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="stickCreateTime" javaType="java.util.Date" jdbcType="TIMESTAMP" />
+      <arg column="ifAuthorization" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="isShowInFront" javaType="java.lang.Boolean" jdbcType="BIT" />
+    </constructor>
+  </resultMap>
+  <sql id="Base_Column_List">
+    companyId, number, organizationCode, certificateType, companyName, industry, scale, 
+    concepts, legalPersonName, legalPersonIdentityNo, legalPersonPhoneNo, ifJointStockExchangeCenter, 
+    companyContractUserPhoneNo, companyContractUserName, businessPath, companyAuthorizationPath, 
+    province, city, county, town, companyLocation, companySummary, companyCharacteristics, 
+    createTime, auditTime, channel, email, note, legalPersonPathFront, legalPersonPathBack, 
+    companyLogoPath, creditCollectionPath, count, applyUserId, updateTime, currentType, 
+    applyType, applyStatus, paCompanyId, stickScale, stickCreateTime, ifAuthorization, 
+    isShowInFront
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from user_company
+    where companyId = #{companyid,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    delete from user_company
+    where companyId = #{companyid,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="com.example.model.UserCompany">
+    insert into user_company (companyId, number, organizationCode, 
+      certificateType, companyName, industry, 
+      scale, concepts, legalPersonName, 
+      legalPersonIdentityNo, legalPersonPhoneNo, 
+      ifJointStockExchangeCenter, companyContractUserPhoneNo, 
+      companyContractUserName, businessPath, 
+      companyAuthorizationPath, province, city, 
+      county, town, companyLocation, 
+      companySummary, companyCharacteristics, 
+      createTime, auditTime, channel, 
+      email, note, legalPersonPathFront, 
+      legalPersonPathBack, companyLogoPath, creditCollectionPath, 
+      count, applyUserId, updateTime, 
+      currentType, applyType, applyStatus, 
+      paCompanyId, stickScale, stickCreateTime, 
+      ifAuthorization, isShowInFront)
+    values (#{companyid,jdbcType=VARCHAR}, #{number,jdbcType=VARCHAR}, #{organizationcode,jdbcType=VARCHAR}, 
+      #{certificatetype,jdbcType=VARCHAR}, #{companyname,jdbcType=VARCHAR}, #{industry,jdbcType=VARCHAR}, 
+      #{scale,jdbcType=VARCHAR}, #{concepts,jdbcType=VARCHAR}, #{legalpersonname,jdbcType=VARCHAR}, 
+      #{legalpersonidentityno,jdbcType=VARCHAR}, #{legalpersonphoneno,jdbcType=VARCHAR}, 
+      #{ifjointstockexchangecenter,jdbcType=VARCHAR}, #{companycontractuserphoneno,jdbcType=VARCHAR}, 
+      #{companycontractusername,jdbcType=VARCHAR}, #{businesspath,jdbcType=VARCHAR}, 
+      #{companyauthorizationpath,jdbcType=VARCHAR}, #{province,jdbcType=VARCHAR}, #{city,jdbcType=VARCHAR}, 
+      #{county,jdbcType=VARCHAR}, #{town,jdbcType=VARCHAR}, #{companylocation,jdbcType=VARCHAR}, 
+      #{companysummary,jdbcType=VARCHAR}, #{companycharacteristics,jdbcType=VARCHAR}, 
+      #{createtime,jdbcType=TIMESTAMP}, #{audittime,jdbcType=TIMESTAMP}, #{channel,jdbcType=VARCHAR}, 
+      #{email,jdbcType=VARCHAR}, #{note,jdbcType=VARCHAR}, #{legalpersonpathfront,jdbcType=VARCHAR}, 
+      #{legalpersonpathback,jdbcType=VARCHAR}, #{companylogopath,jdbcType=VARCHAR}, #{creditcollectionpath,jdbcType=VARCHAR}, 
+      #{count,jdbcType=INTEGER}, #{applyuserid,jdbcType=VARCHAR}, #{updatetime,jdbcType=TIMESTAMP}, 
+      #{currenttype,jdbcType=BIT}, #{applytype,jdbcType=BIT}, #{applystatus,jdbcType=BIT}, 
+      #{pacompanyid,jdbcType=VARCHAR}, #{stickscale,jdbcType=VARCHAR}, #{stickcreatetime,jdbcType=TIMESTAMP}, 
+      #{ifauthorization,jdbcType=VARCHAR}, #{isshowinfront,jdbcType=BIT})
+  </insert>
+  <insert id="insertSelective" parameterType="com.example.model.UserCompany">
+    insert into user_company
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="companyid != null">
+        companyId,
+      </if>
+      <if test="number != null">
+        number,
+      </if>
+      <if test="organizationcode != null">
+        organizationCode,
+      </if>
+      <if test="certificatetype != null">
+        certificateType,
+      </if>
+      <if test="companyname != null">
+        companyName,
+      </if>
+      <if test="industry != null">
+        industry,
+      </if>
+      <if test="scale != null">
+        scale,
+      </if>
+      <if test="concepts != null">
+        concepts,
+      </if>
+      <if test="legalpersonname != null">
+        legalPersonName,
+      </if>
+      <if test="legalpersonidentityno != null">
+        legalPersonIdentityNo,
+      </if>
+      <if test="legalpersonphoneno != null">
+        legalPersonPhoneNo,
+      </if>
+      <if test="ifjointstockexchangecenter != null">
+        ifJointStockExchangeCenter,
+      </if>
+      <if test="companycontractuserphoneno != null">
+        companyContractUserPhoneNo,
+      </if>
+      <if test="companycontractusername != null">
+        companyContractUserName,
+      </if>
+      <if test="businesspath != null">
+        businessPath,
+      </if>
+      <if test="companyauthorizationpath != null">
+        companyAuthorizationPath,
+      </if>
+      <if test="province != null">
+        province,
+      </if>
+      <if test="city != null">
+        city,
+      </if>
+      <if test="county != null">
+        county,
+      </if>
+      <if test="town != null">
+        town,
+      </if>
+      <if test="companylocation != null">
+        companyLocation,
+      </if>
+      <if test="companysummary != null">
+        companySummary,
+      </if>
+      <if test="companycharacteristics != null">
+        companyCharacteristics,
+      </if>
+      <if test="createtime != null">
+        createTime,
+      </if>
+      <if test="audittime != null">
+        auditTime,
+      </if>
+      <if test="channel != null">
+        channel,
+      </if>
+      <if test="email != null">
+        email,
+      </if>
+      <if test="note != null">
+        note,
+      </if>
+      <if test="legalpersonpathfront != null">
+        legalPersonPathFront,
+      </if>
+      <if test="legalpersonpathback != null">
+        legalPersonPathBack,
+      </if>
+      <if test="companylogopath != null">
+        companyLogoPath,
+      </if>
+      <if test="creditcollectionpath != null">
+        creditCollectionPath,
+      </if>
+      <if test="count != null">
+        count,
+      </if>
+      <if test="applyuserid != null">
+        applyUserId,
+      </if>
+      <if test="updatetime != null">
+        updateTime,
+      </if>
+      <if test="currenttype != null">
+        currentType,
+      </if>
+      <if test="applytype != null">
+        applyType,
+      </if>
+      <if test="applystatus != null">
+        applyStatus,
+      </if>
+      <if test="pacompanyid != null">
+        paCompanyId,
+      </if>
+      <if test="stickscale != null">
+        stickScale,
+      </if>
+      <if test="stickcreatetime != null">
+        stickCreateTime,
+      </if>
+      <if test="ifauthorization != null">
+        ifAuthorization,
+      </if>
+      <if test="isshowinfront != null">
+        isShowInFront,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="companyid != null">
+        #{companyid,jdbcType=VARCHAR},
+      </if>
+      <if test="number != null">
+        #{number,jdbcType=VARCHAR},
+      </if>
+      <if test="organizationcode != null">
+        #{organizationcode,jdbcType=VARCHAR},
+      </if>
+      <if test="certificatetype != null">
+        #{certificatetype,jdbcType=VARCHAR},
+      </if>
+      <if test="companyname != null">
+        #{companyname,jdbcType=VARCHAR},
+      </if>
+      <if test="industry != null">
+        #{industry,jdbcType=VARCHAR},
+      </if>
+      <if test="scale != null">
+        #{scale,jdbcType=VARCHAR},
+      </if>
+      <if test="concepts != null">
+        #{concepts,jdbcType=VARCHAR},
+      </if>
+      <if test="legalpersonname != null">
+        #{legalpersonname,jdbcType=VARCHAR},
+      </if>
+      <if test="legalpersonidentityno != null">
+        #{legalpersonidentityno,jdbcType=VARCHAR},
+      </if>
+      <if test="legalpersonphoneno != null">
+        #{legalpersonphoneno,jdbcType=VARCHAR},
+      </if>
+      <if test="ifjointstockexchangecenter != null">
+        #{ifjointstockexchangecenter,jdbcType=VARCHAR},
+      </if>
+      <if test="companycontractuserphoneno != null">
+        #{companycontractuserphoneno,jdbcType=VARCHAR},
+      </if>
+      <if test="companycontractusername != null">
+        #{companycontractusername,jdbcType=VARCHAR},
+      </if>
+      <if test="businesspath != null">
+        #{businesspath,jdbcType=VARCHAR},
+      </if>
+      <if test="companyauthorizationpath != null">
+        #{companyauthorizationpath,jdbcType=VARCHAR},
+      </if>
+      <if test="province != null">
+        #{province,jdbcType=VARCHAR},
+      </if>
+      <if test="city != null">
+        #{city,jdbcType=VARCHAR},
+      </if>
+      <if test="county != null">
+        #{county,jdbcType=VARCHAR},
+      </if>
+      <if test="town != null">
+        #{town,jdbcType=VARCHAR},
+      </if>
+      <if test="companylocation != null">
+        #{companylocation,jdbcType=VARCHAR},
+      </if>
+      <if test="companysummary != null">
+        #{companysummary,jdbcType=VARCHAR},
+      </if>
+      <if test="companycharacteristics != null">
+        #{companycharacteristics,jdbcType=VARCHAR},
+      </if>
+      <if test="createtime != null">
+        #{createtime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="audittime != null">
+        #{audittime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="channel != null">
+        #{channel,jdbcType=VARCHAR},
+      </if>
+      <if test="email != null">
+        #{email,jdbcType=VARCHAR},
+      </if>
+      <if test="note != null">
+        #{note,jdbcType=VARCHAR},
+      </if>
+      <if test="legalpersonpathfront != null">
+        #{legalpersonpathfront,jdbcType=VARCHAR},
+      </if>
+      <if test="legalpersonpathback != null">
+        #{legalpersonpathback,jdbcType=VARCHAR},
+      </if>
+      <if test="companylogopath != null">
+        #{companylogopath,jdbcType=VARCHAR},
+      </if>
+      <if test="creditcollectionpath != null">
+        #{creditcollectionpath,jdbcType=VARCHAR},
+      </if>
+      <if test="count != null">
+        #{count,jdbcType=INTEGER},
+      </if>
+      <if test="applyuserid != null">
+        #{applyuserid,jdbcType=VARCHAR},
+      </if>
+      <if test="updatetime != null">
+        #{updatetime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="currenttype != null">
+        #{currenttype,jdbcType=BIT},
+      </if>
+      <if test="applytype != null">
+        #{applytype,jdbcType=BIT},
+      </if>
+      <if test="applystatus != null">
+        #{applystatus,jdbcType=BIT},
+      </if>
+      <if test="pacompanyid != null">
+        #{pacompanyid,jdbcType=VARCHAR},
+      </if>
+      <if test="stickscale != null">
+        #{stickscale,jdbcType=VARCHAR},
+      </if>
+      <if test="stickcreatetime != null">
+        #{stickcreatetime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="ifauthorization != null">
+        #{ifauthorization,jdbcType=VARCHAR},
+      </if>
+      <if test="isshowinfront != null">
+        #{isshowinfront,jdbcType=BIT},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.example.model.UserCompany">
+    update user_company
+    <set>
+      <if test="number != null">
+        number = #{number,jdbcType=VARCHAR},
+      </if>
+      <if test="organizationcode != null">
+        organizationCode = #{organizationcode,jdbcType=VARCHAR},
+      </if>
+      <if test="certificatetype != null">
+        certificateType = #{certificatetype,jdbcType=VARCHAR},
+      </if>
+      <if test="companyname != null">
+        companyName = #{companyname,jdbcType=VARCHAR},
+      </if>
+      <if test="industry != null">
+        industry = #{industry,jdbcType=VARCHAR},
+      </if>
+      <if test="scale != null">
+        scale = #{scale,jdbcType=VARCHAR},
+      </if>
+      <if test="concepts != null">
+        concepts = #{concepts,jdbcType=VARCHAR},
+      </if>
+      <if test="legalpersonname != null">
+        legalPersonName = #{legalpersonname,jdbcType=VARCHAR},
+      </if>
+      <if test="legalpersonidentityno != null">
+        legalPersonIdentityNo = #{legalpersonidentityno,jdbcType=VARCHAR},
+      </if>
+      <if test="legalpersonphoneno != null">
+        legalPersonPhoneNo = #{legalpersonphoneno,jdbcType=VARCHAR},
+      </if>
+      <if test="ifjointstockexchangecenter != null">
+        ifJointStockExchangeCenter = #{ifjointstockexchangecenter,jdbcType=VARCHAR},
+      </if>
+      <if test="companycontractuserphoneno != null">
+        companyContractUserPhoneNo = #{companycontractuserphoneno,jdbcType=VARCHAR},
+      </if>
+      <if test="companycontractusername != null">
+        companyContractUserName = #{companycontractusername,jdbcType=VARCHAR},
+      </if>
+      <if test="businesspath != null">
+        businessPath = #{businesspath,jdbcType=VARCHAR},
+      </if>
+      <if test="companyauthorizationpath != null">
+        companyAuthorizationPath = #{companyauthorizationpath,jdbcType=VARCHAR},
+      </if>
+      <if test="province != null">
+        province = #{province,jdbcType=VARCHAR},
+      </if>
+      <if test="city != null">
+        city = #{city,jdbcType=VARCHAR},
+      </if>
+      <if test="county != null">
+        county = #{county,jdbcType=VARCHAR},
+      </if>
+      <if test="town != null">
+        town = #{town,jdbcType=VARCHAR},
+      </if>
+      <if test="companylocation != null">
+        companyLocation = #{companylocation,jdbcType=VARCHAR},
+      </if>
+      <if test="companysummary != null">
+        companySummary = #{companysummary,jdbcType=VARCHAR},
+      </if>
+      <if test="companycharacteristics != null">
+        companyCharacteristics = #{companycharacteristics,jdbcType=VARCHAR},
+      </if>
+      <if test="createtime != null">
+        createTime = #{createtime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="audittime != null">
+        auditTime = #{audittime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="channel != null">
+        channel = #{channel,jdbcType=VARCHAR},
+      </if>
+      <if test="email != null">
+        email = #{email,jdbcType=VARCHAR},
+      </if>
+      <if test="note != null">
+        note = #{note,jdbcType=VARCHAR},
+      </if>
+      <if test="legalpersonpathfront != null">
+        legalPersonPathFront = #{legalpersonpathfront,jdbcType=VARCHAR},
+      </if>
+      <if test="legalpersonpathback != null">
+        legalPersonPathBack = #{legalpersonpathback,jdbcType=VARCHAR},
+      </if>
+      <if test="companylogopath != null">
+        companyLogoPath = #{companylogopath,jdbcType=VARCHAR},
+      </if>
+      <if test="creditcollectionpath != null">
+        creditCollectionPath = #{creditcollectionpath,jdbcType=VARCHAR},
+      </if>
+      <if test="count != null">
+        count = #{count,jdbcType=INTEGER},
+      </if>
+      <if test="applyuserid != null">
+        applyUserId = #{applyuserid,jdbcType=VARCHAR},
+      </if>
+      <if test="updatetime != null">
+        updateTime = #{updatetime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="currenttype != null">
+        currentType = #{currenttype,jdbcType=BIT},
+      </if>
+      <if test="applytype != null">
+        applyType = #{applytype,jdbcType=BIT},
+      </if>
+      <if test="applystatus != null">
+        applyStatus = #{applystatus,jdbcType=BIT},
+      </if>
+      <if test="pacompanyid != null">
+        paCompanyId = #{pacompanyid,jdbcType=VARCHAR},
+      </if>
+      <if test="stickscale != null">
+        stickScale = #{stickscale,jdbcType=VARCHAR},
+      </if>
+      <if test="stickcreatetime != null">
+        stickCreateTime = #{stickcreatetime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="ifauthorization != null">
+        ifAuthorization = #{ifauthorization,jdbcType=VARCHAR},
+      </if>
+      <if test="isshowinfront != null">
+        isShowInFront = #{isshowinfront,jdbcType=BIT},
+      </if>
+    </set>
+    where companyId = #{companyid,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.example.model.UserCompany">
+    update user_company
+    set number = #{number,jdbcType=VARCHAR},
+      organizationCode = #{organizationcode,jdbcType=VARCHAR},
+      certificateType = #{certificatetype,jdbcType=VARCHAR},
+      companyName = #{companyname,jdbcType=VARCHAR},
+      industry = #{industry,jdbcType=VARCHAR},
+      scale = #{scale,jdbcType=VARCHAR},
+      concepts = #{concepts,jdbcType=VARCHAR},
+      legalPersonName = #{legalpersonname,jdbcType=VARCHAR},
+      legalPersonIdentityNo = #{legalpersonidentityno,jdbcType=VARCHAR},
+      legalPersonPhoneNo = #{legalpersonphoneno,jdbcType=VARCHAR},
+      ifJointStockExchangeCenter = #{ifjointstockexchangecenter,jdbcType=VARCHAR},
+      companyContractUserPhoneNo = #{companycontractuserphoneno,jdbcType=VARCHAR},
+      companyContractUserName = #{companycontractusername,jdbcType=VARCHAR},
+      businessPath = #{businesspath,jdbcType=VARCHAR},
+      companyAuthorizationPath = #{companyauthorizationpath,jdbcType=VARCHAR},
+      province = #{province,jdbcType=VARCHAR},
+      city = #{city,jdbcType=VARCHAR},
+      county = #{county,jdbcType=VARCHAR},
+      town = #{town,jdbcType=VARCHAR},
+      companyLocation = #{companylocation,jdbcType=VARCHAR},
+      companySummary = #{companysummary,jdbcType=VARCHAR},
+      companyCharacteristics = #{companycharacteristics,jdbcType=VARCHAR},
+      createTime = #{createtime,jdbcType=TIMESTAMP},
+      auditTime = #{audittime,jdbcType=TIMESTAMP},
+      channel = #{channel,jdbcType=VARCHAR},
+      email = #{email,jdbcType=VARCHAR},
+      note = #{note,jdbcType=VARCHAR},
+      legalPersonPathFront = #{legalpersonpathfront,jdbcType=VARCHAR},
+      legalPersonPathBack = #{legalpersonpathback,jdbcType=VARCHAR},
+      companyLogoPath = #{companylogopath,jdbcType=VARCHAR},
+      creditCollectionPath = #{creditcollectionpath,jdbcType=VARCHAR},
+      count = #{count,jdbcType=INTEGER},
+      applyUserId = #{applyuserid,jdbcType=VARCHAR},
+      updateTime = #{updatetime,jdbcType=TIMESTAMP},
+      currentType = #{currenttype,jdbcType=BIT},
+      applyType = #{applytype,jdbcType=BIT},
+      applyStatus = #{applystatus,jdbcType=BIT},
+      paCompanyId = #{pacompanyid,jdbcType=VARCHAR},
+      stickScale = #{stickscale,jdbcType=VARCHAR},
+      stickCreateTime = #{stickcreatetime,jdbcType=TIMESTAMP},
+      ifAuthorization = #{ifauthorization,jdbcType=VARCHAR},
+      isShowInFront = #{isshowinfront,jdbcType=BIT}
+    where companyId = #{companyid,jdbcType=VARCHAR}
+  </update>
+</mapper>

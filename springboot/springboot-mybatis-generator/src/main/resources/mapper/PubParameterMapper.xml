@@ -1,0 +1,641 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.mapper.PubParameterMapper">
+  <resultMap id="BaseResultMap" type="com.example.model.PubParameter">
+    <constructor>
+      <idArg column="aprId" javaType="java.lang.Integer" jdbcType="INTEGER" />
+      <arg column="aprName" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="aprCode" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="aprValue" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="aprShowmsg" javaType="java.lang.String" jdbcType="VARCHAR" />
+    </constructor>
+  </resultMap>
+  <sql id="Base_Column_List">
+    aprId, aprName, aprCode, aprValue, aprShowmsg
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from pub_parameter
+    where aprId = #{aprId,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from pub_parameter
+    where aprId = #{aprId,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.example.model.PubParameter">
+    insert into pub_parameter (aprId, aprName, aprCode, 
+      aprValue, aprShowmsg)
+    values (#{aprId,jdbcType=INTEGER}, #{aprName,jdbcType=VARCHAR}, #{aprCode,jdbcType=VARCHAR}, 
+      #{aprValue,jdbcType=VARCHAR}, #{aprShowmsg,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.example.model.PubParameter">
+    insert into pub_parameter
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="aprId != null">
+        aprId,
+      </if>
+      <if test="aprName != null">
+        aprName,
+      </if>
+      <if test="aprCode != null">
+        aprCode,
+      </if>
+      <if test="aprValue != null">
+        aprValue,
+      </if>
+      <if test="aprShowmsg != null">
+        aprShowmsg,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="aprId != null">
+        #{aprId,jdbcType=INTEGER},
+      </if>
+      <if test="aprName != null">
+        #{aprName,jdbcType=VARCHAR},
+      </if>
+      <if test="aprCode != null">
+        #{aprCode,jdbcType=VARCHAR},
+      </if>
+      <if test="aprValue != null">
+        #{aprValue,jdbcType=VARCHAR},
+      </if>
+      <if test="aprShowmsg != null">
+        #{aprShowmsg,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.example.model.PubParameter">
+    update pub_parameter
+    <set>
+      <if test="aprName != null">
+        aprName = #{aprName,jdbcType=VARCHAR},
+      </if>
+      <if test="aprCode != null">
+        aprCode = #{aprCode,jdbcType=VARCHAR},
+      </if>
+      <if test="aprValue != null">
+        aprValue = #{aprValue,jdbcType=VARCHAR},
+      </if>
+      <if test="aprShowmsg != null">
+        aprShowmsg = #{aprShowmsg,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where aprId = #{aprId,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.example.model.PubParameter">
+    update pub_parameter
+    set aprName = #{aprName,jdbcType=VARCHAR},
+      aprCode = #{aprCode,jdbcType=VARCHAR},
+      aprValue = #{aprValue,jdbcType=VARCHAR},
+      aprShowmsg = #{aprShowmsg,jdbcType=VARCHAR}
+    where aprId = #{aprId,jdbcType=INTEGER}
+  </update>
+  <resultMap id="BaseResultMap" type="com.example.model.PubParameter">
+    <constructor>
+      <idArg column="aprId" javaType="java.lang.Integer" jdbcType="INTEGER" />
+      <arg column="aprName" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="aprCode" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="aprValue" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="aprShowmsg" javaType="java.lang.String" jdbcType="VARCHAR" />
+    </constructor>
+  </resultMap>
+  <sql id="Base_Column_List">
+    aprId, aprName, aprCode, aprValue, aprShowmsg
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from pub_parameter
+    where aprId = #{aprId,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from pub_parameter
+    where aprId = #{aprId,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.example.model.PubParameter">
+    insert into pub_parameter (aprId, aprName, aprCode, 
+      aprValue, aprShowmsg)
+    values (#{aprId,jdbcType=INTEGER}, #{aprName,jdbcType=VARCHAR}, #{aprCode,jdbcType=VARCHAR}, 
+      #{aprValue,jdbcType=VARCHAR}, #{aprShowmsg,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.example.model.PubParameter">
+    insert into pub_parameter
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="aprId != null">
+        aprId,
+      </if>
+      <if test="aprName != null">
+        aprName,
+      </if>
+      <if test="aprCode != null">
+        aprCode,
+      </if>
+      <if test="aprValue != null">
+        aprValue,
+      </if>
+      <if test="aprShowmsg != null">
+        aprShowmsg,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="aprId != null">
+        #{aprId,jdbcType=INTEGER},
+      </if>
+      <if test="aprName != null">
+        #{aprName,jdbcType=VARCHAR},
+      </if>
+      <if test="aprCode != null">
+        #{aprCode,jdbcType=VARCHAR},
+      </if>
+      <if test="aprValue != null">
+        #{aprValue,jdbcType=VARCHAR},
+      </if>
+      <if test="aprShowmsg != null">
+        #{aprShowmsg,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.example.model.PubParameter">
+    update pub_parameter
+    <set>
+      <if test="aprName != null">
+        aprName = #{aprName,jdbcType=VARCHAR},
+      </if>
+      <if test="aprCode != null">
+        aprCode = #{aprCode,jdbcType=VARCHAR},
+      </if>
+      <if test="aprValue != null">
+        aprValue = #{aprValue,jdbcType=VARCHAR},
+      </if>
+      <if test="aprShowmsg != null">
+        aprShowmsg = #{aprShowmsg,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where aprId = #{aprId,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.example.model.PubParameter">
+    update pub_parameter
+    set aprName = #{aprName,jdbcType=VARCHAR},
+      aprCode = #{aprCode,jdbcType=VARCHAR},
+      aprValue = #{aprValue,jdbcType=VARCHAR},
+      aprShowmsg = #{aprShowmsg,jdbcType=VARCHAR}
+    where aprId = #{aprId,jdbcType=INTEGER}
+  </update>
+  <resultMap id="BaseResultMap" type="com.example.model.PubParameter">
+    <constructor>
+      <idArg column="aprId" javaType="java.lang.Integer" jdbcType="INTEGER" />
+      <arg column="aprName" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="aprCode" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="aprValue" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="aprShowmsg" javaType="java.lang.String" jdbcType="VARCHAR" />
+    </constructor>
+  </resultMap>
+  <sql id="Base_Column_List">
+    aprId, aprName, aprCode, aprValue, aprShowmsg
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from pub_parameter
+    where aprId = #{aprid,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from pub_parameter
+    where aprId = #{aprid,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.example.model.PubParameter">
+    insert into pub_parameter (aprId, aprName, aprCode, 
+      aprValue, aprShowmsg)
+    values (#{aprid,jdbcType=INTEGER}, #{aprname,jdbcType=VARCHAR}, #{aprcode,jdbcType=VARCHAR}, 
+      #{aprvalue,jdbcType=VARCHAR}, #{aprshowmsg,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.example.model.PubParameter">
+    insert into pub_parameter
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="aprid != null">
+        aprId,
+      </if>
+      <if test="aprname != null">
+        aprName,
+      </if>
+      <if test="aprcode != null">
+        aprCode,
+      </if>
+      <if test="aprvalue != null">
+        aprValue,
+      </if>
+      <if test="aprshowmsg != null">
+        aprShowmsg,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="aprid != null">
+        #{aprid,jdbcType=INTEGER},
+      </if>
+      <if test="aprname != null">
+        #{aprname,jdbcType=VARCHAR},
+      </if>
+      <if test="aprcode != null">
+        #{aprcode,jdbcType=VARCHAR},
+      </if>
+      <if test="aprvalue != null">
+        #{aprvalue,jdbcType=VARCHAR},
+      </if>
+      <if test="aprshowmsg != null">
+        #{aprshowmsg,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.example.model.PubParameter">
+    update pub_parameter
+    <set>
+      <if test="aprname != null">
+        aprName = #{aprname,jdbcType=VARCHAR},
+      </if>
+      <if test="aprcode != null">
+        aprCode = #{aprcode,jdbcType=VARCHAR},
+      </if>
+      <if test="aprvalue != null">
+        aprValue = #{aprvalue,jdbcType=VARCHAR},
+      </if>
+      <if test="aprshowmsg != null">
+        aprShowmsg = #{aprshowmsg,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where aprId = #{aprid,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.example.model.PubParameter">
+    update pub_parameter
+    set aprName = #{aprname,jdbcType=VARCHAR},
+      aprCode = #{aprcode,jdbcType=VARCHAR},
+      aprValue = #{aprvalue,jdbcType=VARCHAR},
+      aprShowmsg = #{aprshowmsg,jdbcType=VARCHAR}
+    where aprId = #{aprid,jdbcType=INTEGER}
+  </update>
+  <resultMap id="BaseResultMap" type="com.example.model.PubParameter">
+    <constructor>
+      <idArg column="aprId" javaType="java.lang.Integer" jdbcType="INTEGER" />
+      <arg column="aprName" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="aprCode" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="aprValue" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="aprShowmsg" javaType="java.lang.String" jdbcType="VARCHAR" />
+    </constructor>
+  </resultMap>
+  <sql id="Base_Column_List">
+    aprId, aprName, aprCode, aprValue, aprShowmsg
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from pub_parameter
+    where aprId = #{aprid,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from pub_parameter
+    where aprId = #{aprid,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.example.model.PubParameter">
+    insert into pub_parameter (aprId, aprName, aprCode, 
+      aprValue, aprShowmsg)
+    values (#{aprid,jdbcType=INTEGER}, #{aprname,jdbcType=VARCHAR}, #{aprcode,jdbcType=VARCHAR}, 
+      #{aprvalue,jdbcType=VARCHAR}, #{aprshowmsg,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.example.model.PubParameter">
+    insert into pub_parameter
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="aprid != null">
+        aprId,
+      </if>
+      <if test="aprname != null">
+        aprName,
+      </if>
+      <if test="aprcode != null">
+        aprCode,
+      </if>
+      <if test="aprvalue != null">
+        aprValue,
+      </if>
+      <if test="aprshowmsg != null">
+        aprShowmsg,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="aprid != null">
+        #{aprid,jdbcType=INTEGER},
+      </if>
+      <if test="aprname != null">
+        #{aprname,jdbcType=VARCHAR},
+      </if>
+      <if test="aprcode != null">
+        #{aprcode,jdbcType=VARCHAR},
+      </if>
+      <if test="aprvalue != null">
+        #{aprvalue,jdbcType=VARCHAR},
+      </if>
+      <if test="aprshowmsg != null">
+        #{aprshowmsg,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.example.model.PubParameter">
+    update pub_parameter
+    <set>
+      <if test="aprname != null">
+        aprName = #{aprname,jdbcType=VARCHAR},
+      </if>
+      <if test="aprcode != null">
+        aprCode = #{aprcode,jdbcType=VARCHAR},
+      </if>
+      <if test="aprvalue != null">
+        aprValue = #{aprvalue,jdbcType=VARCHAR},
+      </if>
+      <if test="aprshowmsg != null">
+        aprShowmsg = #{aprshowmsg,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where aprId = #{aprid,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.example.model.PubParameter">
+    update pub_parameter
+    set aprName = #{aprname,jdbcType=VARCHAR},
+      aprCode = #{aprcode,jdbcType=VARCHAR},
+      aprValue = #{aprvalue,jdbcType=VARCHAR},
+      aprShowmsg = #{aprshowmsg,jdbcType=VARCHAR}
+    where aprId = #{aprid,jdbcType=INTEGER}
+  </update>
+  <resultMap id="BaseResultMap" type="com.example.model.PubParameter">
+    <constructor>
+      <idArg column="aprId" javaType="java.lang.Integer" jdbcType="INTEGER" />
+      <arg column="aprName" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="aprCode" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="aprValue" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="aprShowmsg" javaType="java.lang.String" jdbcType="VARCHAR" />
+    </constructor>
+  </resultMap>
+  <sql id="Base_Column_List">
+    aprId, aprName, aprCode, aprValue, aprShowmsg
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from pub_parameter
+    where aprId = #{aprid,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from pub_parameter
+    where aprId = #{aprid,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.example.model.PubParameter">
+    insert into pub_parameter (aprId, aprName, aprCode, 
+      aprValue, aprShowmsg)
+    values (#{aprid,jdbcType=INTEGER}, #{aprname,jdbcType=VARCHAR}, #{aprcode,jdbcType=VARCHAR}, 
+      #{aprvalue,jdbcType=VARCHAR}, #{aprshowmsg,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.example.model.PubParameter">
+    insert into pub_parameter
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="aprid != null">
+        aprId,
+      </if>
+      <if test="aprname != null">
+        aprName,
+      </if>
+      <if test="aprcode != null">
+        aprCode,
+      </if>
+      <if test="aprvalue != null">
+        aprValue,
+      </if>
+      <if test="aprshowmsg != null">
+        aprShowmsg,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="aprid != null">
+        #{aprid,jdbcType=INTEGER},
+      </if>
+      <if test="aprname != null">
+        #{aprname,jdbcType=VARCHAR},
+      </if>
+      <if test="aprcode != null">
+        #{aprcode,jdbcType=VARCHAR},
+      </if>
+      <if test="aprvalue != null">
+        #{aprvalue,jdbcType=VARCHAR},
+      </if>
+      <if test="aprshowmsg != null">
+        #{aprshowmsg,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.example.model.PubParameter">
+    update pub_parameter
+    <set>
+      <if test="aprname != null">
+        aprName = #{aprname,jdbcType=VARCHAR},
+      </if>
+      <if test="aprcode != null">
+        aprCode = #{aprcode,jdbcType=VARCHAR},
+      </if>
+      <if test="aprvalue != null">
+        aprValue = #{aprvalue,jdbcType=VARCHAR},
+      </if>
+      <if test="aprshowmsg != null">
+        aprShowmsg = #{aprshowmsg,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where aprId = #{aprid,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.example.model.PubParameter">
+    update pub_parameter
+    set aprName = #{aprname,jdbcType=VARCHAR},
+      aprCode = #{aprcode,jdbcType=VARCHAR},
+      aprValue = #{aprvalue,jdbcType=VARCHAR},
+      aprShowmsg = #{aprshowmsg,jdbcType=VARCHAR}
+    where aprId = #{aprid,jdbcType=INTEGER}
+  </update>
+  <resultMap id="BaseResultMap" type="com.example.model.PubParameter">
+    <constructor>
+      <idArg column="aprId" javaType="java.lang.Integer" jdbcType="INTEGER" />
+      <arg column="aprName" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="aprCode" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="aprValue" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="aprShowmsg" javaType="java.lang.String" jdbcType="VARCHAR" />
+    </constructor>
+  </resultMap>
+  <sql id="Base_Column_List">
+    aprId, aprName, aprCode, aprValue, aprShowmsg
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from pub_parameter
+    where aprId = #{aprid,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from pub_parameter
+    where aprId = #{aprid,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.example.model.PubParameter">
+    insert into pub_parameter (aprId, aprName, aprCode, 
+      aprValue, aprShowmsg)
+    values (#{aprid,jdbcType=INTEGER}, #{aprname,jdbcType=VARCHAR}, #{aprcode,jdbcType=VARCHAR}, 
+      #{aprvalue,jdbcType=VARCHAR}, #{aprshowmsg,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.example.model.PubParameter">
+    insert into pub_parameter
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="aprid != null">
+        aprId,
+      </if>
+      <if test="aprname != null">
+        aprName,
+      </if>
+      <if test="aprcode != null">
+        aprCode,
+      </if>
+      <if test="aprvalue != null">
+        aprValue,
+      </if>
+      <if test="aprshowmsg != null">
+        aprShowmsg,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="aprid != null">
+        #{aprid,jdbcType=INTEGER},
+      </if>
+      <if test="aprname != null">
+        #{aprname,jdbcType=VARCHAR},
+      </if>
+      <if test="aprcode != null">
+        #{aprcode,jdbcType=VARCHAR},
+      </if>
+      <if test="aprvalue != null">
+        #{aprvalue,jdbcType=VARCHAR},
+      </if>
+      <if test="aprshowmsg != null">
+        #{aprshowmsg,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.example.model.PubParameter">
+    update pub_parameter
+    <set>
+      <if test="aprname != null">
+        aprName = #{aprname,jdbcType=VARCHAR},
+      </if>
+      <if test="aprcode != null">
+        aprCode = #{aprcode,jdbcType=VARCHAR},
+      </if>
+      <if test="aprvalue != null">
+        aprValue = #{aprvalue,jdbcType=VARCHAR},
+      </if>
+      <if test="aprshowmsg != null">
+        aprShowmsg = #{aprshowmsg,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where aprId = #{aprid,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.example.model.PubParameter">
+    update pub_parameter
+    set aprName = #{aprname,jdbcType=VARCHAR},
+      aprCode = #{aprcode,jdbcType=VARCHAR},
+      aprValue = #{aprvalue,jdbcType=VARCHAR},
+      aprShowmsg = #{aprshowmsg,jdbcType=VARCHAR}
+    where aprId = #{aprid,jdbcType=INTEGER}
+  </update>
+  <resultMap id="BaseResultMap" type="com.example.model.PubParameter">
+    <constructor>
+      <idArg column="aprId" javaType="java.lang.Integer" jdbcType="INTEGER" />
+      <arg column="aprName" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="aprCode" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="aprValue" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="aprShowmsg" javaType="java.lang.String" jdbcType="VARCHAR" />
+    </constructor>
+  </resultMap>
+  <sql id="Base_Column_List">
+    aprId, aprName, aprCode, aprValue, aprShowmsg
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from pub_parameter
+    where aprId = #{aprid,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from pub_parameter
+    where aprId = #{aprid,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.example.model.PubParameter">
+    insert into pub_parameter (aprId, aprName, aprCode, 
+      aprValue, aprShowmsg)
+    values (#{aprid,jdbcType=INTEGER}, #{aprname,jdbcType=VARCHAR}, #{aprcode,jdbcType=VARCHAR}, 
+      #{aprvalue,jdbcType=VARCHAR}, #{aprshowmsg,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.example.model.PubParameter">
+    insert into pub_parameter
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="aprid != null">
+        aprId,
+      </if>
+      <if test="aprname != null">
+        aprName,
+      </if>
+      <if test="aprcode != null">
+        aprCode,
+      </if>
+      <if test="aprvalue != null">
+        aprValue,
+      </if>
+      <if test="aprshowmsg != null">
+        aprShowmsg,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="aprid != null">
+        #{aprid,jdbcType=INTEGER},
+      </if>
+      <if test="aprname != null">
+        #{aprname,jdbcType=VARCHAR},
+      </if>
+      <if test="aprcode != null">
+        #{aprcode,jdbcType=VARCHAR},
+      </if>
+      <if test="aprvalue != null">
+        #{aprvalue,jdbcType=VARCHAR},
+      </if>
+      <if test="aprshowmsg != null">
+        #{aprshowmsg,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.example.model.PubParameter">
+    update pub_parameter
+    <set>
+      <if test="aprname != null">
+        aprName = #{aprname,jdbcType=VARCHAR},
+      </if>
+      <if test="aprcode != null">
+        aprCode = #{aprcode,jdbcType=VARCHAR},
+      </if>
+      <if test="aprvalue != null">
+        aprValue = #{aprvalue,jdbcType=VARCHAR},
+      </if>
+      <if test="aprshowmsg != null">
+        aprShowmsg = #{aprshowmsg,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where aprId = #{aprid,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.example.model.PubParameter">
+    update pub_parameter
+    set aprName = #{aprname,jdbcType=VARCHAR},
+      aprCode = #{aprcode,jdbcType=VARCHAR},
+      aprValue = #{aprvalue,jdbcType=VARCHAR},
+      aprShowmsg = #{aprshowmsg,jdbcType=VARCHAR}
+    where aprId = #{aprid,jdbcType=INTEGER}
+  </update>
+</mapper>

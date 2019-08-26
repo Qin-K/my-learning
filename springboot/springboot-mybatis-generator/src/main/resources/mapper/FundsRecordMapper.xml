@@ -1,0 +1,732 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.mapper.FundsRecordMapper">
+  <resultMap id="BaseResultMap" type="com.example.model.FundsRecord">
+    <constructor>
+      <idArg column="fundsRecordId" javaType="java.lang.Long" jdbcType="BIGINT" />
+      <arg column="companyId" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="year" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="operatingIncome" javaType="java.math.BigDecimal" jdbcType="DECIMAL" />
+      <arg column="profit" javaType="java.math.BigDecimal" jdbcType="DECIMAL" />
+      <arg column="rDProportion" javaType="java.lang.Boolean" jdbcType="BIT" />
+    </constructor>
+  </resultMap>
+  <sql id="Base_Column_List">
+    fundsRecordId, companyId, year, operatingIncome, profit, rDProportion
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from funds_record
+    where fundsRecordId = #{fundsRecordId,jdbcType=BIGINT}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+    delete from funds_record
+    where fundsRecordId = #{fundsRecordId,jdbcType=BIGINT}
+  </delete>
+  <insert id="insert" parameterType="com.example.model.FundsRecord">
+    insert into funds_record (fundsRecordId, companyId, year, 
+      operatingIncome, profit, rDProportion
+      )
+    values (#{fundsRecordId,jdbcType=BIGINT}, #{companyId,jdbcType=VARCHAR}, #{year,jdbcType=VARCHAR}, 
+      #{operatingIncome,jdbcType=DECIMAL}, #{profit,jdbcType=DECIMAL}, #{rDProportion,jdbcType=BIT}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.example.model.FundsRecord">
+    insert into funds_record
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="fundsRecordId != null">
+        fundsRecordId,
+      </if>
+      <if test="companyId != null">
+        companyId,
+      </if>
+      <if test="year != null">
+        year,
+      </if>
+      <if test="operatingIncome != null">
+        operatingIncome,
+      </if>
+      <if test="profit != null">
+        profit,
+      </if>
+      <if test="rDProportion != null">
+        rDProportion,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="fundsRecordId != null">
+        #{fundsRecordId,jdbcType=BIGINT},
+      </if>
+      <if test="companyId != null">
+        #{companyId,jdbcType=VARCHAR},
+      </if>
+      <if test="year != null">
+        #{year,jdbcType=VARCHAR},
+      </if>
+      <if test="operatingIncome != null">
+        #{operatingIncome,jdbcType=DECIMAL},
+      </if>
+      <if test="profit != null">
+        #{profit,jdbcType=DECIMAL},
+      </if>
+      <if test="rDProportion != null">
+        #{rDProportion,jdbcType=BIT},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.example.model.FundsRecord">
+    update funds_record
+    <set>
+      <if test="companyId != null">
+        companyId = #{companyId,jdbcType=VARCHAR},
+      </if>
+      <if test="year != null">
+        year = #{year,jdbcType=VARCHAR},
+      </if>
+      <if test="operatingIncome != null">
+        operatingIncome = #{operatingIncome,jdbcType=DECIMAL},
+      </if>
+      <if test="profit != null">
+        profit = #{profit,jdbcType=DECIMAL},
+      </if>
+      <if test="rDProportion != null">
+        rDProportion = #{rDProportion,jdbcType=BIT},
+      </if>
+    </set>
+    where fundsRecordId = #{fundsRecordId,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.example.model.FundsRecord">
+    update funds_record
+    set companyId = #{companyId,jdbcType=VARCHAR},
+      year = #{year,jdbcType=VARCHAR},
+      operatingIncome = #{operatingIncome,jdbcType=DECIMAL},
+      profit = #{profit,jdbcType=DECIMAL},
+      rDProportion = #{rDProportion,jdbcType=BIT}
+    where fundsRecordId = #{fundsRecordId,jdbcType=BIGINT}
+  </update>
+  <resultMap id="BaseResultMap" type="com.example.model.FundsRecord">
+    <constructor>
+      <idArg column="fundsRecordId" javaType="java.lang.Long" jdbcType="BIGINT" />
+      <arg column="companyId" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="year" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="operatingIncome" javaType="java.math.BigDecimal" jdbcType="DECIMAL" />
+      <arg column="profit" javaType="java.math.BigDecimal" jdbcType="DECIMAL" />
+      <arg column="rDProportion" javaType="java.lang.Boolean" jdbcType="BIT" />
+    </constructor>
+  </resultMap>
+  <sql id="Base_Column_List">
+    fundsRecordId, companyId, year, operatingIncome, profit, rDProportion
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from funds_record
+    where fundsRecordId = #{fundsRecordId,jdbcType=BIGINT}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+    delete from funds_record
+    where fundsRecordId = #{fundsRecordId,jdbcType=BIGINT}
+  </delete>
+  <insert id="insert" parameterType="com.example.model.FundsRecord">
+    insert into funds_record (fundsRecordId, companyId, year, 
+      operatingIncome, profit, rDProportion
+      )
+    values (#{fundsRecordId,jdbcType=BIGINT}, #{companyId,jdbcType=VARCHAR}, #{year,jdbcType=VARCHAR}, 
+      #{operatingIncome,jdbcType=DECIMAL}, #{profit,jdbcType=DECIMAL}, #{rDProportion,jdbcType=BIT}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.example.model.FundsRecord">
+    insert into funds_record
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="fundsRecordId != null">
+        fundsRecordId,
+      </if>
+      <if test="companyId != null">
+        companyId,
+      </if>
+      <if test="year != null">
+        year,
+      </if>
+      <if test="operatingIncome != null">
+        operatingIncome,
+      </if>
+      <if test="profit != null">
+        profit,
+      </if>
+      <if test="rDProportion != null">
+        rDProportion,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="fundsRecordId != null">
+        #{fundsRecordId,jdbcType=BIGINT},
+      </if>
+      <if test="companyId != null">
+        #{companyId,jdbcType=VARCHAR},
+      </if>
+      <if test="year != null">
+        #{year,jdbcType=VARCHAR},
+      </if>
+      <if test="operatingIncome != null">
+        #{operatingIncome,jdbcType=DECIMAL},
+      </if>
+      <if test="profit != null">
+        #{profit,jdbcType=DECIMAL},
+      </if>
+      <if test="rDProportion != null">
+        #{rDProportion,jdbcType=BIT},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.example.model.FundsRecord">
+    update funds_record
+    <set>
+      <if test="companyId != null">
+        companyId = #{companyId,jdbcType=VARCHAR},
+      </if>
+      <if test="year != null">
+        year = #{year,jdbcType=VARCHAR},
+      </if>
+      <if test="operatingIncome != null">
+        operatingIncome = #{operatingIncome,jdbcType=DECIMAL},
+      </if>
+      <if test="profit != null">
+        profit = #{profit,jdbcType=DECIMAL},
+      </if>
+      <if test="rDProportion != null">
+        rDProportion = #{rDProportion,jdbcType=BIT},
+      </if>
+    </set>
+    where fundsRecordId = #{fundsRecordId,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.example.model.FundsRecord">
+    update funds_record
+    set companyId = #{companyId,jdbcType=VARCHAR},
+      year = #{year,jdbcType=VARCHAR},
+      operatingIncome = #{operatingIncome,jdbcType=DECIMAL},
+      profit = #{profit,jdbcType=DECIMAL},
+      rDProportion = #{rDProportion,jdbcType=BIT}
+    where fundsRecordId = #{fundsRecordId,jdbcType=BIGINT}
+  </update>
+  <resultMap id="BaseResultMap" type="com.example.model.FundsRecord">
+    <constructor>
+      <idArg column="fundsRecordId" javaType="java.lang.Long" jdbcType="BIGINT" />
+      <arg column="companyId" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="year" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="operatingIncome" javaType="java.math.BigDecimal" jdbcType="DECIMAL" />
+      <arg column="profit" javaType="java.math.BigDecimal" jdbcType="DECIMAL" />
+      <arg column="rDProportion" javaType="java.lang.Boolean" jdbcType="BIT" />
+    </constructor>
+  </resultMap>
+  <sql id="Base_Column_List">
+    fundsRecordId, companyId, year, operatingIncome, profit, rDProportion
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from funds_record
+    where fundsRecordId = #{fundsrecordid,jdbcType=BIGINT}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+    delete from funds_record
+    where fundsRecordId = #{fundsrecordid,jdbcType=BIGINT}
+  </delete>
+  <insert id="insert" parameterType="com.example.model.FundsRecord">
+    insert into funds_record (fundsRecordId, companyId, year, 
+      operatingIncome, profit, rDProportion
+      )
+    values (#{fundsrecordid,jdbcType=BIGINT}, #{companyid,jdbcType=VARCHAR}, #{year,jdbcType=VARCHAR}, 
+      #{operatingincome,jdbcType=DECIMAL}, #{profit,jdbcType=DECIMAL}, #{rdproportion,jdbcType=BIT}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.example.model.FundsRecord">
+    insert into funds_record
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="fundsrecordid != null">
+        fundsRecordId,
+      </if>
+      <if test="companyid != null">
+        companyId,
+      </if>
+      <if test="year != null">
+        year,
+      </if>
+      <if test="operatingincome != null">
+        operatingIncome,
+      </if>
+      <if test="profit != null">
+        profit,
+      </if>
+      <if test="rdproportion != null">
+        rDProportion,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="fundsrecordid != null">
+        #{fundsrecordid,jdbcType=BIGINT},
+      </if>
+      <if test="companyid != null">
+        #{companyid,jdbcType=VARCHAR},
+      </if>
+      <if test="year != null">
+        #{year,jdbcType=VARCHAR},
+      </if>
+      <if test="operatingincome != null">
+        #{operatingincome,jdbcType=DECIMAL},
+      </if>
+      <if test="profit != null">
+        #{profit,jdbcType=DECIMAL},
+      </if>
+      <if test="rdproportion != null">
+        #{rdproportion,jdbcType=BIT},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.example.model.FundsRecord">
+    update funds_record
+    <set>
+      <if test="companyid != null">
+        companyId = #{companyid,jdbcType=VARCHAR},
+      </if>
+      <if test="year != null">
+        year = #{year,jdbcType=VARCHAR},
+      </if>
+      <if test="operatingincome != null">
+        operatingIncome = #{operatingincome,jdbcType=DECIMAL},
+      </if>
+      <if test="profit != null">
+        profit = #{profit,jdbcType=DECIMAL},
+      </if>
+      <if test="rdproportion != null">
+        rDProportion = #{rdproportion,jdbcType=BIT},
+      </if>
+    </set>
+    where fundsRecordId = #{fundsrecordid,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.example.model.FundsRecord">
+    update funds_record
+    set companyId = #{companyid,jdbcType=VARCHAR},
+      year = #{year,jdbcType=VARCHAR},
+      operatingIncome = #{operatingincome,jdbcType=DECIMAL},
+      profit = #{profit,jdbcType=DECIMAL},
+      rDProportion = #{rdproportion,jdbcType=BIT}
+    where fundsRecordId = #{fundsrecordid,jdbcType=BIGINT}
+  </update>
+  <resultMap id="BaseResultMap" type="com.example.model.FundsRecord">
+    <constructor>
+      <idArg column="fundsRecordId" javaType="java.lang.Long" jdbcType="BIGINT" />
+      <arg column="companyId" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="year" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="operatingIncome" javaType="java.math.BigDecimal" jdbcType="DECIMAL" />
+      <arg column="profit" javaType="java.math.BigDecimal" jdbcType="DECIMAL" />
+      <arg column="rDProportion" javaType="java.lang.Boolean" jdbcType="BIT" />
+    </constructor>
+  </resultMap>
+  <sql id="Base_Column_List">
+    fundsRecordId, companyId, year, operatingIncome, profit, rDProportion
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from funds_record
+    where fundsRecordId = #{fundsrecordid,jdbcType=BIGINT}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+    delete from funds_record
+    where fundsRecordId = #{fundsrecordid,jdbcType=BIGINT}
+  </delete>
+  <insert id="insert" parameterType="com.example.model.FundsRecord">
+    insert into funds_record (fundsRecordId, companyId, year, 
+      operatingIncome, profit, rDProportion
+      )
+    values (#{fundsrecordid,jdbcType=BIGINT}, #{companyid,jdbcType=VARCHAR}, #{year,jdbcType=VARCHAR}, 
+      #{operatingincome,jdbcType=DECIMAL}, #{profit,jdbcType=DECIMAL}, #{rdproportion,jdbcType=BIT}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.example.model.FundsRecord">
+    insert into funds_record
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="fundsrecordid != null">
+        fundsRecordId,
+      </if>
+      <if test="companyid != null">
+        companyId,
+      </if>
+      <if test="year != null">
+        year,
+      </if>
+      <if test="operatingincome != null">
+        operatingIncome,
+      </if>
+      <if test="profit != null">
+        profit,
+      </if>
+      <if test="rdproportion != null">
+        rDProportion,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="fundsrecordid != null">
+        #{fundsrecordid,jdbcType=BIGINT},
+      </if>
+      <if test="companyid != null">
+        #{companyid,jdbcType=VARCHAR},
+      </if>
+      <if test="year != null">
+        #{year,jdbcType=VARCHAR},
+      </if>
+      <if test="operatingincome != null">
+        #{operatingincome,jdbcType=DECIMAL},
+      </if>
+      <if test="profit != null">
+        #{profit,jdbcType=DECIMAL},
+      </if>
+      <if test="rdproportion != null">
+        #{rdproportion,jdbcType=BIT},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.example.model.FundsRecord">
+    update funds_record
+    <set>
+      <if test="companyid != null">
+        companyId = #{companyid,jdbcType=VARCHAR},
+      </if>
+      <if test="year != null">
+        year = #{year,jdbcType=VARCHAR},
+      </if>
+      <if test="operatingincome != null">
+        operatingIncome = #{operatingincome,jdbcType=DECIMAL},
+      </if>
+      <if test="profit != null">
+        profit = #{profit,jdbcType=DECIMAL},
+      </if>
+      <if test="rdproportion != null">
+        rDProportion = #{rdproportion,jdbcType=BIT},
+      </if>
+    </set>
+    where fundsRecordId = #{fundsrecordid,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.example.model.FundsRecord">
+    update funds_record
+    set companyId = #{companyid,jdbcType=VARCHAR},
+      year = #{year,jdbcType=VARCHAR},
+      operatingIncome = #{operatingincome,jdbcType=DECIMAL},
+      profit = #{profit,jdbcType=DECIMAL},
+      rDProportion = #{rdproportion,jdbcType=BIT}
+    where fundsRecordId = #{fundsrecordid,jdbcType=BIGINT}
+  </update>
+  <resultMap id="BaseResultMap" type="com.example.model.FundsRecord">
+    <constructor>
+      <idArg column="fundsRecordId" javaType="java.lang.Long" jdbcType="BIGINT" />
+      <arg column="companyId" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="year" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="operatingIncome" javaType="java.math.BigDecimal" jdbcType="DECIMAL" />
+      <arg column="profit" javaType="java.math.BigDecimal" jdbcType="DECIMAL" />
+      <arg column="rDProportion" javaType="java.lang.Boolean" jdbcType="BIT" />
+    </constructor>
+  </resultMap>
+  <sql id="Base_Column_List">
+    fundsRecordId, companyId, year, operatingIncome, profit, rDProportion
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from funds_record
+    where fundsRecordId = #{fundsrecordid,jdbcType=BIGINT}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+    delete from funds_record
+    where fundsRecordId = #{fundsrecordid,jdbcType=BIGINT}
+  </delete>
+  <insert id="insert" parameterType="com.example.model.FundsRecord">
+    insert into funds_record (fundsRecordId, companyId, year, 
+      operatingIncome, profit, rDProportion
+      )
+    values (#{fundsrecordid,jdbcType=BIGINT}, #{companyid,jdbcType=VARCHAR}, #{year,jdbcType=VARCHAR}, 
+      #{operatingincome,jdbcType=DECIMAL}, #{profit,jdbcType=DECIMAL}, #{rdproportion,jdbcType=BIT}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.example.model.FundsRecord">
+    insert into funds_record
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="fundsrecordid != null">
+        fundsRecordId,
+      </if>
+      <if test="companyid != null">
+        companyId,
+      </if>
+      <if test="year != null">
+        year,
+      </if>
+      <if test="operatingincome != null">
+        operatingIncome,
+      </if>
+      <if test="profit != null">
+        profit,
+      </if>
+      <if test="rdproportion != null">
+        rDProportion,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="fundsrecordid != null">
+        #{fundsrecordid,jdbcType=BIGINT},
+      </if>
+      <if test="companyid != null">
+        #{companyid,jdbcType=VARCHAR},
+      </if>
+      <if test="year != null">
+        #{year,jdbcType=VARCHAR},
+      </if>
+      <if test="operatingincome != null">
+        #{operatingincome,jdbcType=DECIMAL},
+      </if>
+      <if test="profit != null">
+        #{profit,jdbcType=DECIMAL},
+      </if>
+      <if test="rdproportion != null">
+        #{rdproportion,jdbcType=BIT},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.example.model.FundsRecord">
+    update funds_record
+    <set>
+      <if test="companyid != null">
+        companyId = #{companyid,jdbcType=VARCHAR},
+      </if>
+      <if test="year != null">
+        year = #{year,jdbcType=VARCHAR},
+      </if>
+      <if test="operatingincome != null">
+        operatingIncome = #{operatingincome,jdbcType=DECIMAL},
+      </if>
+      <if test="profit != null">
+        profit = #{profit,jdbcType=DECIMAL},
+      </if>
+      <if test="rdproportion != null">
+        rDProportion = #{rdproportion,jdbcType=BIT},
+      </if>
+    </set>
+    where fundsRecordId = #{fundsrecordid,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.example.model.FundsRecord">
+    update funds_record
+    set companyId = #{companyid,jdbcType=VARCHAR},
+      year = #{year,jdbcType=VARCHAR},
+      operatingIncome = #{operatingincome,jdbcType=DECIMAL},
+      profit = #{profit,jdbcType=DECIMAL},
+      rDProportion = #{rdproportion,jdbcType=BIT}
+    where fundsRecordId = #{fundsrecordid,jdbcType=BIGINT}
+  </update>
+  <resultMap id="BaseResultMap" type="com.example.model.FundsRecord">
+    <constructor>
+      <idArg column="fundsRecordId" javaType="java.lang.Long" jdbcType="BIGINT" />
+      <arg column="companyId" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="year" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="operatingIncome" javaType="java.math.BigDecimal" jdbcType="DECIMAL" />
+      <arg column="profit" javaType="java.math.BigDecimal" jdbcType="DECIMAL" />
+      <arg column="rDProportion" javaType="java.lang.Boolean" jdbcType="BIT" />
+    </constructor>
+  </resultMap>
+  <sql id="Base_Column_List">
+    fundsRecordId, companyId, year, operatingIncome, profit, rDProportion
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from funds_record
+    where fundsRecordId = #{fundsrecordid,jdbcType=BIGINT}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+    delete from funds_record
+    where fundsRecordId = #{fundsrecordid,jdbcType=BIGINT}
+  </delete>
+  <insert id="insert" parameterType="com.example.model.FundsRecord">
+    insert into funds_record (fundsRecordId, companyId, year, 
+      operatingIncome, profit, rDProportion
+      )
+    values (#{fundsrecordid,jdbcType=BIGINT}, #{companyid,jdbcType=VARCHAR}, #{year,jdbcType=VARCHAR}, 
+      #{operatingincome,jdbcType=DECIMAL}, #{profit,jdbcType=DECIMAL}, #{rdproportion,jdbcType=BIT}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.example.model.FundsRecord">
+    insert into funds_record
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="fundsrecordid != null">
+        fundsRecordId,
+      </if>
+      <if test="companyid != null">
+        companyId,
+      </if>
+      <if test="year != null">
+        year,
+      </if>
+      <if test="operatingincome != null">
+        operatingIncome,
+      </if>
+      <if test="profit != null">
+        profit,
+      </if>
+      <if test="rdproportion != null">
+        rDProportion,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="fundsrecordid != null">
+        #{fundsrecordid,jdbcType=BIGINT},
+      </if>
+      <if test="companyid != null">
+        #{companyid,jdbcType=VARCHAR},
+      </if>
+      <if test="year != null">
+        #{year,jdbcType=VARCHAR},
+      </if>
+      <if test="operatingincome != null">
+        #{operatingincome,jdbcType=DECIMAL},
+      </if>
+      <if test="profit != null">
+        #{profit,jdbcType=DECIMAL},
+      </if>
+      <if test="rdproportion != null">
+        #{rdproportion,jdbcType=BIT},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.example.model.FundsRecord">
+    update funds_record
+    <set>
+      <if test="companyid != null">
+        companyId = #{companyid,jdbcType=VARCHAR},
+      </if>
+      <if test="year != null">
+        year = #{year,jdbcType=VARCHAR},
+      </if>
+      <if test="operatingincome != null">
+        operatingIncome = #{operatingincome,jdbcType=DECIMAL},
+      </if>
+      <if test="profit != null">
+        profit = #{profit,jdbcType=DECIMAL},
+      </if>
+      <if test="rdproportion != null">
+        rDProportion = #{rdproportion,jdbcType=BIT},
+      </if>
+    </set>
+    where fundsRecordId = #{fundsrecordid,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.example.model.FundsRecord">
+    update funds_record
+    set companyId = #{companyid,jdbcType=VARCHAR},
+      year = #{year,jdbcType=VARCHAR},
+      operatingIncome = #{operatingincome,jdbcType=DECIMAL},
+      profit = #{profit,jdbcType=DECIMAL},
+      rDProportion = #{rdproportion,jdbcType=BIT}
+    where fundsRecordId = #{fundsrecordid,jdbcType=BIGINT}
+  </update>
+  <resultMap id="BaseResultMap" type="com.example.model.FundsRecord">
+    <constructor>
+      <idArg column="fundsRecordId" javaType="java.lang.Long" jdbcType="BIGINT" />
+      <arg column="companyId" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="year" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="operatingIncome" javaType="java.lang.Long" jdbcType="DECIMAL" />
+      <arg column="profit" javaType="java.lang.Long" jdbcType="DECIMAL" />
+      <arg column="rDProportion" javaType="java.lang.Boolean" jdbcType="BIT" />
+    </constructor>
+  </resultMap>
+  <sql id="Base_Column_List">
+    fundsRecordId, companyId, year, operatingIncome, profit, rDProportion
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from funds_record
+    where fundsRecordId = #{fundsrecordid,jdbcType=BIGINT}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+    delete from funds_record
+    where fundsRecordId = #{fundsrecordid,jdbcType=BIGINT}
+  </delete>
+  <insert id="insert" parameterType="com.example.model.FundsRecord">
+    insert into funds_record (fundsRecordId, companyId, year, 
+      operatingIncome, profit, rDProportion
+      )
+    values (#{fundsrecordid,jdbcType=BIGINT}, #{companyid,jdbcType=VARCHAR}, #{year,jdbcType=VARCHAR}, 
+      #{operatingincome,jdbcType=DECIMAL}, #{profit,jdbcType=DECIMAL}, #{rdproportion,jdbcType=BIT}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.example.model.FundsRecord">
+    insert into funds_record
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="fundsrecordid != null">
+        fundsRecordId,
+      </if>
+      <if test="companyid != null">
+        companyId,
+      </if>
+      <if test="year != null">
+        year,
+      </if>
+      <if test="operatingincome != null">
+        operatingIncome,
+      </if>
+      <if test="profit != null">
+        profit,
+      </if>
+      <if test="rdproportion != null">
+        rDProportion,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="fundsrecordid != null">
+        #{fundsrecordid,jdbcType=BIGINT},
+      </if>
+      <if test="companyid != null">
+        #{companyid,jdbcType=VARCHAR},
+      </if>
+      <if test="year != null">
+        #{year,jdbcType=VARCHAR},
+      </if>
+      <if test="operatingincome != null">
+        #{operatingincome,jdbcType=DECIMAL},
+      </if>
+      <if test="profit != null">
+        #{profit,jdbcType=DECIMAL},
+      </if>
+      <if test="rdproportion != null">
+        #{rdproportion,jdbcType=BIT},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.example.model.FundsRecord">
+    update funds_record
+    <set>
+      <if test="companyid != null">
+        companyId = #{companyid,jdbcType=VARCHAR},
+      </if>
+      <if test="year != null">
+        year = #{year,jdbcType=VARCHAR},
+      </if>
+      <if test="operatingincome != null">
+        operatingIncome = #{operatingincome,jdbcType=DECIMAL},
+      </if>
+      <if test="profit != null">
+        profit = #{profit,jdbcType=DECIMAL},
+      </if>
+      <if test="rdproportion != null">
+        rDProportion = #{rdproportion,jdbcType=BIT},
+      </if>
+    </set>
+    where fundsRecordId = #{fundsrecordid,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.example.model.FundsRecord">
+    update funds_record
+    set companyId = #{companyid,jdbcType=VARCHAR},
+      year = #{year,jdbcType=VARCHAR},
+      operatingIncome = #{operatingincome,jdbcType=DECIMAL},
+      profit = #{profit,jdbcType=DECIMAL},
+      rDProportion = #{rdproportion,jdbcType=BIT}
+    where fundsRecordId = #{fundsrecordid,jdbcType=BIGINT}
+  </update>
+</mapper>

@@ -1,0 +1,1138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.mapper.CompanyExtensionMapper">
+  <resultMap id="BaseResultMap" type="com.example.model.CompanyExtension">
+    <constructor>
+      <idArg column="companyId" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="registeredCapital" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="companyChargeUserName" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="companyChargeUserPhoneNo" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="industryStatus" javaType="java.lang.Boolean" jdbcType="BIT" />
+      <arg column="projectFinancingNeeds" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="stockRightFinancingNeeds" javaType="java.lang.Boolean" jdbcType="BIT" />
+      <arg column="stockRightFinancingQuota" javaType="java.math.BigDecimal" jdbcType="DECIMAL" />
+      <arg column="ratioOfEquityQuotaReleased" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="roadshowWillingness" javaType="java.lang.Boolean" jdbcType="BIT" />
+      <arg column="listingPlan" javaType="java.lang.Boolean" jdbcType="BIT" />
+      <arg column="suggestion" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="noteInfo" javaType="java.lang.String" jdbcType="VARCHAR" />
+    </constructor>
+  </resultMap>
+  <sql id="Base_Column_List">
+    companyId, registeredCapital, companyChargeUserName, companyChargeUserPhoneNo, industryStatus, 
+    projectFinancingNeeds, stockRightFinancingNeeds, stockRightFinancingQuota, ratioOfEquityQuotaReleased, 
+    roadshowWillingness, listingPlan, suggestion, noteInfo
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from company_extension
+    where companyId = #{companyId,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    delete from company_extension
+    where companyId = #{companyId,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="com.example.model.CompanyExtension">
+    insert into company_extension (companyId, registeredCapital, companyChargeUserName, 
+      companyChargeUserPhoneNo, industryStatus, projectFinancingNeeds, 
+      stockRightFinancingNeeds, stockRightFinancingQuota, 
+      ratioOfEquityQuotaReleased, roadshowWillingness, 
+      listingPlan, suggestion, noteInfo
+      )
+    values (#{companyId,jdbcType=VARCHAR}, #{registeredCapital,jdbcType=VARCHAR}, #{companyChargeUserName,jdbcType=VARCHAR}, 
+      #{companyChargeUserPhoneNo,jdbcType=VARCHAR}, #{industryStatus,jdbcType=BIT}, #{projectFinancingNeeds,jdbcType=VARCHAR}, 
+      #{stockRightFinancingNeeds,jdbcType=BIT}, #{stockRightFinancingQuota,jdbcType=DECIMAL}, 
+      #{ratioOfEquityQuotaReleased,jdbcType=VARCHAR}, #{roadshowWillingness,jdbcType=BIT}, 
+      #{listingPlan,jdbcType=BIT}, #{suggestion,jdbcType=VARCHAR}, #{noteInfo,jdbcType=VARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.example.model.CompanyExtension">
+    insert into company_extension
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="companyId != null">
+        companyId,
+      </if>
+      <if test="registeredCapital != null">
+        registeredCapital,
+      </if>
+      <if test="companyChargeUserName != null">
+        companyChargeUserName,
+      </if>
+      <if test="companyChargeUserPhoneNo != null">
+        companyChargeUserPhoneNo,
+      </if>
+      <if test="industryStatus != null">
+        industryStatus,
+      </if>
+      <if test="projectFinancingNeeds != null">
+        projectFinancingNeeds,
+      </if>
+      <if test="stockRightFinancingNeeds != null">
+        stockRightFinancingNeeds,
+      </if>
+      <if test="stockRightFinancingQuota != null">
+        stockRightFinancingQuota,
+      </if>
+      <if test="ratioOfEquityQuotaReleased != null">
+        ratioOfEquityQuotaReleased,
+      </if>
+      <if test="roadshowWillingness != null">
+        roadshowWillingness,
+      </if>
+      <if test="listingPlan != null">
+        listingPlan,
+      </if>
+      <if test="suggestion != null">
+        suggestion,
+      </if>
+      <if test="noteInfo != null">
+        noteInfo,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="companyId != null">
+        #{companyId,jdbcType=VARCHAR},
+      </if>
+      <if test="registeredCapital != null">
+        #{registeredCapital,jdbcType=VARCHAR},
+      </if>
+      <if test="companyChargeUserName != null">
+        #{companyChargeUserName,jdbcType=VARCHAR},
+      </if>
+      <if test="companyChargeUserPhoneNo != null">
+        #{companyChargeUserPhoneNo,jdbcType=VARCHAR},
+      </if>
+      <if test="industryStatus != null">
+        #{industryStatus,jdbcType=BIT},
+      </if>
+      <if test="projectFinancingNeeds != null">
+        #{projectFinancingNeeds,jdbcType=VARCHAR},
+      </if>
+      <if test="stockRightFinancingNeeds != null">
+        #{stockRightFinancingNeeds,jdbcType=BIT},
+      </if>
+      <if test="stockRightFinancingQuota != null">
+        #{stockRightFinancingQuota,jdbcType=DECIMAL},
+      </if>
+      <if test="ratioOfEquityQuotaReleased != null">
+        #{ratioOfEquityQuotaReleased,jdbcType=VARCHAR},
+      </if>
+      <if test="roadshowWillingness != null">
+        #{roadshowWillingness,jdbcType=BIT},
+      </if>
+      <if test="listingPlan != null">
+        #{listingPlan,jdbcType=BIT},
+      </if>
+      <if test="suggestion != null">
+        #{suggestion,jdbcType=VARCHAR},
+      </if>
+      <if test="noteInfo != null">
+        #{noteInfo,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.example.model.CompanyExtension">
+    update company_extension
+    <set>
+      <if test="registeredCapital != null">
+        registeredCapital = #{registeredCapital,jdbcType=VARCHAR},
+      </if>
+      <if test="companyChargeUserName != null">
+        companyChargeUserName = #{companyChargeUserName,jdbcType=VARCHAR},
+      </if>
+      <if test="companyChargeUserPhoneNo != null">
+        companyChargeUserPhoneNo = #{companyChargeUserPhoneNo,jdbcType=VARCHAR},
+      </if>
+      <if test="industryStatus != null">
+        industryStatus = #{industryStatus,jdbcType=BIT},
+      </if>
+      <if test="projectFinancingNeeds != null">
+        projectFinancingNeeds = #{projectFinancingNeeds,jdbcType=VARCHAR},
+      </if>
+      <if test="stockRightFinancingNeeds != null">
+        stockRightFinancingNeeds = #{stockRightFinancingNeeds,jdbcType=BIT},
+      </if>
+      <if test="stockRightFinancingQuota != null">
+        stockRightFinancingQuota = #{stockRightFinancingQuota,jdbcType=DECIMAL},
+      </if>
+      <if test="ratioOfEquityQuotaReleased != null">
+        ratioOfEquityQuotaReleased = #{ratioOfEquityQuotaReleased,jdbcType=VARCHAR},
+      </if>
+      <if test="roadshowWillingness != null">
+        roadshowWillingness = #{roadshowWillingness,jdbcType=BIT},
+      </if>
+      <if test="listingPlan != null">
+        listingPlan = #{listingPlan,jdbcType=BIT},
+      </if>
+      <if test="suggestion != null">
+        suggestion = #{suggestion,jdbcType=VARCHAR},
+      </if>
+      <if test="noteInfo != null">
+        noteInfo = #{noteInfo,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where companyId = #{companyId,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.example.model.CompanyExtension">
+    update company_extension
+    set registeredCapital = #{registeredCapital,jdbcType=VARCHAR},
+      companyChargeUserName = #{companyChargeUserName,jdbcType=VARCHAR},
+      companyChargeUserPhoneNo = #{companyChargeUserPhoneNo,jdbcType=VARCHAR},
+      industryStatus = #{industryStatus,jdbcType=BIT},
+      projectFinancingNeeds = #{projectFinancingNeeds,jdbcType=VARCHAR},
+      stockRightFinancingNeeds = #{stockRightFinancingNeeds,jdbcType=BIT},
+      stockRightFinancingQuota = #{stockRightFinancingQuota,jdbcType=DECIMAL},
+      ratioOfEquityQuotaReleased = #{ratioOfEquityQuotaReleased,jdbcType=VARCHAR},
+      roadshowWillingness = #{roadshowWillingness,jdbcType=BIT},
+      listingPlan = #{listingPlan,jdbcType=BIT},
+      suggestion = #{suggestion,jdbcType=VARCHAR},
+      noteInfo = #{noteInfo,jdbcType=VARCHAR}
+    where companyId = #{companyId,jdbcType=VARCHAR}
+  </update>
+  <resultMap id="BaseResultMap" type="com.example.model.CompanyExtension">
+    <constructor>
+      <idArg column="companyId" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="registeredCapital" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="companyChargeUserName" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="companyChargeUserPhoneNo" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="industryStatus" javaType="java.lang.Boolean" jdbcType="BIT" />
+      <arg column="projectFinancingNeeds" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="stockRightFinancingNeeds" javaType="java.lang.Boolean" jdbcType="BIT" />
+      <arg column="stockRightFinancingQuota" javaType="java.math.BigDecimal" jdbcType="DECIMAL" />
+      <arg column="ratioOfEquityQuotaReleased" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="roadshowWillingness" javaType="java.lang.Boolean" jdbcType="BIT" />
+      <arg column="listingPlan" javaType="java.lang.Boolean" jdbcType="BIT" />
+      <arg column="suggestion" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="noteInfo" javaType="java.lang.String" jdbcType="VARCHAR" />
+    </constructor>
+  </resultMap>
+  <sql id="Base_Column_List">
+    companyId, registeredCapital, companyChargeUserName, companyChargeUserPhoneNo, industryStatus, 
+    projectFinancingNeeds, stockRightFinancingNeeds, stockRightFinancingQuota, ratioOfEquityQuotaReleased, 
+    roadshowWillingness, listingPlan, suggestion, noteInfo
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from company_extension
+    where companyId = #{companyId,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    delete from company_extension
+    where companyId = #{companyId,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="com.example.model.CompanyExtension">
+    insert into company_extension (companyId, registeredCapital, companyChargeUserName, 
+      companyChargeUserPhoneNo, industryStatus, projectFinancingNeeds, 
+      stockRightFinancingNeeds, stockRightFinancingQuota, 
+      ratioOfEquityQuotaReleased, roadshowWillingness, 
+      listingPlan, suggestion, noteInfo
+      )
+    values (#{companyId,jdbcType=VARCHAR}, #{registeredCapital,jdbcType=VARCHAR}, #{companyChargeUserName,jdbcType=VARCHAR}, 
+      #{companyChargeUserPhoneNo,jdbcType=VARCHAR}, #{industryStatus,jdbcType=BIT}, #{projectFinancingNeeds,jdbcType=VARCHAR}, 
+      #{stockRightFinancingNeeds,jdbcType=BIT}, #{stockRightFinancingQuota,jdbcType=DECIMAL}, 
+      #{ratioOfEquityQuotaReleased,jdbcType=VARCHAR}, #{roadshowWillingness,jdbcType=BIT}, 
+      #{listingPlan,jdbcType=BIT}, #{suggestion,jdbcType=VARCHAR}, #{noteInfo,jdbcType=VARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.example.model.CompanyExtension">
+    insert into company_extension
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="companyId != null">
+        companyId,
+      </if>
+      <if test="registeredCapital != null">
+        registeredCapital,
+      </if>
+      <if test="companyChargeUserName != null">
+        companyChargeUserName,
+      </if>
+      <if test="companyChargeUserPhoneNo != null">
+        companyChargeUserPhoneNo,
+      </if>
+      <if test="industryStatus != null">
+        industryStatus,
+      </if>
+      <if test="projectFinancingNeeds != null">
+        projectFinancingNeeds,
+      </if>
+      <if test="stockRightFinancingNeeds != null">
+        stockRightFinancingNeeds,
+      </if>
+      <if test="stockRightFinancingQuota != null">
+        stockRightFinancingQuota,
+      </if>
+      <if test="ratioOfEquityQuotaReleased != null">
+        ratioOfEquityQuotaReleased,
+      </if>
+      <if test="roadshowWillingness != null">
+        roadshowWillingness,
+      </if>
+      <if test="listingPlan != null">
+        listingPlan,
+      </if>
+      <if test="suggestion != null">
+        suggestion,
+      </if>
+      <if test="noteInfo != null">
+        noteInfo,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="companyId != null">
+        #{companyId,jdbcType=VARCHAR},
+      </if>
+      <if test="registeredCapital != null">
+        #{registeredCapital,jdbcType=VARCHAR},
+      </if>
+      <if test="companyChargeUserName != null">
+        #{companyChargeUserName,jdbcType=VARCHAR},
+      </if>
+      <if test="companyChargeUserPhoneNo != null">
+        #{companyChargeUserPhoneNo,jdbcType=VARCHAR},
+      </if>
+      <if test="industryStatus != null">
+        #{industryStatus,jdbcType=BIT},
+      </if>
+      <if test="projectFinancingNeeds != null">
+        #{projectFinancingNeeds,jdbcType=VARCHAR},
+      </if>
+      <if test="stockRightFinancingNeeds != null">
+        #{stockRightFinancingNeeds,jdbcType=BIT},
+      </if>
+      <if test="stockRightFinancingQuota != null">
+        #{stockRightFinancingQuota,jdbcType=DECIMAL},
+      </if>
+      <if test="ratioOfEquityQuotaReleased != null">
+        #{ratioOfEquityQuotaReleased,jdbcType=VARCHAR},
+      </if>
+      <if test="roadshowWillingness != null">
+        #{roadshowWillingness,jdbcType=BIT},
+      </if>
+      <if test="listingPlan != null">
+        #{listingPlan,jdbcType=BIT},
+      </if>
+      <if test="suggestion != null">
+        #{suggestion,jdbcType=VARCHAR},
+      </if>
+      <if test="noteInfo != null">
+        #{noteInfo,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.example.model.CompanyExtension">
+    update company_extension
+    <set>
+      <if test="registeredCapital != null">
+        registeredCapital = #{registeredCapital,jdbcType=VARCHAR},
+      </if>
+      <if test="companyChargeUserName != null">
+        companyChargeUserName = #{companyChargeUserName,jdbcType=VARCHAR},
+      </if>
+      <if test="companyChargeUserPhoneNo != null">
+        companyChargeUserPhoneNo = #{companyChargeUserPhoneNo,jdbcType=VARCHAR},
+      </if>
+      <if test="industryStatus != null">
+        industryStatus = #{industryStatus,jdbcType=BIT},
+      </if>
+      <if test="projectFinancingNeeds != null">
+        projectFinancingNeeds = #{projectFinancingNeeds,jdbcType=VARCHAR},
+      </if>
+      <if test="stockRightFinancingNeeds != null">
+        stockRightFinancingNeeds = #{stockRightFinancingNeeds,jdbcType=BIT},
+      </if>
+      <if test="stockRightFinancingQuota != null">
+        stockRightFinancingQuota = #{stockRightFinancingQuota,jdbcType=DECIMAL},
+      </if>
+      <if test="ratioOfEquityQuotaReleased != null">
+        ratioOfEquityQuotaReleased = #{ratioOfEquityQuotaReleased,jdbcType=VARCHAR},
+      </if>
+      <if test="roadshowWillingness != null">
+        roadshowWillingness = #{roadshowWillingness,jdbcType=BIT},
+      </if>
+      <if test="listingPlan != null">
+        listingPlan = #{listingPlan,jdbcType=BIT},
+      </if>
+      <if test="suggestion != null">
+        suggestion = #{suggestion,jdbcType=VARCHAR},
+      </if>
+      <if test="noteInfo != null">
+        noteInfo = #{noteInfo,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where companyId = #{companyId,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.example.model.CompanyExtension">
+    update company_extension
+    set registeredCapital = #{registeredCapital,jdbcType=VARCHAR},
+      companyChargeUserName = #{companyChargeUserName,jdbcType=VARCHAR},
+      companyChargeUserPhoneNo = #{companyChargeUserPhoneNo,jdbcType=VARCHAR},
+      industryStatus = #{industryStatus,jdbcType=BIT},
+      projectFinancingNeeds = #{projectFinancingNeeds,jdbcType=VARCHAR},
+      stockRightFinancingNeeds = #{stockRightFinancingNeeds,jdbcType=BIT},
+      stockRightFinancingQuota = #{stockRightFinancingQuota,jdbcType=DECIMAL},
+      ratioOfEquityQuotaReleased = #{ratioOfEquityQuotaReleased,jdbcType=VARCHAR},
+      roadshowWillingness = #{roadshowWillingness,jdbcType=BIT},
+      listingPlan = #{listingPlan,jdbcType=BIT},
+      suggestion = #{suggestion,jdbcType=VARCHAR},
+      noteInfo = #{noteInfo,jdbcType=VARCHAR}
+    where companyId = #{companyId,jdbcType=VARCHAR}
+  </update>
+  <resultMap id="BaseResultMap" type="com.example.model.CompanyExtension">
+    <constructor>
+      <idArg column="companyId" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="registeredCapital" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="companyChargeUserName" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="companyChargeUserPhoneNo" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="industryStatus" javaType="java.lang.Boolean" jdbcType="BIT" />
+      <arg column="projectFinancingNeeds" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="stockRightFinancingNeeds" javaType="java.lang.Boolean" jdbcType="BIT" />
+      <arg column="stockRightFinancingQuota" javaType="java.math.BigDecimal" jdbcType="DECIMAL" />
+      <arg column="ratioOfEquityQuotaReleased" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="roadshowWillingness" javaType="java.lang.Boolean" jdbcType="BIT" />
+      <arg column="listingPlan" javaType="java.lang.Boolean" jdbcType="BIT" />
+      <arg column="suggestion" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="noteInfo" javaType="java.lang.String" jdbcType="VARCHAR" />
+    </constructor>
+  </resultMap>
+  <sql id="Base_Column_List">
+    companyId, registeredCapital, companyChargeUserName, companyChargeUserPhoneNo, industryStatus, 
+    projectFinancingNeeds, stockRightFinancingNeeds, stockRightFinancingQuota, ratioOfEquityQuotaReleased, 
+    roadshowWillingness, listingPlan, suggestion, noteInfo
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from company_extension
+    where companyId = #{companyid,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    delete from company_extension
+    where companyId = #{companyid,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="com.example.model.CompanyExtension">
+    insert into company_extension (companyId, registeredCapital, companyChargeUserName, 
+      companyChargeUserPhoneNo, industryStatus, projectFinancingNeeds, 
+      stockRightFinancingNeeds, stockRightFinancingQuota, 
+      ratioOfEquityQuotaReleased, roadshowWillingness, 
+      listingPlan, suggestion, noteInfo
+      )
+    values (#{companyid,jdbcType=VARCHAR}, #{registeredcapital,jdbcType=VARCHAR}, #{companychargeusername,jdbcType=VARCHAR}, 
+      #{companychargeuserphoneno,jdbcType=VARCHAR}, #{industrystatus,jdbcType=BIT}, #{projectfinancingneeds,jdbcType=VARCHAR}, 
+      #{stockrightfinancingneeds,jdbcType=BIT}, #{stockrightfinancingquota,jdbcType=DECIMAL}, 
+      #{ratioofequityquotareleased,jdbcType=VARCHAR}, #{roadshowwillingness,jdbcType=BIT}, 
+      #{listingplan,jdbcType=BIT}, #{suggestion,jdbcType=VARCHAR}, #{noteinfo,jdbcType=VARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.example.model.CompanyExtension">
+    insert into company_extension
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="companyid != null">
+        companyId,
+      </if>
+      <if test="registeredcapital != null">
+        registeredCapital,
+      </if>
+      <if test="companychargeusername != null">
+        companyChargeUserName,
+      </if>
+      <if test="companychargeuserphoneno != null">
+        companyChargeUserPhoneNo,
+      </if>
+      <if test="industrystatus != null">
+        industryStatus,
+      </if>
+      <if test="projectfinancingneeds != null">
+        projectFinancingNeeds,
+      </if>
+      <if test="stockrightfinancingneeds != null">
+        stockRightFinancingNeeds,
+      </if>
+      <if test="stockrightfinancingquota != null">
+        stockRightFinancingQuota,
+      </if>
+      <if test="ratioofequityquotareleased != null">
+        ratioOfEquityQuotaReleased,
+      </if>
+      <if test="roadshowwillingness != null">
+        roadshowWillingness,
+      </if>
+      <if test="listingplan != null">
+        listingPlan,
+      </if>
+      <if test="suggestion != null">
+        suggestion,
+      </if>
+      <if test="noteinfo != null">
+        noteInfo,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="companyid != null">
+        #{companyid,jdbcType=VARCHAR},
+      </if>
+      <if test="registeredcapital != null">
+        #{registeredcapital,jdbcType=VARCHAR},
+      </if>
+      <if test="companychargeusername != null">
+        #{companychargeusername,jdbcType=VARCHAR},
+      </if>
+      <if test="companychargeuserphoneno != null">
+        #{companychargeuserphoneno,jdbcType=VARCHAR},
+      </if>
+      <if test="industrystatus != null">
+        #{industrystatus,jdbcType=BIT},
+      </if>
+      <if test="projectfinancingneeds != null">
+        #{projectfinancingneeds,jdbcType=VARCHAR},
+      </if>
+      <if test="stockrightfinancingneeds != null">
+        #{stockrightfinancingneeds,jdbcType=BIT},
+      </if>
+      <if test="stockrightfinancingquota != null">
+        #{stockrightfinancingquota,jdbcType=DECIMAL},
+      </if>
+      <if test="ratioofequityquotareleased != null">
+        #{ratioofequityquotareleased,jdbcType=VARCHAR},
+      </if>
+      <if test="roadshowwillingness != null">
+        #{roadshowwillingness,jdbcType=BIT},
+      </if>
+      <if test="listingplan != null">
+        #{listingplan,jdbcType=BIT},
+      </if>
+      <if test="suggestion != null">
+        #{suggestion,jdbcType=VARCHAR},
+      </if>
+      <if test="noteinfo != null">
+        #{noteinfo,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.example.model.CompanyExtension">
+    update company_extension
+    <set>
+      <if test="registeredcapital != null">
+        registeredCapital = #{registeredcapital,jdbcType=VARCHAR},
+      </if>
+      <if test="companychargeusername != null">
+        companyChargeUserName = #{companychargeusername,jdbcType=VARCHAR},
+      </if>
+      <if test="companychargeuserphoneno != null">
+        companyChargeUserPhoneNo = #{companychargeuserphoneno,jdbcType=VARCHAR},
+      </if>
+      <if test="industrystatus != null">
+        industryStatus = #{industrystatus,jdbcType=BIT},
+      </if>
+      <if test="projectfinancingneeds != null">
+        projectFinancingNeeds = #{projectfinancingneeds,jdbcType=VARCHAR},
+      </if>
+      <if test="stockrightfinancingneeds != null">
+        stockRightFinancingNeeds = #{stockrightfinancingneeds,jdbcType=BIT},
+      </if>
+      <if test="stockrightfinancingquota != null">
+        stockRightFinancingQuota = #{stockrightfinancingquota,jdbcType=DECIMAL},
+      </if>
+      <if test="ratioofequityquotareleased != null">
+        ratioOfEquityQuotaReleased = #{ratioofequityquotareleased,jdbcType=VARCHAR},
+      </if>
+      <if test="roadshowwillingness != null">
+        roadshowWillingness = #{roadshowwillingness,jdbcType=BIT},
+      </if>
+      <if test="listingplan != null">
+        listingPlan = #{listingplan,jdbcType=BIT},
+      </if>
+      <if test="suggestion != null">
+        suggestion = #{suggestion,jdbcType=VARCHAR},
+      </if>
+      <if test="noteinfo != null">
+        noteInfo = #{noteinfo,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where companyId = #{companyid,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.example.model.CompanyExtension">
+    update company_extension
+    set registeredCapital = #{registeredcapital,jdbcType=VARCHAR},
+      companyChargeUserName = #{companychargeusername,jdbcType=VARCHAR},
+      companyChargeUserPhoneNo = #{companychargeuserphoneno,jdbcType=VARCHAR},
+      industryStatus = #{industrystatus,jdbcType=BIT},
+      projectFinancingNeeds = #{projectfinancingneeds,jdbcType=VARCHAR},
+      stockRightFinancingNeeds = #{stockrightfinancingneeds,jdbcType=BIT},
+      stockRightFinancingQuota = #{stockrightfinancingquota,jdbcType=DECIMAL},
+      ratioOfEquityQuotaReleased = #{ratioofequityquotareleased,jdbcType=VARCHAR},
+      roadshowWillingness = #{roadshowwillingness,jdbcType=BIT},
+      listingPlan = #{listingplan,jdbcType=BIT},
+      suggestion = #{suggestion,jdbcType=VARCHAR},
+      noteInfo = #{noteinfo,jdbcType=VARCHAR}
+    where companyId = #{companyid,jdbcType=VARCHAR}
+  </update>
+  <resultMap id="BaseResultMap" type="com.example.model.CompanyExtension">
+    <constructor>
+      <idArg column="companyId" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="registeredCapital" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="companyChargeUserName" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="companyChargeUserPhoneNo" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="industryStatus" javaType="java.lang.Boolean" jdbcType="BIT" />
+      <arg column="projectFinancingNeeds" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="stockRightFinancingNeeds" javaType="java.lang.Boolean" jdbcType="BIT" />
+      <arg column="stockRightFinancingQuota" javaType="java.math.BigDecimal" jdbcType="DECIMAL" />
+      <arg column="ratioOfEquityQuotaReleased" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="roadshowWillingness" javaType="java.lang.Boolean" jdbcType="BIT" />
+      <arg column="listingPlan" javaType="java.lang.Boolean" jdbcType="BIT" />
+      <arg column="suggestion" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="noteInfo" javaType="java.lang.String" jdbcType="VARCHAR" />
+    </constructor>
+  </resultMap>
+  <sql id="Base_Column_List">
+    companyId, registeredCapital, companyChargeUserName, companyChargeUserPhoneNo, industryStatus, 
+    projectFinancingNeeds, stockRightFinancingNeeds, stockRightFinancingQuota, ratioOfEquityQuotaReleased, 
+    roadshowWillingness, listingPlan, suggestion, noteInfo
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from company_extension
+    where companyId = #{companyid,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    delete from company_extension
+    where companyId = #{companyid,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="com.example.model.CompanyExtension">
+    insert into company_extension (companyId, registeredCapital, companyChargeUserName, 
+      companyChargeUserPhoneNo, industryStatus, projectFinancingNeeds, 
+      stockRightFinancingNeeds, stockRightFinancingQuota, 
+      ratioOfEquityQuotaReleased, roadshowWillingness, 
+      listingPlan, suggestion, noteInfo
+      )
+    values (#{companyid,jdbcType=VARCHAR}, #{registeredcapital,jdbcType=VARCHAR}, #{companychargeusername,jdbcType=VARCHAR}, 
+      #{companychargeuserphoneno,jdbcType=VARCHAR}, #{industrystatus,jdbcType=BIT}, #{projectfinancingneeds,jdbcType=VARCHAR}, 
+      #{stockrightfinancingneeds,jdbcType=BIT}, #{stockrightfinancingquota,jdbcType=DECIMAL}, 
+      #{ratioofequityquotareleased,jdbcType=VARCHAR}, #{roadshowwillingness,jdbcType=BIT}, 
+      #{listingplan,jdbcType=BIT}, #{suggestion,jdbcType=VARCHAR}, #{noteinfo,jdbcType=VARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.example.model.CompanyExtension">
+    insert into company_extension
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="companyid != null">
+        companyId,
+      </if>
+      <if test="registeredcapital != null">
+        registeredCapital,
+      </if>
+      <if test="companychargeusername != null">
+        companyChargeUserName,
+      </if>
+      <if test="companychargeuserphoneno != null">
+        companyChargeUserPhoneNo,
+      </if>
+      <if test="industrystatus != null">
+        industryStatus,
+      </if>
+      <if test="projectfinancingneeds != null">
+        projectFinancingNeeds,
+      </if>
+      <if test="stockrightfinancingneeds != null">
+        stockRightFinancingNeeds,
+      </if>
+      <if test="stockrightfinancingquota != null">
+        stockRightFinancingQuota,
+      </if>
+      <if test="ratioofequityquotareleased != null">
+        ratioOfEquityQuotaReleased,
+      </if>
+      <if test="roadshowwillingness != null">
+        roadshowWillingness,
+      </if>
+      <if test="listingplan != null">
+        listingPlan,
+      </if>
+      <if test="suggestion != null">
+        suggestion,
+      </if>
+      <if test="noteinfo != null">
+        noteInfo,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="companyid != null">
+        #{companyid,jdbcType=VARCHAR},
+      </if>
+      <if test="registeredcapital != null">
+        #{registeredcapital,jdbcType=VARCHAR},
+      </if>
+      <if test="companychargeusername != null">
+        #{companychargeusername,jdbcType=VARCHAR},
+      </if>
+      <if test="companychargeuserphoneno != null">
+        #{companychargeuserphoneno,jdbcType=VARCHAR},
+      </if>
+      <if test="industrystatus != null">
+        #{industrystatus,jdbcType=BIT},
+      </if>
+      <if test="projectfinancingneeds != null">
+        #{projectfinancingneeds,jdbcType=VARCHAR},
+      </if>
+      <if test="stockrightfinancingneeds != null">
+        #{stockrightfinancingneeds,jdbcType=BIT},
+      </if>
+      <if test="stockrightfinancingquota != null">
+        #{stockrightfinancingquota,jdbcType=DECIMAL},
+      </if>
+      <if test="ratioofequityquotareleased != null">
+        #{ratioofequityquotareleased,jdbcType=VARCHAR},
+      </if>
+      <if test="roadshowwillingness != null">
+        #{roadshowwillingness,jdbcType=BIT},
+      </if>
+      <if test="listingplan != null">
+        #{listingplan,jdbcType=BIT},
+      </if>
+      <if test="suggestion != null">
+        #{suggestion,jdbcType=VARCHAR},
+      </if>
+      <if test="noteinfo != null">
+        #{noteinfo,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.example.model.CompanyExtension">
+    update company_extension
+    <set>
+      <if test="registeredcapital != null">
+        registeredCapital = #{registeredcapital,jdbcType=VARCHAR},
+      </if>
+      <if test="companychargeusername != null">
+        companyChargeUserName = #{companychargeusername,jdbcType=VARCHAR},
+      </if>
+      <if test="companychargeuserphoneno != null">
+        companyChargeUserPhoneNo = #{companychargeuserphoneno,jdbcType=VARCHAR},
+      </if>
+      <if test="industrystatus != null">
+        industryStatus = #{industrystatus,jdbcType=BIT},
+      </if>
+      <if test="projectfinancingneeds != null">
+        projectFinancingNeeds = #{projectfinancingneeds,jdbcType=VARCHAR},
+      </if>
+      <if test="stockrightfinancingneeds != null">
+        stockRightFinancingNeeds = #{stockrightfinancingneeds,jdbcType=BIT},
+      </if>
+      <if test="stockrightfinancingquota != null">
+        stockRightFinancingQuota = #{stockrightfinancingquota,jdbcType=DECIMAL},
+      </if>
+      <if test="ratioofequityquotareleased != null">
+        ratioOfEquityQuotaReleased = #{ratioofequityquotareleased,jdbcType=VARCHAR},
+      </if>
+      <if test="roadshowwillingness != null">
+        roadshowWillingness = #{roadshowwillingness,jdbcType=BIT},
+      </if>
+      <if test="listingplan != null">
+        listingPlan = #{listingplan,jdbcType=BIT},
+      </if>
+      <if test="suggestion != null">
+        suggestion = #{suggestion,jdbcType=VARCHAR},
+      </if>
+      <if test="noteinfo != null">
+        noteInfo = #{noteinfo,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where companyId = #{companyid,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.example.model.CompanyExtension">
+    update company_extension
+    set registeredCapital = #{registeredcapital,jdbcType=VARCHAR},
+      companyChargeUserName = #{companychargeusername,jdbcType=VARCHAR},
+      companyChargeUserPhoneNo = #{companychargeuserphoneno,jdbcType=VARCHAR},
+      industryStatus = #{industrystatus,jdbcType=BIT},
+      projectFinancingNeeds = #{projectfinancingneeds,jdbcType=VARCHAR},
+      stockRightFinancingNeeds = #{stockrightfinancingneeds,jdbcType=BIT},
+      stockRightFinancingQuota = #{stockrightfinancingquota,jdbcType=DECIMAL},
+      ratioOfEquityQuotaReleased = #{ratioofequityquotareleased,jdbcType=VARCHAR},
+      roadshowWillingness = #{roadshowwillingness,jdbcType=BIT},
+      listingPlan = #{listingplan,jdbcType=BIT},
+      suggestion = #{suggestion,jdbcType=VARCHAR},
+      noteInfo = #{noteinfo,jdbcType=VARCHAR}
+    where companyId = #{companyid,jdbcType=VARCHAR}
+  </update>
+  <resultMap id="BaseResultMap" type="com.example.model.CompanyExtension">
+    <constructor>
+      <idArg column="companyId" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="registeredCapital" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="companyChargeUserName" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="companyChargeUserPhoneNo" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="industryStatus" javaType="java.lang.Boolean" jdbcType="BIT" />
+      <arg column="projectFinancingNeeds" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="stockRightFinancingNeeds" javaType="java.lang.Boolean" jdbcType="BIT" />
+      <arg column="stockRightFinancingQuota" javaType="java.math.BigDecimal" jdbcType="DECIMAL" />
+      <arg column="ratioOfEquityQuotaReleased" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="roadshowWillingness" javaType="java.lang.Boolean" jdbcType="BIT" />
+      <arg column="listingPlan" javaType="java.lang.Boolean" jdbcType="BIT" />
+      <arg column="suggestion" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="noteInfo" javaType="java.lang.String" jdbcType="VARCHAR" />
+    </constructor>
+  </resultMap>
+  <sql id="Base_Column_List">
+    companyId, registeredCapital, companyChargeUserName, companyChargeUserPhoneNo, industryStatus, 
+    projectFinancingNeeds, stockRightFinancingNeeds, stockRightFinancingQuota, ratioOfEquityQuotaReleased, 
+    roadshowWillingness, listingPlan, suggestion, noteInfo
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from company_extension
+    where companyId = #{companyid,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    delete from company_extension
+    where companyId = #{companyid,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="com.example.model.CompanyExtension">
+    insert into company_extension (companyId, registeredCapital, companyChargeUserName, 
+      companyChargeUserPhoneNo, industryStatus, projectFinancingNeeds, 
+      stockRightFinancingNeeds, stockRightFinancingQuota, 
+      ratioOfEquityQuotaReleased, roadshowWillingness, 
+      listingPlan, suggestion, noteInfo
+      )
+    values (#{companyid,jdbcType=VARCHAR}, #{registeredcapital,jdbcType=VARCHAR}, #{companychargeusername,jdbcType=VARCHAR}, 
+      #{companychargeuserphoneno,jdbcType=VARCHAR}, #{industrystatus,jdbcType=BIT}, #{projectfinancingneeds,jdbcType=VARCHAR}, 
+      #{stockrightfinancingneeds,jdbcType=BIT}, #{stockrightfinancingquota,jdbcType=DECIMAL}, 
+      #{ratioofequityquotareleased,jdbcType=VARCHAR}, #{roadshowwillingness,jdbcType=BIT}, 
+      #{listingplan,jdbcType=BIT}, #{suggestion,jdbcType=VARCHAR}, #{noteinfo,jdbcType=VARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.example.model.CompanyExtension">
+    insert into company_extension
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="companyid != null">
+        companyId,
+      </if>
+      <if test="registeredcapital != null">
+        registeredCapital,
+      </if>
+      <if test="companychargeusername != null">
+        companyChargeUserName,
+      </if>
+      <if test="companychargeuserphoneno != null">
+        companyChargeUserPhoneNo,
+      </if>
+      <if test="industrystatus != null">
+        industryStatus,
+      </if>
+      <if test="projectfinancingneeds != null">
+        projectFinancingNeeds,
+      </if>
+      <if test="stockrightfinancingneeds != null">
+        stockRightFinancingNeeds,
+      </if>
+      <if test="stockrightfinancingquota != null">
+        stockRightFinancingQuota,
+      </if>
+      <if test="ratioofequityquotareleased != null">
+        ratioOfEquityQuotaReleased,
+      </if>
+      <if test="roadshowwillingness != null">
+        roadshowWillingness,
+      </if>
+      <if test="listingplan != null">
+        listingPlan,
+      </if>
+      <if test="suggestion != null">
+        suggestion,
+      </if>
+      <if test="noteinfo != null">
+        noteInfo,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="companyid != null">
+        #{companyid,jdbcType=VARCHAR},
+      </if>
+      <if test="registeredcapital != null">
+        #{registeredcapital,jdbcType=VARCHAR},
+      </if>
+      <if test="companychargeusername != null">
+        #{companychargeusername,jdbcType=VARCHAR},
+      </if>
+      <if test="companychargeuserphoneno != null">
+        #{companychargeuserphoneno,jdbcType=VARCHAR},
+      </if>
+      <if test="industrystatus != null">
+        #{industrystatus,jdbcType=BIT},
+      </if>
+      <if test="projectfinancingneeds != null">
+        #{projectfinancingneeds,jdbcType=VARCHAR},
+      </if>
+      <if test="stockrightfinancingneeds != null">
+        #{stockrightfinancingneeds,jdbcType=BIT},
+      </if>
+      <if test="stockrightfinancingquota != null">
+        #{stockrightfinancingquota,jdbcType=DECIMAL},
+      </if>
+      <if test="ratioofequityquotareleased != null">
+        #{ratioofequityquotareleased,jdbcType=VARCHAR},
+      </if>
+      <if test="roadshowwillingness != null">
+        #{roadshowwillingness,jdbcType=BIT},
+      </if>
+      <if test="listingplan != null">
+        #{listingplan,jdbcType=BIT},
+      </if>
+      <if test="suggestion != null">
+        #{suggestion,jdbcType=VARCHAR},
+      </if>
+      <if test="noteinfo != null">
+        #{noteinfo,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.example.model.CompanyExtension">
+    update company_extension
+    <set>
+      <if test="registeredcapital != null">
+        registeredCapital = #{registeredcapital,jdbcType=VARCHAR},
+      </if>
+      <if test="companychargeusername != null">
+        companyChargeUserName = #{companychargeusername,jdbcType=VARCHAR},
+      </if>
+      <if test="companychargeuserphoneno != null">
+        companyChargeUserPhoneNo = #{companychargeuserphoneno,jdbcType=VARCHAR},
+      </if>
+      <if test="industrystatus != null">
+        industryStatus = #{industrystatus,jdbcType=BIT},
+      </if>
+      <if test="projectfinancingneeds != null">
+        projectFinancingNeeds = #{projectfinancingneeds,jdbcType=VARCHAR},
+      </if>
+      <if test="stockrightfinancingneeds != null">
+        stockRightFinancingNeeds = #{stockrightfinancingneeds,jdbcType=BIT},
+      </if>
+      <if test="stockrightfinancingquota != null">
+        stockRightFinancingQuota = #{stockrightfinancingquota,jdbcType=DECIMAL},
+      </if>
+      <if test="ratioofequityquotareleased != null">
+        ratioOfEquityQuotaReleased = #{ratioofequityquotareleased,jdbcType=VARCHAR},
+      </if>
+      <if test="roadshowwillingness != null">
+        roadshowWillingness = #{roadshowwillingness,jdbcType=BIT},
+      </if>
+      <if test="listingplan != null">
+        listingPlan = #{listingplan,jdbcType=BIT},
+      </if>
+      <if test="suggestion != null">
+        suggestion = #{suggestion,jdbcType=VARCHAR},
+      </if>
+      <if test="noteinfo != null">
+        noteInfo = #{noteinfo,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where companyId = #{companyid,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.example.model.CompanyExtension">
+    update company_extension
+    set registeredCapital = #{registeredcapital,jdbcType=VARCHAR},
+      companyChargeUserName = #{companychargeusername,jdbcType=VARCHAR},
+      companyChargeUserPhoneNo = #{companychargeuserphoneno,jdbcType=VARCHAR},
+      industryStatus = #{industrystatus,jdbcType=BIT},
+      projectFinancingNeeds = #{projectfinancingneeds,jdbcType=VARCHAR},
+      stockRightFinancingNeeds = #{stockrightfinancingneeds,jdbcType=BIT},
+      stockRightFinancingQuota = #{stockrightfinancingquota,jdbcType=DECIMAL},
+      ratioOfEquityQuotaReleased = #{ratioofequityquotareleased,jdbcType=VARCHAR},
+      roadshowWillingness = #{roadshowwillingness,jdbcType=BIT},
+      listingPlan = #{listingplan,jdbcType=BIT},
+      suggestion = #{suggestion,jdbcType=VARCHAR},
+      noteInfo = #{noteinfo,jdbcType=VARCHAR}
+    where companyId = #{companyid,jdbcType=VARCHAR}
+  </update>
+  <resultMap id="BaseResultMap" type="com.example.model.CompanyExtension">
+    <constructor>
+      <idArg column="companyId" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="registeredCapital" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="companyChargeUserName" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="companyChargeUserPhoneNo" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="industryStatus" javaType="java.lang.Boolean" jdbcType="BIT" />
+      <arg column="projectFinancingNeeds" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="stockRightFinancingNeeds" javaType="java.lang.Boolean" jdbcType="BIT" />
+      <arg column="stockRightFinancingQuota" javaType="java.math.BigDecimal" jdbcType="DECIMAL" />
+      <arg column="ratioOfEquityQuotaReleased" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="roadshowWillingness" javaType="java.lang.Boolean" jdbcType="BIT" />
+      <arg column="listingPlan" javaType="java.lang.Boolean" jdbcType="BIT" />
+      <arg column="suggestion" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="noteInfo" javaType="java.lang.String" jdbcType="VARCHAR" />
+    </constructor>
+  </resultMap>
+  <sql id="Base_Column_List">
+    companyId, registeredCapital, companyChargeUserName, companyChargeUserPhoneNo, industryStatus, 
+    projectFinancingNeeds, stockRightFinancingNeeds, stockRightFinancingQuota, ratioOfEquityQuotaReleased, 
+    roadshowWillingness, listingPlan, suggestion, noteInfo
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from company_extension
+    where companyId = #{companyid,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    delete from company_extension
+    where companyId = #{companyid,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="com.example.model.CompanyExtension">
+    insert into company_extension (companyId, registeredCapital, companyChargeUserName, 
+      companyChargeUserPhoneNo, industryStatus, projectFinancingNeeds, 
+      stockRightFinancingNeeds, stockRightFinancingQuota, 
+      ratioOfEquityQuotaReleased, roadshowWillingness, 
+      listingPlan, suggestion, noteInfo
+      )
+    values (#{companyid,jdbcType=VARCHAR}, #{registeredcapital,jdbcType=VARCHAR}, #{companychargeusername,jdbcType=VARCHAR}, 
+      #{companychargeuserphoneno,jdbcType=VARCHAR}, #{industrystatus,jdbcType=BIT}, #{projectfinancingneeds,jdbcType=VARCHAR}, 
+      #{stockrightfinancingneeds,jdbcType=BIT}, #{stockrightfinancingquota,jdbcType=DECIMAL}, 
+      #{ratioofequityquotareleased,jdbcType=VARCHAR}, #{roadshowwillingness,jdbcType=BIT}, 
+      #{listingplan,jdbcType=BIT}, #{suggestion,jdbcType=VARCHAR}, #{noteinfo,jdbcType=VARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.example.model.CompanyExtension">
+    insert into company_extension
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="companyid != null">
+        companyId,
+      </if>
+      <if test="registeredcapital != null">
+        registeredCapital,
+      </if>
+      <if test="companychargeusername != null">
+        companyChargeUserName,
+      </if>
+      <if test="companychargeuserphoneno != null">
+        companyChargeUserPhoneNo,
+      </if>
+      <if test="industrystatus != null">
+        industryStatus,
+      </if>
+      <if test="projectfinancingneeds != null">
+        projectFinancingNeeds,
+      </if>
+      <if test="stockrightfinancingneeds != null">
+        stockRightFinancingNeeds,
+      </if>
+      <if test="stockrightfinancingquota != null">
+        stockRightFinancingQuota,
+      </if>
+      <if test="ratioofequityquotareleased != null">
+        ratioOfEquityQuotaReleased,
+      </if>
+      <if test="roadshowwillingness != null">
+        roadshowWillingness,
+      </if>
+      <if test="listingplan != null">
+        listingPlan,
+      </if>
+      <if test="suggestion != null">
+        suggestion,
+      </if>
+      <if test="noteinfo != null">
+        noteInfo,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="companyid != null">
+        #{companyid,jdbcType=VARCHAR},
+      </if>
+      <if test="registeredcapital != null">
+        #{registeredcapital,jdbcType=VARCHAR},
+      </if>
+      <if test="companychargeusername != null">
+        #{companychargeusername,jdbcType=VARCHAR},
+      </if>
+      <if test="companychargeuserphoneno != null">
+        #{companychargeuserphoneno,jdbcType=VARCHAR},
+      </if>
+      <if test="industrystatus != null">
+        #{industrystatus,jdbcType=BIT},
+      </if>
+      <if test="projectfinancingneeds != null">
+        #{projectfinancingneeds,jdbcType=VARCHAR},
+      </if>
+      <if test="stockrightfinancingneeds != null">
+        #{stockrightfinancingneeds,jdbcType=BIT},
+      </if>
+      <if test="stockrightfinancingquota != null">
+        #{stockrightfinancingquota,jdbcType=DECIMAL},
+      </if>
+      <if test="ratioofequityquotareleased != null">
+        #{ratioofequityquotareleased,jdbcType=VARCHAR},
+      </if>
+      <if test="roadshowwillingness != null">
+        #{roadshowwillingness,jdbcType=BIT},
+      </if>
+      <if test="listingplan != null">
+        #{listingplan,jdbcType=BIT},
+      </if>
+      <if test="suggestion != null">
+        #{suggestion,jdbcType=VARCHAR},
+      </if>
+      <if test="noteinfo != null">
+        #{noteinfo,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.example.model.CompanyExtension">
+    update company_extension
+    <set>
+      <if test="registeredcapital != null">
+        registeredCapital = #{registeredcapital,jdbcType=VARCHAR},
+      </if>
+      <if test="companychargeusername != null">
+        companyChargeUserName = #{companychargeusername,jdbcType=VARCHAR},
+      </if>
+      <if test="companychargeuserphoneno != null">
+        companyChargeUserPhoneNo = #{companychargeuserphoneno,jdbcType=VARCHAR},
+      </if>
+      <if test="industrystatus != null">
+        industryStatus = #{industrystatus,jdbcType=BIT},
+      </if>
+      <if test="projectfinancingneeds != null">
+        projectFinancingNeeds = #{projectfinancingneeds,jdbcType=VARCHAR},
+      </if>
+      <if test="stockrightfinancingneeds != null">
+        stockRightFinancingNeeds = #{stockrightfinancingneeds,jdbcType=BIT},
+      </if>
+      <if test="stockrightfinancingquota != null">
+        stockRightFinancingQuota = #{stockrightfinancingquota,jdbcType=DECIMAL},
+      </if>
+      <if test="ratioofequityquotareleased != null">
+        ratioOfEquityQuotaReleased = #{ratioofequityquotareleased,jdbcType=VARCHAR},
+      </if>
+      <if test="roadshowwillingness != null">
+        roadshowWillingness = #{roadshowwillingness,jdbcType=BIT},
+      </if>
+      <if test="listingplan != null">
+        listingPlan = #{listingplan,jdbcType=BIT},
+      </if>
+      <if test="suggestion != null">
+        suggestion = #{suggestion,jdbcType=VARCHAR},
+      </if>
+      <if test="noteinfo != null">
+        noteInfo = #{noteinfo,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where companyId = #{companyid,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.example.model.CompanyExtension">
+    update company_extension
+    set registeredCapital = #{registeredcapital,jdbcType=VARCHAR},
+      companyChargeUserName = #{companychargeusername,jdbcType=VARCHAR},
+      companyChargeUserPhoneNo = #{companychargeuserphoneno,jdbcType=VARCHAR},
+      industryStatus = #{industrystatus,jdbcType=BIT},
+      projectFinancingNeeds = #{projectfinancingneeds,jdbcType=VARCHAR},
+      stockRightFinancingNeeds = #{stockrightfinancingneeds,jdbcType=BIT},
+      stockRightFinancingQuota = #{stockrightfinancingquota,jdbcType=DECIMAL},
+      ratioOfEquityQuotaReleased = #{ratioofequityquotareleased,jdbcType=VARCHAR},
+      roadshowWillingness = #{roadshowwillingness,jdbcType=BIT},
+      listingPlan = #{listingplan,jdbcType=BIT},
+      suggestion = #{suggestion,jdbcType=VARCHAR},
+      noteInfo = #{noteinfo,jdbcType=VARCHAR}
+    where companyId = #{companyid,jdbcType=VARCHAR}
+  </update>
+</mapper>
