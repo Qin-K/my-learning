@@ -1,8 +1,5 @@
 package com.qin_kai.kafkatest.news;
 
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.qin_kai.kafkatest.news.model.News;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -25,13 +22,6 @@ public class KafkaNewsProducerController {
     public String send(String msg) {
         kafkaTemplate.send("hello_topic", msg);
         return "send success";
-    }
-
-    @PostMapping("/sendNews")
-    public News sendNews(News news) throws JsonProcessingException {
-        ObjectMapper objectMapper = new ObjectMapper();
-        kafkaTemplate.send("NEWS_RECV", objectMapper.writeValueAsString(news));
-        return news;
     }
 
 }

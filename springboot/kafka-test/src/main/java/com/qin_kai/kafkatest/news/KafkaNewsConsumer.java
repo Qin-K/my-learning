@@ -10,16 +10,9 @@ import org.springframework.stereotype.Component;
  **/
 @Component
 public class KafkaNewsConsumer {
-    private int cnt = 0;
 
-    @KafkaListener(topics = {"NEWS_RECV"})
+    @KafkaListener(topics = {"hello_topic"})
     public void listen(ConsumerRecord<String, String> record) {
-        if (cnt == 0) {
-
-            System.out.printf("topic = %s, offset = %s, value = %s \n", record.topic(), record.offset(), record.value());
-            System.out.println(record.value());
-            cnt++;
-        }
+        System.out.printf("topic = %s, offset = %s, value = %s \n", record.topic(), record.offset(), record.value());
     }
-
 }
