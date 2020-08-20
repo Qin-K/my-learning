@@ -1,0 +1,30 @@
+// 定义版本号
+ext.versions = [
+        "springBoot" :"2.1.3.RELEASE"
+]
+
+// 依赖库
+ext.libraries = [
+        "spring-boot-starter-web": "org.springframework.boot:spring-boot-starter-web:${versions.springBoot}"
+]
+
+allprojects {
+    apply plugin: 'java'
+    apply plugin: 'idea'
+    apply plugin: 'maven'
+
+    group 'com.qin_kai'
+    version '1.0-SNAPSHOT'
+    sourceCompatibility = 1.8
+    targetCompatibility = 1.8
+
+    repositories {
+        maven { url 'http://maven.aliyun.com/nexus/content/groups/public/' }
+        mavenCentral()
+    }
+
+    // 通用依赖
+    dependencies {
+        testCompile group: 'junit', name: 'junit', version: '4.12'
+    }
+}

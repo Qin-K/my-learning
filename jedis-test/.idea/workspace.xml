@@ -1,0 +1,908 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="43377197-5563-4b4b-bb17-a2478057ab86" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../demo/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/JedisConstant.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/JedisPoolTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/JedisTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/PipelineTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../my-utilities/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../my-utilities/src/main/java/JsonUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../my-utilities/src/main/java/model/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../my-utilities/src/main/resources/logback.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../my-utilities/src/test/java/JsonUtilTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../elasticsearch-test/src/main/java/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../elasticsearch-test/src/main/java/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../utils/JsoupDemo/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../utils/JsoupDemo/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../utils/logbackTest/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../utils/logbackTest/.idea/workspace.xml" afterDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/out/" />
+    <ignored path="$PROJECT_DIR$/.gradle/" />
+    <ignored path="$PROJECT_DIR$/build/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/JedisTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="243">
+              <caret line="9" selection-start-line="9" selection-end-line="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/JedisConstant.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="108">
+              <caret line="4" column="32" selection-start-line="4" selection-start-column="32" selection-end-line="4" selection-end-column="32" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/PipelineTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="540">
+              <caret line="20" selection-start-line="20" selection-end-line="20" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://D:/opt/Java/jdk1.8.0_181/javafx-src.zip!/com/sun/javafx/binding/StringFormatter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="162">
+              <caret line="39" column="22" selection-start-line="39" selection-start-column="22" selection-end-line="39" selection-end-column="22" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://D:/opt/Java/jdk1.8.0_181/src.zip!/java/util/Formatter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1019">
+              <caret line="2453" column="21" selection-start-line="2453" selection-start-column="21" selection-end-line="2453" selection-end-column="21" />
+              <folding>
+                <element signature="e#101735#101736#0" expanded="true" />
+                <element signature="e#101781#101782#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://D:/opt/Java/jdk1.8.0_181/javafx-src.zip!/javafx/beans/binding/StringExpression.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="298">
+              <caret line="49" column="18" selection-start-line="49" selection-start-column="18" selection-end-line="49" selection-end-column="18" />
+              <folding>
+                <element signature="e#1114#1115#0" expanded="true" />
+                <element signature="e#1142#1143#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/JedisPoolTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="459">
+              <caret line="17" column="5" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/redis.clients/jedis/3.3.0/cd2de91d11c3a7eeccba89c3194c28bf905e3ada/jedis-3.3.0-sources.jar!/redis/clients/jedis/util/Pool.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="972">
+              <caret line="49" column="31" selection-start-line="49" selection-start-column="31" selection-end-line="49" selection-end-column="31" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/redis.clients/jedis/3.3.0/cd2de91d11c3a7eeccba89c3194c28bf905e3ada/jedis-3.3.0-sources.jar!/redis/clients/jedis/Jedis.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="108">
+              <caret line="32" column="13" selection-start-line="32" selection-start-column="13" selection-end-line="32" selection-end-column="13" />
+              <folding>
+                <element signature="e#1419#1420#0" expanded="true" />
+                <element signature="e#1436#1437#0" expanded="true" />
+                <element signature="e#3339#3340#0" expanded="true" />
+                <element signature="e#3365#3366#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="GradleLocalSettings">
+    <option name="myGradleHomes">
+      <map>
+        <entry key="$PROJECT_DIR$" value="D:\opt\gradle-5.6.4" />
+      </map>
+    </option>
+    <option name="myGradleVersions">
+      <map>
+        <entry key="$PROJECT_DIR$" value="5.6.4" />
+      </map>
+    </option>
+    <option name="availableProjects">
+      <map>
+        <entry>
+          <key>
+            <ExternalProjectPojo>
+              <option name="name" value="jedis-test" />
+              <option name="path" value="$PROJECT_DIR$" />
+            </ExternalProjectPojo>
+          </key>
+          <value>
+            <list>
+              <ExternalProjectPojo>
+                <option name="name" value="jedis-test" />
+                <option name="path" value="$PROJECT_DIR$" />
+              </ExternalProjectPojo>
+            </list>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="availableTasks">
+      <map>
+        <entry key="$PROJECT_DIR$">
+          <value>
+            <list>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays the components produced by root project 'jedis-test'. [incubating]" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="components" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Assembles and tests this project and all projects that depend on it." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="buildDependents" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays the sub-projects of root project 'jedis-test'." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="projects" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Assembles main classes." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="classes" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays the dependent components of components in root project 'jedis-test'. [incubating]" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="dependentComponents" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays all buildscript dependencies declared in root project 'jedis-test'." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="buildEnvironment" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Generates Gradle wrapper files." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="wrapper" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Assembles test classes." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="testClasses" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Generates Javadoc API documentation for the main source code." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="javadoc" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Assembles a jar archive containing the main classes." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="jar" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays the configuration model of root project 'jedis-test'. [incubating]" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="model" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Processes main resources." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="processResources" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays the tasks runnable from root project 'jedis-test'." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="tasks" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Initializes a new Gradle build." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="init" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Runs the unit tests." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="test" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Compiles main Java source." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="compileJava" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays the insight into a specific dependency in root project 'jedis-test'." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="dependencyInsight" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Runs all checks." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="check" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Assembles the outputs of this project." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="assemble" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Deletes the build directory." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="clean" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Compiles test Java source." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="compileTestJava" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays all dependencies declared in root project 'jedis-test'." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="dependencies" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="prepareKotlinBuildScriptModel" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Processes test resources." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="processTestResources" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays a help message." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="help" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Assembles and tests this project." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="build" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Assembles and tests this project and all projects it depends on." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="buildNeeded" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays the properties of root project 'jedis-test'." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="properties" />
+              </ExternalTaskPojo>
+            </list>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="modificationStamps">
+      <map>
+        <entry key="$PROJECT_DIR$" value="4793239235329" />
+        <entry key="$PROJECT_DIR$/.gradle" value="0" />
+        <entry key="$PROJECT_DIR$/build.gradle" value="1640782025" />
+        <entry key="$PROJECT_DIR$/settings.gradle" value="1420127504" />
+      </map>
+    </option>
+    <option name="projectBuildClasspath">
+      <map>
+        <entry key="$PROJECT_DIR$">
+          <value>
+            <ExternalProjectBuildClasspathPojo>
+              <option name="modulesBuildClasspath">
+                <map>
+                  <entry key="$PROJECT_DIR$">
+                    <value>
+                      <ExternalModuleBuildClasspathPojo>
+                        <option name="path" value="$PROJECT_DIR$" />
+                      </ExternalModuleBuildClasspathPojo>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+              <option name="name" value="jedis-test" />
+              <option name="projectBuildClasspath">
+                <list>
+                  <option value="D:/opt/gradle-5.6.4/src/announce" />
+                  <option value="D:/opt/gradle-5.6.4/src/antlr" />
+                  <option value="D:/opt/gradle-5.6.4/src/base-services" />
+                  <option value="D:/opt/gradle-5.6.4/src/base-services-groovy" />
+                  <option value="D:/opt/gradle-5.6.4/src/bootstrap" />
+                  <option value="D:/opt/gradle-5.6.4/src/build-cache" />
+                  <option value="D:/opt/gradle-5.6.4/src/build-cache-http" />
+                  <option value="D:/opt/gradle-5.6.4/src/build-cache-packaging" />
+                  <option value="D:/opt/gradle-5.6.4/src/build-comparison" />
+                  <option value="D:/opt/gradle-5.6.4/src/build-init" />
+                  <option value="D:/opt/gradle-5.6.4/src/build-option" />
+                  <option value="D:/opt/gradle-5.6.4/src/build-profile" />
+                  <option value="D:/opt/gradle-5.6.4/src/cli" />
+                  <option value="D:/opt/gradle-5.6.4/src/code-quality" />
+                  <option value="D:/opt/gradle-5.6.4/src/composite-builds" />
+                  <option value="D:/opt/gradle-5.6.4/src/core" />
+                  <option value="D:/opt/gradle-5.6.4/src/core-api" />
+                  <option value="D:/opt/gradle-5.6.4/src/dependency-management" />
+                  <option value="D:/opt/gradle-5.6.4/src/diagnostics" />
+                  <option value="D:/opt/gradle-5.6.4/src/docs" />
+                  <option value="D:/opt/gradle-5.6.4/src/ear" />
+                  <option value="D:/opt/gradle-5.6.4/src/execution" />
+                  <option value="D:/opt/gradle-5.6.4/src/file-collections" />
+                  <option value="D:/opt/gradle-5.6.4/src/files" />
+                  <option value="D:/opt/gradle-5.6.4/src/hashing" />
+                  <option value="D:/opt/gradle-5.6.4/src/ide" />
+                  <option value="D:/opt/gradle-5.6.4/src/ide-native" />
+                  <option value="D:/opt/gradle-5.6.4/src/ide-play" />
+                  <option value="D:/opt/gradle-5.6.4/src/installation-beacon" />
+                  <option value="D:/opt/gradle-5.6.4/src/instant-execution" />
+                  <option value="D:/opt/gradle-5.6.4/src/instant-execution-report" />
+                  <option value="D:/opt/gradle-5.6.4/src/internal-android-performance-testing" />
+                  <option value="D:/opt/gradle-5.6.4/src/internal-integ-testing" />
+                  <option value="D:/opt/gradle-5.6.4/src/internal-performance-testing" />
+                  <option value="D:/opt/gradle-5.6.4/src/internal-testing" />
+                  <option value="D:/opt/gradle-5.6.4/src/ivy" />
+                  <option value="D:/opt/gradle-5.6.4/src/jacoco" />
+                  <option value="D:/opt/gradle-5.6.4/src/javascript" />
+                  <option value="D:/opt/gradle-5.6.4/src/jvm-services" />
+                  <option value="D:/opt/gradle-5.6.4/src/kotlin-dsl" />
+                  <option value="D:/opt/gradle-5.6.4/src/kotlin-dsl-plugins" />
+                  <option value="D:/opt/gradle-5.6.4/src/kotlin-dsl-provider-plugins" />
+                  <option value="D:/opt/gradle-5.6.4/src/kotlin-dsl-test-fixtures" />
+                  <option value="D:/opt/gradle-5.6.4/src/kotlin-dsl-tooling-builders" />
+                  <option value="D:/opt/gradle-5.6.4/src/kotlin-dsl-tooling-models" />
+                  <option value="D:/opt/gradle-5.6.4/src/language-groovy" />
+                  <option value="D:/opt/gradle-5.6.4/src/language-java" />
+                  <option value="D:/opt/gradle-5.6.4/src/language-jvm" />
+                  <option value="D:/opt/gradle-5.6.4/src/language-native" />
+                  <option value="D:/opt/gradle-5.6.4/src/language-scala" />
+                  <option value="D:/opt/gradle-5.6.4/src/launcher" />
+                  <option value="D:/opt/gradle-5.6.4/src/logging" />
+                  <option value="D:/opt/gradle-5.6.4/src/maven" />
+                  <option value="D:/opt/gradle-5.6.4/src/messaging" />
+                  <option value="D:/opt/gradle-5.6.4/src/model-core" />
+                  <option value="D:/opt/gradle-5.6.4/src/model-groovy" />
+                  <option value="D:/opt/gradle-5.6.4/src/native" />
+                  <option value="D:/opt/gradle-5.6.4/src/osgi" />
+                  <option value="D:/opt/gradle-5.6.4/src/persistent-cache" />
+                  <option value="D:/opt/gradle-5.6.4/src/pineapple" />
+                  <option value="D:/opt/gradle-5.6.4/src/platform-base" />
+                  <option value="D:/opt/gradle-5.6.4/src/platform-jvm" />
+                  <option value="D:/opt/gradle-5.6.4/src/platform-native" />
+                  <option value="D:/opt/gradle-5.6.4/src/platform-play" />
+                  <option value="D:/opt/gradle-5.6.4/src/plugin-development" />
+                  <option value="D:/opt/gradle-5.6.4/src/plugin-use" />
+                  <option value="D:/opt/gradle-5.6.4/src/plugins" />
+                  <option value="D:/opt/gradle-5.6.4/src/process-services" />
+                  <option value="D:/opt/gradle-5.6.4/src/publish" />
+                  <option value="D:/opt/gradle-5.6.4/src/reporting" />
+                  <option value="D:/opt/gradle-5.6.4/src/resources" />
+                  <option value="D:/opt/gradle-5.6.4/src/resources-gcs" />
+                  <option value="D:/opt/gradle-5.6.4/src/resources-http" />
+                  <option value="D:/opt/gradle-5.6.4/src/resources-s3" />
+                  <option value="D:/opt/gradle-5.6.4/src/resources-sftp" />
+                  <option value="D:/opt/gradle-5.6.4/src/scala" />
+                  <option value="D:/opt/gradle-5.6.4/src/signing" />
+                  <option value="D:/opt/gradle-5.6.4/src/snapshots" />
+                  <option value="D:/opt/gradle-5.6.4/src/test-kit" />
+                  <option value="D:/opt/gradle-5.6.4/src/testing-base" />
+                  <option value="D:/opt/gradle-5.6.4/src/testing-junit-platform" />
+                  <option value="D:/opt/gradle-5.6.4/src/testing-jvm" />
+                  <option value="D:/opt/gradle-5.6.4/src/testing-native" />
+                  <option value="D:/opt/gradle-5.6.4/src/tooling-api" />
+                  <option value="D:/opt/gradle-5.6.4/src/tooling-api-builders" />
+                  <option value="D:/opt/gradle-5.6.4/src/tooling-native" />
+                  <option value="D:/opt/gradle-5.6.4/src/version-control" />
+                  <option value="D:/opt/gradle-5.6.4/src/worker-processes" />
+                  <option value="D:/opt/gradle-5.6.4/src/workers" />
+                  <option value="D:/opt/gradle-5.6.4/src/wrapper" />
+                  <option value="D:/opt/gradle-5.6.4/lib/ant-1.9.14.jar" />
+                  <option value="D:/opt/gradle-5.6.4/lib/ant-launcher-1.9.14.jar" />
+                  <option value="D:/opt/gradle-5.6.4/lib/gradle-api-metadata-5.6.4.jar" />
+                  <option value="D:/opt/gradle-5.6.4/lib/gradle-base-services-5.6.4.jar" />
+                  <option value="D:/opt/gradle-5.6.4/lib/gradle-base-services-groovy-5.6.4.jar" />
+                  <option value="D:/opt/gradle-5.6.4/lib/gradle-bootstrap-5.6.4.jar" />
+                  <option value="D:/opt/gradle-5.6.4/lib/gradle-build-cache-5.6.4.jar" />
+                  <option value="D:/opt/gradle-5.6.4/lib/gradle-build-cache-packaging-5.6.4.jar" />
+                  <option value="D:/opt/gradle-5.6.4/lib/gradle-build-option-5.6.4.jar" />
+                  <option value="D:/opt/gradle-5.6.4/lib/gradle-cli-5.6.4.jar" />
+                  <option value="D:/opt/gradle-5.6.4/lib/gradle-core-5.6.4.jar" />
+                  <option value="D:/opt/gradle-5.6.4/lib/gradle-core-api-5.6.4.jar" />
+                  <option value="D:/opt/gradle-5.6.4/lib/gradle-docs-5.6.4.jar" />
+                  <option value="D:/opt/gradle-5.6.4/lib/gradle-execution-5.6.4.jar" />
+                  <option value="D:/opt/gradle-5.6.4/lib/gradle-file-collections-5.6.4.jar" />
+                  <option value="D:/opt/gradle-5.6.4/lib/gradle-files-5.6.4.jar" />
+                  <option value="D:/opt/gradle-5.6.4/lib/gradle-hashing-5.6.4.jar" />
+                  <option value="D:/opt/gradle-5.6.4/lib/gradle-installation-beacon-5.6.4.jar" />
+                  <option value="D:/opt/gradle-5.6.4/lib/gradle-instant-execution-5.6.4.jar" />
+                  <option value="D:/opt/gradle-5.6.4/lib/gradle-jvm-services-5.6.4.jar" />
+                  <option value="D:/opt/gradle-5.6.4/lib/gradle-kotlin-dsl-5.6.4.jar" />
+                  <option value="D:/opt/gradle-5.6.4/lib/gradle-kotlin-dsl-tooling-models-5.6.4.jar" />
+                  <option value="D:/opt/gradle-5.6.4/lib/gradle-launcher-5.6.4.jar" />
+                  <option value="D:/opt/gradle-5.6.4/lib/gradle-logging-5.6.4.jar" />
+                  <option value="D:/opt/gradle-5.6.4/lib/gradle-messaging-5.6.4.jar" />
+                  <option value="D:/opt/gradle-5.6.4/lib/gradle-model-core-5.6.4.jar" />
+                  <option value="D:/opt/gradle-5.6.4/lib/gradle-model-groovy-5.6.4.jar" />
+                  <option value="D:/opt/gradle-5.6.4/lib/gradle-native-5.6.4.jar" />
+                  <option value="D:/opt/gradle-5.6.4/lib/gradle-persistent-cache-5.6.4.jar" />
+                  <option value="D:/opt/gradle-5.6.4/lib/gradle-pineapple-5.6.4.jar" />
+                  <option value="D:/opt/gradle-5.6.4/lib/gradle-process-services-5.6.4.jar" />
+                  <option value="D:/opt/gradle-5.6.4/lib/gradle-resources-5.6.4.jar" />
+                  <option value="D:/opt/gradle-5.6.4/lib/gradle-runtime-api-info-5.6.4.jar" />
+                  <option value="D:/opt/gradle-5.6.4/lib/gradle-snapshots-5.6.4.jar" />
+                  <option value="D:/opt/gradle-5.6.4/lib/gradle-tooling-api-5.6.4.jar" />
+                  <option value="D:/opt/gradle-5.6.4/lib/gradle-worker-processes-5.6.4.jar" />
+                  <option value="D:/opt/gradle-5.6.4/lib/gradle-wrapper-5.6.4.jar" />
+                  <option value="D:/opt/gradle-5.6.4/lib/plugins/gradle-announce-5.6.4.jar" />
+                  <option value="D:/opt/gradle-5.6.4/lib/plugins/gradle-antlr-5.6.4.jar" />
+                  <option value="D:/opt/gradle-5.6.4/lib/plugins/gradle-build-cache-http-5.6.4.jar" />
+                  <option value="D:/opt/gradle-5.6.4/lib/plugins/gradle-build-comparison-5.6.4.jar" />
+                  <option value="D:/opt/gradle-5.6.4/lib/plugins/gradle-build-init-5.6.4.jar" />
+                  <option value="D:/opt/gradle-5.6.4/lib/plugins/gradle-build-profile-5.6.4.jar" />
+                  <option value="D:/opt/gradle-5.6.4/lib/plugins/gradle-code-quality-5.6.4.jar" />
+                  <option value="D:/opt/gradle-5.6.4/lib/plugins/gradle-composite-builds-5.6.4.jar" />
+                  <option value="D:/opt/gradle-5.6.4/lib/plugins/gradle-dependency-management-5.6.4.jar" />
+                  <option value="D:/opt/gradle-5.6.4/lib/plugins/gradle-diagnostics-5.6.4.jar" />
+                  <option value="D:/opt/gradle-5.6.4/lib/plugins/gradle-ear-5.6.4.jar" />
+                  <option value="D:/opt/gradle-5.6.4/lib/plugins/gradle-ide-5.6.4.jar" />
+                  <option value="D:/opt/gradle-5.6.4/lib/plugins/gradle-ide-native-5.6.4.jar" />
+                  <option value="D:/opt/gradle-5.6.4/lib/plugins/gradle-ide-play-5.6.4.jar" />
+                  <option value="D:/opt/gradle-5.6.4/lib/plugins/gradle-ivy-5.6.4.jar" />
+                  <option value="D:/opt/gradle-5.6.4/lib/plugins/gradle-jacoco-5.6.4.jar" />
+                  <option value="D:/opt/gradle-5.6.4/lib/plugins/gradle-javascript-5.6.4.jar" />
+                  <option value="D:/opt/gradle-5.6.4/lib/plugins/gradle-kotlin-dsl-provider-plugins-5.6.4.jar" />
+                  <option value="D:/opt/gradle-5.6.4/lib/plugins/gradle-kotlin-dsl-tooling-builders-5.6.4.jar" />
+                  <option value="D:/opt/gradle-5.6.4/lib/plugins/gradle-language-groovy-5.6.4.jar" />
+                  <option value="D:/opt/gradle-5.6.4/lib/plugins/gradle-language-java-5.6.4.jar" />
+                  <option value="D:/opt/gradle-5.6.4/lib/plugins/gradle-language-jvm-5.6.4.jar" />
+                  <option value="D:/opt/gradle-5.6.4/lib/plugins/gradle-language-native-5.6.4.jar" />
+                  <option value="D:/opt/gradle-5.6.4/lib/plugins/gradle-language-scala-5.6.4.jar" />
+                  <option value="D:/opt/gradle-5.6.4/lib/plugins/gradle-maven-5.6.4.jar" />
+                  <option value="D:/opt/gradle-5.6.4/lib/plugins/gradle-osgi-5.6.4.jar" />
+                  <option value="D:/opt/gradle-5.6.4/lib/plugins/gradle-platform-base-5.6.4.jar" />
+                  <option value="D:/opt/gradle-5.6.4/lib/plugins/gradle-platform-jvm-5.6.4.jar" />
+                  <option value="D:/opt/gradle-5.6.4/lib/plugins/gradle-platform-native-5.6.4.jar" />
+                  <option value="D:/opt/gradle-5.6.4/lib/plugins/gradle-platform-play-5.6.4.jar" />
+                  <option value="D:/opt/gradle-5.6.4/lib/plugins/gradle-plugin-development-5.6.4.jar" />
+                  <option value="D:/opt/gradle-5.6.4/lib/plugins/gradle-plugin-use-5.6.4.jar" />
+                  <option value="D:/opt/gradle-5.6.4/lib/plugins/gradle-plugins-5.6.4.jar" />
+                  <option value="D:/opt/gradle-5.6.4/lib/plugins/gradle-publish-5.6.4.jar" />
+                  <option value="D:/opt/gradle-5.6.4/lib/plugins/gradle-reporting-5.6.4.jar" />
+                  <option value="D:/opt/gradle-5.6.4/lib/plugins/gradle-resources-gcs-5.6.4.jar" />
+                  <option value="D:/opt/gradle-5.6.4/lib/plugins/gradle-resources-http-5.6.4.jar" />
+                  <option value="D:/opt/gradle-5.6.4/lib/plugins/gradle-resources-s3-5.6.4.jar" />
+                  <option value="D:/opt/gradle-5.6.4/lib/plugins/gradle-resources-sftp-5.6.4.jar" />
+                  <option value="D:/opt/gradle-5.6.4/lib/plugins/gradle-scala-5.6.4.jar" />
+                  <option value="D:/opt/gradle-5.6.4/lib/plugins/gradle-signing-5.6.4.jar" />
+                  <option value="D:/opt/gradle-5.6.4/lib/plugins/gradle-test-kit-5.6.4.jar" />
+                  <option value="D:/opt/gradle-5.6.4/lib/plugins/gradle-testing-base-5.6.4.jar" />
+                  <option value="D:/opt/gradle-5.6.4/lib/plugins/gradle-testing-junit-platform-5.6.4.jar" />
+                  <option value="D:/opt/gradle-5.6.4/lib/plugins/gradle-testing-jvm-5.6.4.jar" />
+                  <option value="D:/opt/gradle-5.6.4/lib/plugins/gradle-testing-native-5.6.4.jar" />
+                  <option value="D:/opt/gradle-5.6.4/lib/plugins/gradle-tooling-api-builders-5.6.4.jar" />
+                  <option value="D:/opt/gradle-5.6.4/lib/plugins/gradle-tooling-native-5.6.4.jar" />
+                  <option value="D:/opt/gradle-5.6.4/lib/plugins/gradle-version-control-5.6.4.jar" />
+                  <option value="D:/opt/gradle-5.6.4/lib/plugins/gradle-workers-5.6.4.jar" />
+                  <option value="D:/opt/gradle-5.6.4/lib/plugins/ivy-2.3.0.jar" />
+                </list>
+              </option>
+            </ExternalProjectBuildClasspathPojo>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="projectSyncType">
+      <map>
+        <entry key="$PROJECT_DIR$" value="RE_IMPORT" />
+        <entry key="E:/svn/DataCenter/News/branches/dc-cloudconfig-dev" value="PREVIEW" />
+        <entry key="E:/svn/DataCenter/News/branches/dc-clouddelete-master" value="PREVIEW" />
+        <entry key="E:/svn/DataCenter/News/branches/dc-datasync-dev" value="PREVIEW" />
+        <entry key="E:/svn/DataCenter/News/branches/dcnews-perf-test-master" value="PREVIEW" />
+        <entry key="E:/svn/DataCenter/News/branches/dcnews-sync-news-master" value="PREVIEW" />
+        <entry key="E:/svn/DataCenter/News/branches/dcnews-synchronize-master" value="PREVIEW" />
+        <entry key="E:/svn/DataCenter/News/branches/dcnews-synchronize-template" value="PREVIEW" />
+        <entry key="E:/svn/DataCenter/News/branches/dss/dcnews-dss-api/dcnews-dss-api-master" value="PREVIEW" />
+        <entry key="E:/svn/DataCenter/News/branches/dss/dcnews-dss/dcnews-dss-master" value="PREVIEW" />
+        <entry key="E:/svn/DataCenter/dcadvise/branches/dcadvise-storm-DATACENTER-3550" value="PREVIEW" />
+        <entry key="E:/svn/DataCenter/dcadvise/branches/dcadvise-terminalapi-master" value="PREVIEW" />
+      </map>
+    </option>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/build.gradle" />
+        <option value="$PROJECT_DIR$/src/main/java/JedisConstant.java" />
+        <option value="$PROJECT_DIR$/src/main/java/JedisPoolTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/JedisTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/PipelineTest.java" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="localRepository" value="D:\opt\apache-maven-3.6.0\repository" />
+        <option name="mavenHome" value="D:/opt/apache-maven-3.6.0" />
+        <option name="userSettingsFile" value="D:\opt\apache-maven-3.6.0\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="260" />
+    <option name="y" value="20" />
+    <option name="width" value="1400" />
+    <option name="height" value="1000" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="jedis-test" type="b2602c69:ProjectViewProjectNode" />
+              <item name="jedis-test" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+            </path>
+            <path>
+              <item name="jedis-test" type="b2602c69:ProjectViewProjectNode" />
+              <item name="jedis-test" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="jedis-test" type="b2602c69:ProjectViewProjectNode" />
+              <item name="jedis-test" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+            </path>
+            <path>
+              <item name="jedis-test" type="b2602c69:ProjectViewProjectNode" />
+              <item name="jedis-test" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="jedis-test" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1597901739935" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Application.PipelineTest">
+    <configuration name="JedisPoolTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="JedisPoolTest" />
+      <module name="jedis-test_main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="JedisTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="JedisTest" />
+      <module name="jedis-test_main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PipelineTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="PipelineTest" />
+      <module name="jedis-test_main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.JedisTest" />
+      <item itemvalue="Application.JedisPoolTest" />
+      <item itemvalue="Application.PipelineTest" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.PipelineTest" />
+        <item itemvalue="Application.JedisPoolTest" />
+        <item itemvalue="Application.JedisTest" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="43377197-5563-4b4b-bb17-a2478057ab86" name="Default Changelist" comment="" />
+      <created>1597746310417</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1597746310417</updated>
+      <workItem from="1597746312674" duration="3788000" />
+      <workItem from="1597750700884" duration="4539000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="8327000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25266525" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="Designer" order="3" />
+      <window_info id="Capture Tool" order="4" />
+      <window_info id="UI Designer" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.29207385" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.033659067" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.20738328" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="Build" order="11" weight="0.77198696" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="right" id="Gradle" order="5" />
+      <window_info anchor="right" id="Theme Preview" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Database" order="8" />
+      <window_info anchor="right" id="Maven Projects" order="9" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/.gradle/5.6.4/gc.properties">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/vcs.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/settings.gradle">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="10" column="72" selection-start-line="10" selection-start-column="72" selection-end-line="10" selection-end-column="72" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.commons/commons-pool2/2.6.2/730e1f4e0af8513090412fbbfb8075e625770fc0/commons-pool2-2.6.2-sources.jar!/org/apache/commons/pool2/impl/GenericObjectPoolConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="30" column="13" selection-start-line="30" selection-start-column="13" selection-end-line="30" selection-end-column="13" />
+          <folding>
+            <element signature="e#3389#3390#0" expanded="true" />
+            <element signature="e#3427#3428#0" expanded="true" />
+            <element signature="e#4149#4150#0" expanded="true" />
+            <element signature="e#4187#4188#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.commons/commons-pool2/2.6.2/730e1f4e0af8513090412fbbfb8075e625770fc0/commons-pool2-2.6.2-sources.jar!/org/apache/commons/pool2/impl/GenericObjectPool.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30753">
+          <caret line="1183" column="55" selection-start-line="1183" selection-start-column="55" selection-end-line="1183" selection-end-column="55" />
+          <folding>
+            <element signature="e#7505#7506#0" expanded="true" />
+            <element signature="e#7543#7544#0" expanded="true" />
+            <element signature="e#8340#8341#0" expanded="true" />
+            <element signature="e#8378#8379#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/redis.clients/jedis/3.3.0/cd2de91d11c3a7eeccba89c3194c28bf905e3ada/jedis-3.3.0-sources.jar!/redis/clients/jedis/JedisPool.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="7317">
+          <caret line="287" column="29" selection-start-line="287" selection-start-column="29" selection-end-line="287" selection-end-column="29" />
+          <folding>
+            <element signature="e#462#463#0" expanded="true" />
+            <element signature="e#522#523#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/redis.clients/jedis/3.3.0/cd2de91d11c3a7eeccba89c3194c28bf905e3ada/jedis-3.3.0-sources.jar!/redis/clients/jedis/util/Pool.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="972">
+          <caret line="49" column="31" selection-start-line="49" selection-start-column="31" selection-end-line="49" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/redis.clients/jedis/3.3.0/cd2de91d11c3a7eeccba89c3194c28bf905e3ada/jedis-3.3.0-sources.jar!/redis/clients/jedis/Jedis.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="32" column="13" selection-start-line="32" selection-start-column="13" selection-end-line="32" selection-end-column="13" />
+          <folding>
+            <element signature="e#1419#1420#0" expanded="true" />
+            <element signature="e#1436#1437#0" expanded="true" />
+            <element signature="e#3339#3340#0" expanded="true" />
+            <element signature="e#3365#3366#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/JedisConstant.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="4" column="32" selection-start-line="4" selection-start-column="32" selection-end-line="4" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/JedisPoolTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="17" column="5" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/JedisTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="243">
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/opt/Java/jdk1.8.0_181/javafx-src.zip!/javafx/beans/binding/StringExpression.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="298">
+          <caret line="49" column="18" selection-start-line="49" selection-start-column="18" selection-end-line="49" selection-end-column="18" />
+          <folding>
+            <element signature="e#1114#1115#0" expanded="true" />
+            <element signature="e#1142#1143#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/opt/Java/jdk1.8.0_181/src.zip!/java/util/Formatter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1019">
+          <caret line="2453" column="21" selection-start-line="2453" selection-start-column="21" selection-end-line="2453" selection-end-column="21" />
+          <folding>
+            <element signature="e#101735#101736#0" expanded="true" />
+            <element signature="e#101781#101782#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/opt/Java/jdk1.8.0_181/javafx-src.zip!/com/sun/javafx/binding/StringFormatter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="39" column="22" selection-start-line="39" selection-start-column="22" selection-end-line="39" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/PipelineTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="20" selection-start-line="20" selection-end-line="20" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>
