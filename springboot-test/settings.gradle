@@ -1,0 +1,4 @@
+rootProject.name = 'springboot-test'
+include 'demo1'
+include 'demo2'
+

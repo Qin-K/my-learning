@@ -1,4 +1,0 @@
-dependencies {
-    compile rootProject.ext.libraries['spring-boot-starter-web']
-}
-

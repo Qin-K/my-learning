@@ -2,6 +2,7 @@ package streamapi;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.Map;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -65,6 +66,15 @@ public class StreamApiTest {
         List<Integer> numberList = list.stream().filter((x) -> x > 5)
                 .collect(Collectors.toList());
         System.out.println(numberList);
+
+        // groupingBy, 类似mysql group by
+        // 第一个参数：Function 返回结果相同的分成一组
+        // 第二个参数（可省略）：每个组的操作，max min count，也可以将这个组收集起来
+        // 通过groupingBy实现奇偶分组
+        Map<Integer, List<Integer>> map = Stream.of(5, 3, 2, 4, 1, 8, 9, 7, 6, 10)
+                .sorted()
+                .collect(Collectors.groupingBy(x -> x % 2, Collectors.toList()));
+        System.out.println(map);
 
     }
 }

@@ -1,0 +1,26 @@
+allprojects {
+
+    apply plugin: "java"
+    apply plugin: "maven"
+    apply plugin: "idea"
+
+    group = 'com.example'
+    version = '1.0'
+    sourceCompatibility = '1.8'
+
+    repositories {
+        maven { url 'http://maven.aliyun.com/nexus/content/groups/public/' }
+        mavenCentral()
+    }
+
+    dependencies {
+        implementation 'org.springframework.boot:spring-boot-starter:2.3.3.RELEASE'
+        testImplementation('org.springframework.boot:spring-boot-starter-test:2.3.3.RELEASE') {
+            exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
+        }
+    }
+
+    test {
+        useJUnitPlatform()
+    }
+}

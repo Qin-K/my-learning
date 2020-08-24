@@ -1,0 +1,19 @@
+plugins {
+    id 'java'
+}
+
+group 'com.qin_kai'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    maven { url 'http://maven.aliyun.com/nexus/content/groups/public/' }
+    mavenCentral()
+}
+
+dependencies {
+    compile group: 'org.apache.commons', name: 'commons-configuration2', version: '2.3'
+    compile group: 'commons-beanutils', name: 'commons-beanutils', version: '1.9.3'
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+}
