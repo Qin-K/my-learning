@@ -1,3 +1,5 @@
+package hello;
+
 import org.quartz.Job;
 import org.quartz.JobExecutionContext;
 import org.quartz.JobExecutionException;
@@ -16,6 +18,6 @@ public class HelloJob implements Job {
     @Override
     public void execute(JobExecutionContext context) throws JobExecutionException {
         SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-        LOGGER.info("HelloJob is doing, currentTime is " + dateFormat.format(new Date()));
+        LOGGER.info("hello.HelloJob is doing, currentTime is " + dateFormat.format(new Date()));
     }
 }
