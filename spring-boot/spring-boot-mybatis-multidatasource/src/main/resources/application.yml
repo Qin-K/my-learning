@@ -1,0 +1,20 @@
+server:
+  port: 8080
+spring:
+  datasource:
+    test1:
+      jdbc-url: jdbc:mysql://localhost:3306/test1?useUnicode=true&characterEncoding=utf8&serverTimezone=Asia/Shanghai&useSSL=false
+      username: root
+      password: Admin@123
+      # 使用druid数据源
+      type: com.alibaba.druid.pool.DruidDataSource
+    test2:
+      jdbc-url: jdbc:mysql://localhost:3306/test2?useUnicode=true&characterEncoding=utf8&serverTimezone=Asia/Shanghai&useSSL=false
+      username: root
+      password: Admin@123
+      # 使用druid数据源
+      type: com.alibaba.druid.pool.DruidDataSource
+mybatis:
+  type-aliases-package: com.example.model
+  configuration:
+    map-underscore-to-camel-case: true
