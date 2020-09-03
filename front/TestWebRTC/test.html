@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<div>
+    <button id="start">开始录制</button>
+    <button id="stop">停止录制</button>
+</div>
+<div>
+    <video autoplay controls id="stream"></video>
+</div>
+<script>
+    // 只获取视频
+    let constraints = {audio: false, video: true};
+    let startBtn = document.getElementById('start')
+    let stopBtn = document.getElementById('stop')
+    let video = document.getElementById('stream')
+    startBtn.onclick = function() {
+        navigator.getUserMedia(constraints, function(stream) {
+            video.srcObject = stream;
+            window.stream = stream;
+        }, function(err) {
+            console.log(err)
+        })
+    }
+    stopBtn.onclick = function() {
+        video.pause();
+    }
+</script>
+</body>
+</html>

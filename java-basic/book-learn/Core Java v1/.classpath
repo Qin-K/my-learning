@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="ch10"/>
+	<classpathentry kind="src" path="ch05"/>
+	<classpathentry kind="src" path="ch06"/>
+	<classpathentry kind="src" path="ch07"/>
+	<classpathentry kind="src" path="ch08"/>
+	<classpathentry kind="src" path="ch09"/>
+	<classpathentry kind="src" path="ch11"/>
+	<classpathentry kind="src" path="ch12"/>
+	<classpathentry kind="src" path="ch14"/>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
