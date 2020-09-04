@@ -1,5 +1,6 @@
-package com.qin_kai.consumer;
+package com.qin_kai.hystrix.controller;
 
+import com.qin_kai.hystrix.remote.HelloRemote;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
