@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/07DynamicProgramming/01斐波那契/01斐波那契.iml" filepath="$PROJECT_DIR$/07DynamicProgramming/01斐波那契/01斐波那契.iml" />
+      <module fileurl="file://$PROJECT_DIR$/07DynamicProgramming/02矩阵路径/02矩阵路径.iml" filepath="$PROJECT_DIR$/07DynamicProgramming/02矩阵路径/02矩阵路径.iml" />
+      <module fileurl="file://$PROJECT_DIR$/07DynamicProgramming/03数组区间和/03数组区间和.iml" filepath="$PROJECT_DIR$/07DynamicProgramming/03数组区间和/03数组区间和.iml" />
+      <module fileurl="file://$PROJECT_DIR$/07DynamicProgramming/04分割整数/04分割整数.iml" filepath="$PROJECT_DIR$/07DynamicProgramming/04分割整数/04分割整数.iml" />
+      <module fileurl="file://$PROJECT_DIR$/07DynamicProgramming/05最长递增子序列/05最长递增子序列.iml" filepath="$PROJECT_DIR$/07DynamicProgramming/05最长递增子序列/05最长递增子序列.iml" />
+      <module fileurl="file://$PROJECT_DIR$/07DynamicProgramming/06最长公共子序列/06最长公共子序列.iml" filepath="$PROJECT_DIR$/07DynamicProgramming/06最长公共子序列/06最长公共子序列.iml" />
+      <module fileurl="file://$PROJECT_DIR$/07DynamicProgramming/07背包/07背包.iml" filepath="$PROJECT_DIR$/07DynamicProgramming/07背包/07背包.iml" />
+      <module fileurl="file://$PROJECT_DIR$/07DynamicProgramming/08股票交易/08股票交易.iml" filepath="$PROJECT_DIR$/07DynamicProgramming/08股票交易/08股票交易.iml" />
+      <module fileurl="file://$PROJECT_DIR$/07DynamicProgramming/09字符串编辑/09字符串编辑.iml" filepath="$PROJECT_DIR$/07DynamicProgramming/09字符串编辑/09字符串编辑.iml" />
+      <module fileurl="file://$PROJECT_DIR$/04BinarySearch/BinarySearch.iml" filepath="$PROJECT_DIR$/04BinarySearch/BinarySearch.iml" />
+      <module fileurl="file://$PROJECT_DIR$/05DivideAndConquer/DivideAndConquer.iml" filepath="$PROJECT_DIR$/05DivideAndConquer/DivideAndConquer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/01DoublePointer/DoublePointer.iml" filepath="$PROJECT_DIR$/01DoublePointer/DoublePointer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/07DynamicProgramming/DynamicProgramming.iml" filepath="$PROJECT_DIR$/07DynamicProgramming/DynamicProgramming.iml" />
+      <module fileurl="file://$PROJECT_DIR$/03Greedy/Greedy.iml" filepath="$PROJECT_DIR$/03Greedy/Greedy.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Heap/Heap.iml" filepath="$PROJECT_DIR$/Heap/Heap.iml" />
+      <module fileurl="file://$PROJECT_DIR$/LinkedList/LinkedList.iml" filepath="$PROJECT_DIR$/LinkedList/LinkedList.iml" />
+      <module fileurl="file://$PROJECT_DIR$/06Search/Search.iml" filepath="$PROJECT_DIR$/06Search/Search.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SegementTree/SegementTree.iml" filepath="$PROJECT_DIR$/SegementTree/SegementTree.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Set/Set.iml" filepath="$PROJECT_DIR$/Set/Set.iml" />
+      <module fileurl="file://$PROJECT_DIR$/02Sort/Sort.iml" filepath="$PROJECT_DIR$/02Sort/Sort.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Trie/Trie.iml" filepath="$PROJECT_DIR$/Trie/Trie.iml" />
+      <module fileurl="file://$PROJECT_DIR$/06Search/backtracking/backtracking.iml" filepath="$PROJECT_DIR$/06Search/backtracking/backtracking.iml" />
+      <module fileurl="file://$PROJECT_DIR$/06Search/bfs/bfs.iml" filepath="$PROJECT_DIR$/06Search/bfs/bfs.iml" />
+      <module fileurl="file://$PROJECT_DIR$/06Search/dfs/dfs.iml" filepath="$PROJECT_DIR$/06Search/dfs/dfs.iml" />
+      <module fileurl="file://$PROJECT_DIR$/leetcode.iml" filepath="$PROJECT_DIR$/leetcode.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Stack/stack.iml" filepath="$PROJECT_DIR$/Stack/stack.iml" />
+    </modules>
+  </component>
+</project>
