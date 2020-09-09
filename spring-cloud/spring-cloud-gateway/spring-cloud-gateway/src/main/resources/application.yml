@@ -1,0 +1,19 @@
+server:
+  port: 7000
+
+# 通过yml配置spring cloud gateway
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: route-test
+          uri: http://localhost:9001
+          predicates:
+#            - After=2018-01-20T06:06:06+08:00[Asia/Shanghai] # After / Before 通过时间匹配
+#            - Path=/hello/{segment} # 通过路径匹配 /hello/xx
+#            - Cookie=name, qinkai # 通过Cookie 匹配
+#            - Header=age, \d+ # 通过header 匹配，第二个参数为正则表达式
+#            - Host=localhost # 通过host匹配
+#            - Method=get # 通过请求方式匹配
+#            - Query=name # 通过请求参数匹配也可以通过键值Query=name,qinkai来匹配
+#            - RemoteAddr=172.30.66.30/24 # 通过远程访问的ip地址来匹配 24为前缀，及掩码为255.255.255.0

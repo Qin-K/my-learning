@@ -1,0 +1,69 @@
+server:
+  port: 7000
+# 通过yml配置spring cloud gateway
+spring:
+  application:
+    name: gateway-service
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+      routes:
+#        - id: filter-test-route
+#          uri: lb://spring-cloud-producer # 通过服务名访问，lb://应用注册服务名
+#          filters:
+#            - AddRequestParameter=name,qinkai # 添加一个filter，添加请求参数
+#             - StripPrefix=2 # 请求路径截取，Path=/name/** 匹配到之后会将前面两个路径截取掉 /name/test/hello 最后访问的路径只是/hello
+#          predicates:
+#            - Method=get
+#            - Path=/hello
+#            - Path=/name/**
+
+          - id: requestratelimiter-test-route
+            uri: lb://spring-cloud-producer
+            filters:
+              # 限流
+              - name: RequestRateLimiter
+                args:
+                  redis-rate-limiter.replenishRate: 1 # 允许单个用户每秒处理多少个请求
+                  redis-rate-limiter.burstCapacity: 20 # 令牌桶的容量，允许在一秒钟内完成的最大请求数
+                  key-resolver: "#{@userKeyResolver}" # 限流策略，使用 SpEL 按名称引用 bean
+              # 熔断
+              - name: Hystrix
+                args:
+                  name: fallbackcmd
+#                  fallbackUri: forward:/error # 如果这个fallback在gateway配置了route，本地写了controller，优先是本地controller处理
+                  fallbackUri: forward:/fallback
+
+              # 重试
+              - name: Retry
+                args:
+                  retries: 3 # 重试次数 默认3
+                  statuses: BAD_GATEWAY # 返回的响应状态码 org.springframework.http.HttpStatus
+                  methods: GET,POST # 指定要重试的请求方法 默认GET
+                  series: SERVER_ERROR # 符合的某段状态码才会进行重试逻辑默认SERVER_ERROR 5xx，取值参考org.springframework.http.HttpStatus.Series
+            predicates:
+              - Method=get
+              - Path=/hello
+
+          # 用来处理error
+          - id: error-test-route
+            uri: http://www.baidu.com
+            predicates:
+            - Path=/fallback
+  redis:
+    host: localhost
+    port: 6379
+    password:
+
+# gateway 注册到注册中心后，自动代理注册中心的服务
+# http://网关地址：端口/服务中心注册 serviceId/具体的url # 这里的serviceId必须大写
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8000/eureka
+
+logging:
+  level:
+    org.springframework.cloud.gateway: debug
