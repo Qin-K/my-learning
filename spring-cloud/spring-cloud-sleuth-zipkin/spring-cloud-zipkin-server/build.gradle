@@ -1,0 +1,43 @@
+plugins {
+    id 'org.springframework.boot' version '2.1.5.RELEASE'
+    id 'io.spring.dependency-management' version '1.0.10.RELEASE'
+    id 'java'
+}
+
+group = 'com.qin_kai'
+version = '1.0.0'
+sourceCompatibility = '1.8'
+
+ext {
+    springCloudVersion = "Greenwich.SR2"
+}
+
+repositories {
+    maven { url 'http://maven.aliyun.com/nexus/content/groups/public/' }
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.springframework.cloud:spring-cloud-starter-netflix-eureka-client'
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.springframework.cloud:spring-cloud-starter-zipkin'
+    implementation 'io.zipkin.java:zipkin-server:2.11.8'
+    implementation 'io.zipkin.java:zipkin-autoconfigure-ui:2.11.8'
+    testImplementation('org.springframework.boot:spring-boot-starter-test') {
+        exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
+    }
+}
+
+configurations {
+    all*.exclude group: 'org.apache.logging.log4j'
+}
+
+test {
+    useJUnitPlatform()
+}
+
+dependencyManagement {
+    imports {
+        mavenBom "org.springframework.cloud:spring-cloud-dependencies:${springCloudVersion}"
+    }
+}

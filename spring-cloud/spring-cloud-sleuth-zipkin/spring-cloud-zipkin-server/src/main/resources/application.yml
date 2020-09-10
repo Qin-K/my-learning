@@ -1,0 +1,16 @@
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8000/eureka/
+server:
+  port: 8810
+spring:
+  application:
+    name: zipkin-server
+
+management:
+  metrics:
+    web:
+      server:
+        #避免访问zipkin页面报java.lang.IllegalArgumentException
+        auto-time-requests: false
