@@ -11,7 +11,7 @@
     <groupId>com.example</groupId>
     <artifactId>springboot-mybatis</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>springboot-mybatis</name>
+    <name>spring-boot-mybatis</name>
     <description>Demo project for Spring Boot</description>
 
     <properties>
