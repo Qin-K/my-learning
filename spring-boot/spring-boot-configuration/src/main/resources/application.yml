@@ -1,0 +1,24 @@
+app:
+  user:
+    # simple properties
+    name: qinkai
+    age: 18
+    # list properties
+    hobbies:
+      - sing
+      - run
+      - movie
+    # object properties
+    address:
+      province: 四川
+      city: 绵阳
+    # map properties
+    map:
+      name: qinkai
+      age: 18
+    # object list properties
+    addresses:
+      - province: 四川
+        city: 绵阳
+      - province: 陕西
+        city: 西安
