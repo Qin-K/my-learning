@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="GradleLocalSettings">
+    <option name="projectSyncType">
+      <map>
+        <entry key="E:/code-learn/spring-framework" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../../storm" value="PREVIEW" />
+        <entry key="E:/mytest/dcnews-perf-test-master" value="PREVIEW" />
+        <entry key="E:/mytest/dcnews-terminalapi-master/dcnews-service-http" value="PREVIEW" />
+        <entry key="E:/project-demo/day-mark" value="PREVIEW" />
+        <entry key="E:/project-demo/dc-microservice/dc-eureka-server" value="PREVIEW" />
+        <entry key="E:/project-demo/dc-microservice/dc-gateway" value="PREVIEW" />
+        <entry key="E:/project-demo/dc-microservice/dc-hystrix-turbine" value="PREVIEW" />
+        <entry key="E:/project-demo/dc-service1" value="PREVIEW" />
+        <entry key="E:/project-demo/dc-service2" value="PREVIEW" />
+        <entry key="E:/project-demo/dc-sleuth-zipkin" value="PREVIEW" />
+        <entry key="E:/project-demo/dc-spring-cloud-ms/dc-config-server" value="PREVIEW" />
+        <entry key="E:/project-demo/dc-spring-cloud-ms/dc-eureka-server" value="PREVIEW" />
+        <entry key="E:/svn/DataCenter/News/branches/dc-cloudconfig-dev" value="PREVIEW" />
+        <entry key="E:/svn/DataCenter/News/branches/dc-clouddelete-master" value="PREVIEW" />
+        <entry key="E:/svn/DataCenter/News/branches/dc-datasync-dev" value="PREVIEW" />
+        <entry key="E:/svn/DataCenter/News/branches/dc-datasync-master" value="PREVIEW" />
+        <entry key="E:/svn/DataCenter/News/branches/dcnews-DATACENTER-3687" value="PREVIEW" />
+        <entry key="E:/svn/DataCenter/News/branches/dcnews-perf-test-DATACENTER-3550" value="PREVIEW" />
+        <entry key="E:/svn/DataCenter/News/branches/dcnews-perf-test-DATACENTER-3658" value="PREVIEW" />
+        <entry key="E:/svn/DataCenter/News/branches/dcnews-perf-test-DATACENTER-3687" value="PREVIEW" />
+        <entry key="E:/svn/DataCenter/News/branches/dcnews-perf-test-master" value="PREVIEW" />
+        <entry key="E:/svn/DataCenter/News/branches/dcnews-perf-test-master-DATACENTER-3658" value="PREVIEW" />
+        <entry key="E:/svn/DataCenter/News/branches/dcnews-sync-news-master" value="PREVIEW" />
+        <entry key="E:/svn/DataCenter/News/branches/dcnews-synchronize-master" value="PREVIEW" />
+        <entry key="E:/svn/DataCenter/News/branches/dcnews-synchronize-template" value="PREVIEW" />
+        <entry key="E:/svn/DataCenter/News/branches/dcnews-terminalapi-master" value="PREVIEW" />
+        <entry key="E:/svn/DataCenter/News/branches/dss/dcnews-dss-api/dcnews-dss-api-master" value="PREVIEW" />
+        <entry key="E:/svn/DataCenter/News/branches/dss/dcnews-dss/dcnews-dss-master" value="PREVIEW" />
+        <entry key="E:/svn/DataCenter/dcadvise/branches/Dc_framework/bootstrap/bootstrap-http-core-spring" value="PREVIEW" />
+        <entry key="E:/svn/DataCenter/dcadvise/branches/Dc_framework/commons/commons-util" value="PREVIEW" />
+        <entry key="E:/svn/DataCenter/dcadvise/branches/Dc_framework/dcnews-gradle-plugin" value="PREVIEW" />
+        <entry key="E:/svn/DataCenter/dcadvise/branches/Dc_framework/transponder" value="PREVIEW" />
+        <entry key="E:/svn/DataCenter/dcadvise/branches/dcadvise-storm-DATACENTER-3550" value="PREVIEW" />
+        <entry key="E:/svn/DataCenter/dcadvise/branches/dcadvise-terminalapi-master" value="PREVIEW" />
+      </map>
+    </option>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="localRepository" value="D:\opt\apache-maven-3.6.0\repository" />
+        <option name="mavenHome" value="D:/opt/apache-maven-3.6.0" />
+        <option name="userSettingsFile" value="D:\opt\apache-maven-3.6.0\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="260" />
+    <option name="y" value="20" />
+    <option name="width" value="1400" />
+    <option name="height" value="1000" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>
