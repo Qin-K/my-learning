@@ -4,7 +4,7 @@ import redis.clients.jedis.Pipeline;
 
 /**
  * @author qin kai
- * @Date 2020/8/18
+ * @date 2020/8/18
  */
 public class PipelineTest {
     public static void main(String[] args) {

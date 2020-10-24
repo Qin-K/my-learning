@@ -4,7 +4,7 @@ import com.alibaba.fastjson.annotation.JSONField;
 
 /**
  * @author qin kai
- * @Date 2020/9/29
+ * @date 2020/9/29
  */
 public class MyModel1 {
 

@@ -14,7 +14,7 @@ import org.springframework.data.mongodb.core.mapping.MongoMappingContext;
 
 /**
  * @author qin kai
- * @Date 2020/8/28
+ * @date 2020/8/28
  */
 @Configuration
 public class MongoConfig {

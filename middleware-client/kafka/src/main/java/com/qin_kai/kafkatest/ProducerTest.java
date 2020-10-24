@@ -10,7 +10,7 @@ import java.util.concurrent.ExecutionException;
 
 /**
  * @author qin kai
- * @Date 2020/8/20
+ * @date 2020/8/20
  */
 public class ProducerTest {
 

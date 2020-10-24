@@ -9,7 +9,7 @@ import java.util.Scanner;
 
 /**
  * @author qin kai
- * @Date 2020/10/13
+ * @date 2020/10/13
  */
 public class SocketChannelDemo {
     public static void main(String[] args) throws IOException {

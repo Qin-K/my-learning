@@ -8,7 +8,7 @@ import java.util.concurrent.TimeUnit;
 
 /**
  * @author qin kai
- * @Date 2020/8/26
+ * @date 2020/8/26
  */
 public class CacheTest {
     public static void main(String[] args) {

@@ -6,7 +6,7 @@ import org.springframework.stereotype.Component;
 
 /**
  * @author qin kai
- * @Date 2020/8/25
+ * @date 2020/8/25
  */
 @Component
 @Scope(ConfigurableBeanFactory.SCOPE_PROTOTYPE)

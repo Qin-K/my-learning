@@ -6,7 +6,7 @@ import java.util.Properties;
 
 /**
  * @author qin kai
- * @Date 2020/8/20
+ * @date 2020/8/20
  */
 public class KafkaConfig {
     private static Properties producerConfig = new Properties();

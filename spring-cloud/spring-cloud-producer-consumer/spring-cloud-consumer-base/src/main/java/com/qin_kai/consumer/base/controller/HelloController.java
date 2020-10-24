@@ -13,7 +13,7 @@ import java.util.List;
 
 /**
  * @author qin kai
- * @Date 2020/9/18
+ * @date 2020/9/18
  */
 @RestController
 public class HelloController {

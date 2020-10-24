@@ -27,7 +27,7 @@ import java.util.Set;
  * 此时没有线程在 select 上阻塞，那么之后的一个 select() 或 select(timeout) 会立即返回，而不会阻塞，当然，它只会作用一次。
  *
  * @author qin kai
- * @Date 2020/10/13
+ * @date 2020/10/13
  */
 public class SelectorDemo {
     public static void main(String[] args) throws IOException {

@@ -7,7 +7,7 @@ import java.lang.annotation.Target;
 
 /**
  * @author qin kai
- * @Date 2020/8/25
+ * @date 2020/8/25
  */
 @Target(ElementType.TYPE)
 @Retention(RetentionPolicy.RUNTIME)

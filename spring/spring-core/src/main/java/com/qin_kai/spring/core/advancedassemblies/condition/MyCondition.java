@@ -7,7 +7,7 @@ import org.springframework.core.type.AnnotatedTypeMetadata;
 
 /**
  * @author qin kai
- * @Date 2020/8/25
+ * @date 2020/8/25
  */
 // Condition是一个接口包含一个matches方法，根据返回值判断是否装配
 public class MyCondition implements Condition {

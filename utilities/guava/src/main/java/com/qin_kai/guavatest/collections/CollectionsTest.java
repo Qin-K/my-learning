@@ -8,7 +8,7 @@ import java.util.Map;
 
 /**
  * @author qin kai
- * @Date 2020/10/9
+ * @date 2020/10/9
  */
 public class CollectionsTest {
     public static void main(String[] args) {

@@ -2,7 +2,7 @@ package com.qin_kai.spring.core.advancedassemblies.profile;
 
 /**
  * @author qin kai
- * @Date 2020/8/25
+ * @date 2020/8/25
  */
 public class MyDataSource{
     private String name;

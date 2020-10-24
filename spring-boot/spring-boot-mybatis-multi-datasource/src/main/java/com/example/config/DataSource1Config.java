@@ -15,7 +15,7 @@ import javax.sql.DataSource;
 
 /**
  * @author qin kai
- * @Date 2020/8/27
+ * @date 2020/8/27
  */
 @Configuration
 @MapperScan(basePackages = {"com.example.mapper.test1"}, sqlSessionTemplateRef = "test1SqlSessionTemplate")

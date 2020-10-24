@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 /**
  * @author qin kai
- * @Date 2020/8/26
+ * @date 2020/8/26
  */
 @RestController
 public class HelloController {

@@ -6,7 +6,7 @@ import java.util.Date;
 
 /**
  * @author qin kai
- * @Date 2020/9/29
+ * @date 2020/9/29
  */
 public class MyModel3 {
 

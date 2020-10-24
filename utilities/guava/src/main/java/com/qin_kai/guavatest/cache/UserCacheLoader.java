@@ -4,7 +4,7 @@ import com.google.common.cache.CacheLoader;
 
 /**
  * @author qin kai
- * @Date 2020/8/26
+ * @date 2020/8/26
  */
 public class UserCacheLoader extends CacheLoader<Integer, User> {
 

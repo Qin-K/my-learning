@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 /**
  * @author qin kai
- * @Date 2020/9/4
+ * @date 2020/9/4
  */
 @FeignClient(name = "spring-cloud-producer", fallback = HelloRemoteHystrix.class)
 @Component

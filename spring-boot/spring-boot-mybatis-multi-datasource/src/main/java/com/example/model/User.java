@@ -2,7 +2,7 @@ package com.example.model;
 
 /**
  * @author qin kai
- * @Date 2020/8/27
+ * @date 2020/8/27
  */
 public class User {
     private Integer id;

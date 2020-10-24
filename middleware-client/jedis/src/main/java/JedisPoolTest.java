@@ -6,7 +6,7 @@ import java.util.Set;
 
 /**
  * @author qin kai
- * @Date 2020/8/18
+ * @date 2020/8/18
  */
 public class JedisPoolTest {
     private static GenericObjectPoolConfig config = new GenericObjectPoolConfig();

@@ -6,7 +6,7 @@ import org.springframework.stereotype.Repository;
 
 /**
  * @author qin kai
- * @Date 2020/8/27
+ * @date 2020/8/27
  */
 @Repository
 public interface UserMapper2 {

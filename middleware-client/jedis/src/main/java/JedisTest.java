@@ -2,7 +2,7 @@ import redis.clients.jedis.Jedis;
 
 /**
  * @author qin kai
- * @Date 2020/8/18
+ * @date 2020/8/18
  */
 public class JedisTest {
     public static void main(String[] args) {

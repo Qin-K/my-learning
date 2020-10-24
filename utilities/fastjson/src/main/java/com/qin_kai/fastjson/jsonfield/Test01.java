@@ -9,7 +9,7 @@ import java.util.Date;
 /**
  * JSONField 注解打在 String 类型上
  * @author qin kai
- * @Date 2020/9/29
+ * @date 2020/9/29
  */
 public class Test01 {
     public static void main(String[] args) {

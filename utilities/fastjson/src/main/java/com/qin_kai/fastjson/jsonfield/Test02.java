@@ -9,7 +9,7 @@ import java.util.Date;
  * JSONField 注解打在 Date 类型上
  * 作用就是序列化成指定 Date 格式，以及反序列化从指定格式的字符串中转化为 Date 类型
  * @author qin kai
- * @Date 2020/9/29
+ * @date 2020/9/29
  */
 public class Test02 {
     public static void main(String[] args) {

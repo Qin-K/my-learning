@@ -1,6 +1,6 @@
 /**
  * @author qin kai
- * @Date 2020/8/18
+ * @date 2020/8/18
  */
 public interface JedisConstant {
     String HOST = "localhost";

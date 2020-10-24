@@ -1,6 +1,6 @@
 /**
  * @author qin kai
- * @Date 2020/8/24
+ * @date 2020/8/24
  */
 public class Test {
     public static void main(String[] args) {

@@ -14,7 +14,7 @@ import java.util.List;
 
 /**
  * @author qin kai
- * @Date 2020/8/28
+ * @date 2020/8/28
  */
 @Repository
 public class UserDaoImpl implements UserDao {

@@ -10,7 +10,7 @@ import org.springframework.web.client.RestTemplate;
 
 /**
  * @author qin kai
- * @Date 2020/9/11
+ * @date 2020/9/11
  */
 @RestController
 public class HelloController {

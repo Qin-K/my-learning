@@ -4,7 +4,7 @@ import java.lang.annotation.*;
 
 /**
  * @author qin kai
- * @Date 2020/8/24
+ * @date 2020/8/24
  */
 @Documented
 @Target({ElementType.TYPE, ElementType.METHOD})

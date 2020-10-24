@@ -6,7 +6,7 @@ import org.springframework.context.annotation.Profile;
 
 /**
  * @author qin kai
- * @Date 2020/8/25
+ * @date 2020/8/25
  */
 @Configuration
 public class DataSourceConfig {

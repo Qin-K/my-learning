@@ -1,4 +1,4 @@
-package com.qin_kai.commons.lang3.array;
+package com.qin_kai.commons.lang3;
 
 import org.apache.commons.lang3.ArrayUtils;
 
@@ -6,9 +6,9 @@ import java.util.Arrays;
 
 /**
  * @author qin kai
- * @Date 2020/10/13
+ * @date 2020/10/13
  */
-public class Main {
+public class ArrayUtilsTest {
 
     private static int[] initialNums = {1, 2, 3, 4, 5, 6};
 

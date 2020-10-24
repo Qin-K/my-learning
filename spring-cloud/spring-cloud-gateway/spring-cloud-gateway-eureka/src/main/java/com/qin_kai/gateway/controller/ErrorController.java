@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 /**
  * @author qin kai
- * @Date 2020/9/9
+ * @date 2020/9/9
  */
 @RestController
 public class ErrorController {

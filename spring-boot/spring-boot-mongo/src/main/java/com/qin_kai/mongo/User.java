@@ -5,7 +5,7 @@ import java.util.Objects;
 
 /**
  * @author qin kai
- * @Date 2020/8/28
+ * @date 2020/8/28
  */
 public class User implements Serializable {
 

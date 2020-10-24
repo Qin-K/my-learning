@@ -4,7 +4,7 @@ import org.springframework.stereotype.Component;
 
 /**
  * @author qin kai
- * @Date 2020/8/23
+ * @date 2020/8/23
  */
 @Component
 public class Book {

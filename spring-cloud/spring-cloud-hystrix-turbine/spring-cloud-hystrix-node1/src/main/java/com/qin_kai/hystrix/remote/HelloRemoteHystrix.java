@@ -4,7 +4,7 @@ import org.springframework.stereotype.Component;
 
 /**
  * @author qin kai
- * @Date 2020/9/4
+ * @date 2020/9/4
  */
 @Component
 public class HelloRemoteHystrix implements HelloRemote {

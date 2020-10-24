@@ -7,7 +7,7 @@ import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 
 /**
  * @author qin kai
- * @Date 2020/8/26
+ * @date 2020/8/26
  */
 @Configuration
 @ComponentScan(excludeFilters = {
