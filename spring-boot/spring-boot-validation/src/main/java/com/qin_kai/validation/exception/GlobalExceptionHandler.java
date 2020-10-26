@@ -56,7 +56,7 @@ public class GlobalExceptionHandler {
      */
     @ExceptionHandler(Exception.class)
     protected HttpResult exception(Exception exception) {
-        LOGGER.info("发生未知异常", exception);
+        LOGGER.error("发生未知异常", exception);
         return HttpResult.error(ResultCode.INTERNAL_ERROR);
     }
 }
