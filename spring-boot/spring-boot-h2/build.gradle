@@ -1,0 +1,37 @@
+buildscript {
+    ext { // 统一SpringBoot版本
+        SpringBootVersion = '2.3.3.RELEASE'
+    }
+    repositories {
+        maven { url 'http://maven.aliyun.com/nexus/content/groups/public/' }
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:${SpringBootVersion}")
+    }
+}
+apply plugin: 'java'
+apply plugin: 'idea'
+apply plugin: 'org.springframework.boot'
+
+// 声明依赖的时候忽略掉版本号
+apply plugin: 'io.spring.dependency-management'
+group = 'com.qin_kai'
+version = '1.0.0'
+sourceCompatibility = '1.8'
+
+repositories {
+    maven { url "http://maven.aliyun.com/nexus/content/groups/public/" }
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter'
+    compile group: 'org.mybatis.spring.boot', name: 'mybatis-spring-boot-starter', version: '1.3.2'
+    compile group: 'com.alibaba', name: 'druid-spring-boot-starter', version: '1.1.10'
+    runtime group: 'com.h2database', name: 'h2', version: '1.4.197'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+}
+
+test {
+    useJUnitPlatform()
+}
