@@ -10,4 +10,5 @@ spring:
             auto-commit-interval: 1000
             key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
             value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
-            auto-offset-reset: earliest
+            # auto-offset-reset: earliest 从头开始
+            auto-offset-reset: latest

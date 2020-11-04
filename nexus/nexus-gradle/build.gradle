@@ -1,0 +1,51 @@
+plugins {
+    id 'java'
+    id 'maven'
+}
+
+group 'com.qin_kai'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    maven {
+        url 'http://nexus-vm:8081/repository/maven-public/'
+        // 配置仓库账号密码
+        credentials {
+            username 'admin'
+            password 'admin123'
+        }
+    }
+    mavenCentral()
+}
+
+dependencies {
+    compile 'com.qin_kai:nexus-upload:1.0-RELEASE'
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+}
+
+
+uploadArchives {
+    repositories {
+        mavenDeployer {
+            repository(url: "http://nexus-vm:8081/repository/maven-snapshots/") {
+                authentication(userName: "admin", password: "admin123")
+            }
+//            repository(url: "file://localhost/F:/Studying/repo/")
+            pom.project {
+                groupId = "com.qin_kai"
+//                artifactId = "nexus-gradle"
+//                version = "1.0"
+                packaging 'jar'
+//                developers {
+//                    developer {
+//                        id 'xter'
+//                        name 'Liang'
+//                        timezone 'Asia/Shanghai'
+//                    }
+//                }
+            }
+        }
+    }
+}
