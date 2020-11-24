@@ -9,7 +9,7 @@ import java.util.Date;
  * @author qin kai
  * @date 2020/8/28
  */
-@Component
+//@Component
 public class ScheduleTask {
 
     @Scheduled(fixedRate = 1000) // fixedRate 固定频率执行 单位ms
