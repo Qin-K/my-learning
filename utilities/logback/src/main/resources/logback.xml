@@ -11,6 +11,7 @@
     </appender>
     <!-- 按照每天生成日志文件 -->
     <appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${LOG_HOME}/logbackTest.log</file>
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
             <!--日志文件输出的文件名-->
             <FileNamePattern>${LOG_HOME}/logbackTest.log.%d{yyyy-MM-dd}.log</FileNamePattern>
@@ -27,9 +28,23 @@
         </triggeringPolicy>
     </appender>
 
+    <appender name="SYNC_FILE" class="ch.qos.logback.classic.AsyncAppender">
+        <discardingThreshold>0</discardingThreshold>
+        <queueSize>450000</queueSize>
+        <appender-ref ref="FILE"/>
+    </appender>
+
+
+    <logger name="LOG" level="INFO" additivity="false">
+        <appender-ref ref="FILE"/>
+    </logger>
+
+    <logger name="SYNC_LOG" level="INFO" additivity="false">
+        <appender-ref ref="SYNC_FILE"/>
+    </logger>
+
     <!-- 日志输出级别 -->
     <root level="debug">
         <appender-ref ref="STDOUT"/>
-        <appender-ref ref="FILE" />
     </root>
 </configuration>

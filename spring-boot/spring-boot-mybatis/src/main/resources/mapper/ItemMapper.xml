@@ -3,20 +3,20 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.example.mapper.ItemMapper">
-    <select id="findAllItem" resultType="item">
+    <select id="findAllItem" resultType="com.example.model.Item">
         select * from item
     </select>
 
-    <select id="findItemById" parameterType="int" resultType="item">
+    <select id="findItemById" parameterType="int" resultType="com.example.model.Item">
         select * from item where id = #{id}
     </select>
 
-    <insert id="addItem" parameterType="item">
+    <insert id="addItem" parameterType="com.example.model.Item">
         insert into item(name, price, detail, createtime)
         values (#{name}, #{price}, #{detail}, #{createtime})
     </insert>
 
-    <update id="updateItem" parameterType="item">
+    <update id="updateItem" parameterType="com.example.model.Item">
         update item set name = #{name}, price = #{price}, detail = #{detail}
         where id = #{id}
     </update>
