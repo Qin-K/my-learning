@@ -4,14 +4,7 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3fc67135-0aa0-447b-a6ed-9a8811038cdf" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot-mybatis.iml" beforeDir="false" afterPath="$PROJECT_DIR$/springboot-mybatis.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/mapper/ItemMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/mapper/ItemMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/ItemMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/ItemMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../utilities/logback/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../utilities/logback/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../utilities/logback/src/main/resources/logback.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../utilities/logback/src/main/resources/logback.xml" afterDir="false" />
-    </list>
+    <list default="true" id="3fc67135-0aa0-447b-a6ed-9a8811038cdf" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -486,6 +479,7 @@
       <workItem from="1604655186567" duration="1253000" />
       <workItem from="1610588991304" duration="648000" />
       <workItem from="1610590672837" duration="3879000" />
+      <workItem from="1615430882247" duration="590000" />
     </task>
     <servers />
   </component>
