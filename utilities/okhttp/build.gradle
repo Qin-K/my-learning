@@ -1,0 +1,21 @@
+plugins {
+    id 'java'
+}
+
+group 'com.qin_kai'
+version '1.0.0'
+
+repositories {
+    maven { url "http://maven.aliyun.com/nexus/content/groups/public/" }
+    mavenCentral()
+}
+
+dependencies {
+    implementation group: 'com.squareup.okhttp3', name: 'okhttp', version: '3.14.9'
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.6.0'
+    implementation group: 'com.google.guava', name: 'guava', version: '30.1-jre'
+}
+
+test {
+    useJUnitPlatform()
+}
