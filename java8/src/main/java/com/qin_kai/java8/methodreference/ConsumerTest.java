@@ -1,4 +1,4 @@
-package methodreference;
+package com.qin_kai.java8.methodreference;
 
 import java.util.function.Consumer;
 

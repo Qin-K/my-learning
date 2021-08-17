@@ -1,4 +1,4 @@
-package lambda;
+package com.qin_kai.java8.lambda;
 
 import java.util.function.Consumer;
 import java.util.function.Function;

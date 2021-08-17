@@ -1,4 +1,4 @@
-package streamapi;
+package com.qin_kai.java8.streamapi;
 
 import java.util.Arrays;
 import java.util.List;
