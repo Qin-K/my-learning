@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<stus>
+	<stu>
+		<name>秦凯</name>
+		<age>20</age>
+	</stu>
+	<stu>
+		<name>马宾强</name>
+		<age>20</age>
+	</stu>
+	<stu>
+		<name>陆双全</name>
+		<age>20</age>
+	</stu>
+</stus>

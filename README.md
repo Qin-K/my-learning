@@ -50,6 +50,14 @@
 
 [Java 8实战 (豆瓣)](https://book.douban.com/subject/26772632/)
 
+## java-basic
+
+学习java基础入门的时候的相关代码
+
+- Core Java v1：《java核心技术卷1》学习代码
+- Core Java v2：《java核心技术卷2》学习代码
+- Head_First_Java：《Head First Java》学习代码
+
 ## java-core
 
 学习java核心知识代码
@@ -61,6 +69,12 @@ nio学习资料：
 ## javaee
 
 javaEE学习
+
+## java-web
+
+java web基础，servlet jsp学习相关代码。
+
+学习资料：黑马培训班视频
 
 ## middleware-client
 
