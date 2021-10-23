@@ -1,0 +1,4 @@
+rootProject.name = 'gradle-multi-module'
+include 'demo1'
+include 'demo2'
+

@@ -1,0 +1,81 @@
+<html>
+
+<head></head>
+<title>模板语法-插值</title>
+
+<body>
+    <!-- 文本 -->
+    <p class="p1">{{ a }}</p>
+    <p v-once class="p2">v-once:{{ a }}</p>
+
+    <!-- 原始HTML -->
+    <p class="p31">Using mustaches: {{ rawHtml }}</p>
+    <p class="p32">Using v-html directive: <span v-html="rawHtml"></span></p>
+
+    <!-- Attribute -->
+    <div class="p41" v-bind:id="dynamicId"></div>
+    <button class="p42" v-bind:disable="isButtonDisabled">Button</button>
+
+    <!-- 使用 JavaScript 表达式 -->
+    <p class="p51">{{ number + 1 }}</p>
+    <p class="p52">{{ ok ? 'YES' : 'NO' }}</p>
+    <p class="p53">{{ message.split('').reverse().join('') }}</p>
+    <div class="p54" v-bind:id="'list-' + id"></div>
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+<script>
+    // 我们的数据对象
+    var data = { a: 1 }
+
+    // 该对象被加入到一个 Vue 实例中
+    var p1 = new Vue({
+        el: ".p1",
+        data: data
+    })
+
+    var p2 = new Vue({
+        el: ".p2",
+        data: data
+    })
+
+    var p31 = new Vue({
+        el: ".p31",
+        data: { rawHtml: '<span style="color:red">This show be red</span>' }
+    })
+
+    var p32 = new Vue({
+        el: ".p32",
+        data: { rawHtml: '<span style="color:red">This show be red</span>' }
+    })
+
+    var p41 = new Vue({
+        el: ".p41",
+        data: { dynamicId: "123" }
+    })
+
+    var p42 = new Vue({
+        el: ".p42",
+        data: { isButtonDisabled: true }
+    })
+
+    var p51 = new Vue({
+        el: ".p51",
+        data: {number: 10}
+    })
+    var p52 = new Vue({
+        el: ".p52",
+        data: {ok: true}
+    })
+    var p53 = new Vue({
+        el: ".p53",
+        data: {message: "test"}
+    })
+    var p54 = new Vue({
+        el: ".p54",
+        data: {id: 10}
+    })
+
+</script>
+
+</html>

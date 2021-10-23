@@ -1,0 +1,85 @@
+<html>
+
+<head></head>
+<title>模板语法-指令</title>
+
+<body>
+    <!-- v-bind绑定html属性 -->
+    <a class="p11" v-bind:href="url">url</a><br><br>
+    <button class="p12" v-on:click="doSomething">click to doSomething</button><br>
+    <!-- 动态参数 -->
+    <!-- 在 DOM 中使用模板时 (直接在一个 HTML 文件里撰写模板)，还需要避免使用大写字符来命名键名，因为浏览器会把 attribute 名全部强制转为小写： -->
+    <!-- 如果使用attributeName的话会报错 -->
+    <a class="p21" v-bind:[attribute_name]="url">url</a><br>
+    <button class="p22" v-on:[event_name]="doSomething">Button</button>
+
+    <!-- 修饰符 -->
+    <!-- .prevent 修饰符告诉 v-on 指令对于触发的事件调用 event.preventDefault()： -->
+    <form class="p3" v-on:submit.prevent="onsubmit">
+        <button id="submit">submit</button>
+    </form>
+
+    <!-- 缩写 -->
+    <!-- v-bind-->
+    <!-- 完整语法 -->
+    <!-- <a v-bind:href="url">...</a> -->
+    <!-- 缩写 -->
+    <a :href="url">a>
+    <!-- 动态参数的缩写 (2.6.0+) -->
+    <a :[key]="url"></a>
+
+    <!-- v-on -->
+    <a v-on:click="doSomething"></a>
+    <!-- 缩写 -->
+    <a @click="doSomething"></a>
+    <!-- 动态参数的缩写 (2.6.0+) -->
+    <a @[event]="doSomething"></a>
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+<script>
+    // 该对象被加入到一个 Vue 实例中
+    var p11 = new Vue({
+        el: ".p11",
+        data: { url: "http://www.baidu.com" }
+    })
+
+    var p12 = new Vue({
+        el: ".p12",
+        methods: {
+            doSomething: function () {
+                alert("you click!")
+            }
+        }
+    })
+
+    var p21 = new Vue({
+        el: ".p21",
+        data: {
+            attribute_name: "href",
+            url: "http://www.baidu.com"
+        }
+    })
+    var p22 = new Vue({
+        el: ".p22",
+        data: {
+            event_name: "click",
+        },
+        methods: {
+            doSomething: function () {
+                alert("you click button!")
+            }
+        }
+    })
+
+    var p3 = new Vue({
+        el: ".p3",
+        methods: {
+            onsubmit: function () {
+                alert("you submit!")
+            }
+        }
+    })
+</script>
+
+</html>

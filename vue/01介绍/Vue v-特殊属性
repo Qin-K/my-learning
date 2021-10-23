@@ -1,0 +1,23 @@
+v-bind:title="message"
+将model与html属性关联
+示例：v-bind:title="message"
+将title与message关联
+
+v-if:
+条件，如果条件指定的值为true则显示，否则隐藏
+<p v-if="seen">现在你看到我了</p>
+如果seen=true显示p标签
+
+v-for:
+循环
+<li v-for="todo in todos">
+    {{ todo.text }}
+</li>
+
+
+v-on:
+监听时间
+
+v-once：
+执行一次性地插值，当数据改变时，插值处的内容不会更新
+

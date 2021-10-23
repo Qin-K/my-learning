@@ -1,4 +1,0 @@
-rootProject.name = 'gradle'
-include 'demo1'
-include 'demo2'
-

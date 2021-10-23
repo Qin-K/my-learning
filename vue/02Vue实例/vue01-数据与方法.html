@@ -1,0 +1,72 @@
+<html>
+
+<head></head>
+<title>数据与方法</title>
+
+<body>
+    <!-- 由于data关联的对象使用了Object.freeze，所以通过 app.foo设置值这里不会有变化 -->
+    <p id="app">{{ foo }}</p>
+
+    <p id="example"></p>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+<script>
+    // 我们的数据对象
+    var data = { a: 1 }
+
+    // 该对象被加入到一个 Vue 实例中
+    var vm = new Vue({
+        data: data
+    })
+
+    // 获得这个实例上的 property
+    // 返回源数据中对应的字段
+    vm.a == data.a // => true
+    console.log("vm.a == data.a: " + (vm.a == data.a))
+
+    // 设置 property 也会影响到原始数据
+    vm.a = 2
+    data.a // => 2
+    console.log("vm.a=" + vm.a + ",data.a=" + data.a);
+
+    // ……反之亦然
+    data.a = 3
+    vm.a // => 3
+    console.log("vm.a=" + vm.a + ",data.a=" + data.a);
+
+    // 只有vue实例被创建时data中就存在的属性才是响应的
+    vm.b = 'hi'
+    console.log("vm.b=" + vm.b + ",data.b=" + data.b)
+
+    // Object.freeze()，这会阻止修改现有的 property，也意味着响应系统无法再追踪变化。
+    var obj = {
+        foo: 'bar'
+    }
+
+    Object.freeze(obj)
+
+    new Vue({
+        el: '#app',
+        data: obj
+    })
+
+
+    // 除了数据 property，Vue 实例还暴露了一些有用的实例 property 与方法。它们都有前缀 $，以便与用户定义的 property 区分开来
+    var data = { a: 1 }
+    var vm = new Vue({
+        el: '#example',
+        data: data
+    })
+
+    vm.$data === data // => true
+    console.log("vm.$data === data:" + (vm.$data === data))
+    vm.$el === document.getElementById('example') // => true
+    console.log("vm.$el === document.getElementById('example'):" + (vm.$el === document.getElementById('example')))
+    // $watch 是一个实例方法
+    vm.$watch('a', function (newValue, oldValue) {
+        // 这个回调将在 `vm.a` 改变后调用
+        alert("a属性被改变！！！from=" + oldValue + " to=" + newValue)
+    })
+</script>
+
+</html>
