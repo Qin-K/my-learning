@@ -1,0 +1,46 @@
+<html>
+<head>
+    <title>websocket test</title>
+    <script
+            src="https://code.jquery.com/jquery-3.6.0.min.js"
+            integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+            crossorigin="anonymous"></script>
+</head>
+<body>
+<button id="connect-button">connect</button><br>
+<input id="msg-input" type="text"><button id="send-button">send</button><br>
+<textarea id="receive-msg-text-area"></textarea><br>
+</body>
+<script>
+    $(function() {
+        var ws;
+        $("#connect-button").click(function() {
+            if (ws == null) {
+                ws = new WebSocket('ws://localhost:8080/WS');
+                // 收到消息
+                ws.onmessage = function(data) {
+                    console.log("收到消息:" + data.data);
+                    $("#receive-msg-text-area").val(data.data);
+                }
+                var that  = $(this);
+                ws.onopen = function () {
+                    that.text("disconnect");
+                    console.log("websocket建立连接成功")
+                }
+                ws.onclose = function () {
+                    console.log("websocket断开连接")
+                    that.text("connect");
+                    ws = null;
+                }
+            } else {
+               ws.close();
+            }
+        });
+        $("#send-button").click(function() {
+            var message = $("#msg-input").val();
+            ws.send(message);
+            console.log("发送消息：" + message);
+        });
+    });
+</script>
+</html>
