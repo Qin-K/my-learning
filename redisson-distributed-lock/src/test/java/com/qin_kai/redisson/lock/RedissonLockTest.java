@@ -3,12 +3,16 @@ package com.qin_kai.redisson.lock;
 import org.junit.jupiter.api.Test;
 import org.redisson.api.RLock;
 import org.redisson.api.RedissonClient;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
 
 import java.util.concurrent.TimeUnit;
 
-public class RedissonLockTest {
+@SpringBootTest
+class RedissonLockTest {
 
-    private RedissonClient redissonClient = RedissonClientHolder.getClient();
+    @Autowired
+    private RedissonClient redissonClient;
 
     @Test
     void testLock() throws InterruptedException {
@@ -45,6 +49,14 @@ public class RedissonLockTest {
             test.unlock();
         }
         System.out.println("unlock success");
+    }
+
+    @Autowired
+    private Task task;
+
+    @Test
+    void testLockAnnotation() throws InterruptedException {
+        task.test();
     }
 
 }
