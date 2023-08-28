@@ -1,0 +1,13 @@
+server:
+  port: 9090
+spring:
+  application:
+    name: apollo-test
+
+test: test
+
+# apollo
+app.id: ${spring.application.name}
+apollo:
+  meta: http://172.21.28.80:8080
+  cache: ./apollo-cache-dir
