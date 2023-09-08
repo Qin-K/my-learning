@@ -24,6 +24,11 @@ public class DemoController {
         return "Hello " + port;
     }
 
+    @GetMapping("/hello")
+    public String hello() {
+        return "Hello";
+    }
+
 
     @GetMapping("/video.mp4")
     public void video(HttpServletResponse response) throws IOException {
