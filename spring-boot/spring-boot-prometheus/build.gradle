@@ -9,12 +9,14 @@ version = '1.0.0'
 sourceCompatibility = '1.8'
 
 repositories {
+    maven { url 'http://maven.aliyun.com/nexus/content/groups/public/' }
     mavenCentral()
 }
 
 dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-actuator'
     implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.springframework.boot:spring-boot-starter-aop'
     runtimeOnly 'io.micrometer:micrometer-registry-prometheus'
     testImplementation('org.springframework.boot:spring-boot-starter-test') {
         exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
